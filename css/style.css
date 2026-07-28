@@ -1,0 +1,346 @@
+/* ==========================================================================
+   terrariumdla.pl — arkusz główny
+   Statyczny HTML, bez frameworka. Paleta: 2 akcenty (miętowy + szmaragdowy).
+   ========================================================================== */
+
+:root {
+  /* Kolory */
+  --color-bg: #16181A;
+  --color-surface: #1E2023;
+  --color-hover: #26292D;
+  --color-text: #E8EAE6;
+  --color-text-muted: #A7ACA8;
+  --color-accent-mint: #98FB98;   /* linki, liczby, nagłówki */
+  --color-accent-emerald: #50C878; /* przyciski, obramowania, UI */
+  --color-border: #2E3236;
+
+  /* Typografia */
+  --font-base: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+
+  /* Layout */
+  --max-width: 1160px;
+  --radius: 10px;
+  --gap: 1.5rem;
+  --header-height: 68px;
+}
+
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--color-accent-mint); text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul, ol { padding-left: 1.25rem; }
+table { border-collapse: collapse; width: 100%; }
+
+h1, h2, h3, h4 {
+  color: var(--color-accent-mint);
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+}
+h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); margin-top: 2.5rem; }
+h3 { font-size: 1.25rem; margin-top: 1.75rem; }
+p { margin: 0 0 1rem; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* --- Nawigacja --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(22, 24, 26, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-border);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+.nav-logo {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+.nav-logo span { color: var(--color-accent-mint); }
+.nav-logo:hover { text-decoration: none; }
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+.nav-links a:hover {
+  color: var(--color-accent-mint);
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+@media (max-width: 780px) {
+  .nav-links {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: var(--color-surface);
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 1px solid var(--color-border);
+    display: none;
+  }
+  .nav-links.is-open { display: flex; }
+  .nav-links a {
+    display: block;
+    padding: 0.9rem 1.25rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .nav-toggle { display: block; }
+}
+
+/* --- Breadcrumbs --- */
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 1.25rem 0;
+}
+.breadcrumbs a { color: var(--color-text-muted); }
+.breadcrumbs a:hover { color: var(--color-accent-mint); }
+
+/* --- Hero / nagłówek dynamiczny --- */
+.hero {
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+.hero-tagline {
+  font-size: clamp(1.6rem, 4.5vw, 2.6rem);
+  font-weight: 800;
+  color: var(--color-text);
+}
+.hero-tagline .rotator {
+  color: var(--color-accent-mint);
+  display: inline-block;
+  min-width: 1ch;
+}
+.hero-sub {
+  color: var(--color-text-muted);
+  max-width: 640px;
+  margin: 1rem auto 0;
+}
+
+/* Animacja CSS „terrarium dla X” — pętla 20s, długie przytrzymanie na ostatnim słowie */
+.rotator-list {
+  display: inline-grid;
+  overflow: hidden;
+  vertical-align: bottom;
+  height: 1.2em;
+}
+.rotator-list span {
+  grid-area: 1 / 1;
+  opacity: 0;
+  animation: rotator-fade 20s infinite;
+}
+.rotator-list span:nth-child(1) { animation-delay: 0s; }
+.rotator-list span:nth-child(2) { animation-delay: 2s; }
+.rotator-list span:nth-child(3) { animation-delay: 4s; }
+.rotator-list span:nth-child(4) { animation-delay: 6s; }
+.rotator-list span:nth-child(5) { animation-delay: 8s; }
+.rotator-list span:nth-child(6) { animation-delay: 10s; }
+.rotator-list span:nth-child(7) { animation-delay: 12s; }
+.rotator-list span:nth-child(8) { animation-delay: 14s; }
+.rotator-list span:nth-child(9) { animation-delay: 16s; }
+.rotator-list span:last-child { animation-delay: 18s; animation-duration: 20s; }
+
+@keyframes rotator-fade {
+  0% { opacity: 0; }
+  2% { opacity: 1; }
+  9% { opacity: 1; }
+  11% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rotator-list span { animation: none; opacity: 1; position: static; }
+}
+
+/* --- Karty kategorii --- */
+.grid {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.card:hover {
+  background: var(--color-hover);
+  border-color: var(--color-accent-emerald);
+}
+.card h3 { margin-top: 0; }
+.card h3 a { color: var(--color-accent-mint); }
+.card p { color: var(--color-text-muted); margin-bottom: 0; }
+
+/* --- Plakietka trudności --- */
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-accent-emerald);
+  color: var(--color-accent-emerald);
+}
+.badge.easy { color: var(--color-accent-mint); border-color: var(--color-accent-mint); }
+.badge.medium { color: #E8C547; border-color: #E8C547; }
+.badge.hard { color: #E86B5C; border-color: #E86B5C; }
+
+/* --- Tabela porównawcza --- */
+.table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.compare-table {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.compare-table th, .compare-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.92rem;
+}
+.compare-table th {
+  color: var(--color-accent-mint);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table tr:hover td { background: var(--color-hover); }
+
+/* --- Przyciski --- */
+.btn {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid var(--color-accent-emerald);
+  color: var(--color-accent-emerald);
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn:hover {
+  background: var(--color-accent-emerald);
+  color: var(--color-bg);
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--color-accent-emerald);
+  color: var(--color-bg);
+}
+.btn-primary:hover { opacity: 0.88; background: var(--color-accent-emerald); }
+
+/* --- Sekcje --- */
+.section { padding: 3rem 0; }
+.section-alt { background: var(--color-surface); }
+.section-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.section-title a { font-size: 0.9rem; }
+
+/* --- Kalkulator (pasek) --- */
+.calc-bar {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* --- Karty bloga --- */
+.blog-card { display: flex; flex-direction: column; gap: 0.5rem; }
+.blog-card time { color: var(--color-text-muted); font-size: 0.8rem; }
+
+/* --- Stopka --- */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 3rem 0 2rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  margin-bottom: 2rem;
+}
+.footer-grid h4 {
+  color: var(--color-text);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+}
+.footer-grid ul { list-style: none; padding: 0; margin: 0; }
+.footer-grid li { margin-bottom: 0.5rem; }
+.footer-grid a { color: var(--color-text-muted); }
+.footer-grid a:hover { color: var(--color-accent-mint); }
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* --- Utility --- */
+.text-muted { color: var(--color-text-muted); }
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tytuł podstrony – terrariumdla.pl</title>
+<meta name="description" content="Krótki, konkretny opis podstrony (150–160 znaków) pod frazę główną.">
+<link rel="canonical" href="https://terrariumdla.pl/SCIEZKA/">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- ==========================================================
+     WZORZEC PODSTRONY — skopiuj ten plik przy tworzeniu nowej
+     treści (patrz plan-podstron.csv dla URL/tytułu/frazy głównej).
+     Zastąp: <title>, meta description, canonical, breadcrumbs, H1,
+     treść w <main> oraz nawigację "aktywna strona" jeśli potrzeba.
+     ========================================================== -->
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" class="nav-logo">terrarium<span>dla</span>.pl</a>
+    <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false" id="navToggle">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/weze/">Węże</a></li>
+      <li><a href="/gekony/">Gekony</a></li>
+      <li><a href="/agamy/">Agamy</a></li>
+      <li><a href="/kameleony/">Kameleony</a></li>
+      <li><a href="/zolwie/">Żółwie</a></li>
+      <li><a href="/bezkregowce/">Bezkręgowce</a></li>
+      <li><a href="/poradniki/">Opieka uniwersalna</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <nav class="breadcrumbs" aria-label="Okruszki">
+      <a href="/">Start</a> / <a href="/RODZINA/">Rodzina</a> / Bieżąca podstrona
+    </nav>
+
+    <article>
+      <h1>Nagłówek H1 — zawiera frazę główną</h1>
+
+      <p>Treść wprowadzająca...</p>
+
+      <h2>Śródtytuł</h2>
+      <p>Treść sekcji...</p>
+
+    </article>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Rodziny</h4>
+        <ul>
+          <li><a href="/weze/">Węże</a></li>
+          <li><a href="/gekony/">Gekony</a></li>
+          <li><a href="/agamy/">Agamy</a></li>
+          <li><a href="/kameleony/">Kameleony</a></li>
+          <li><a href="/zolwie/">Żółwie</a></li>
+          <li><a href="/bezkregowce/">Bezkręgowce</a></li>
+          <li><a href="/plazy/">Płazy</a></li>
+          <li><a href="/inne-gady/">Inne gady</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Zasoby</h4>
+        <ul>
+          <li><a href="/sprzet/">Sprzęt</a></li>
+          <li><a href="/karma/">Karma</a></li>
+          <li><a href="/poradniki/">Opieka uniwersalna</a></li>
+          <li><a href="/rosliny/">Rośliny do terrarium</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>O serwisie</h4>
+        <ul>
+          <li><a href="/o-mnie/">O mnie</a></li>
+          <li><a href="/kontakt/">Kontakt</a></li>
+          <li><a href="/polityka-prywatnosci/">Polityka prywatności</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> terrariumdla.pl — czysta forma natury, terrarium dla Ciebie</span>
+      <span>Zbudowane w Polsce 🇵🇱</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var links = document.getElementById('navLinks');
+    var isOpen = links.classList.toggle('is-open');
+    this.setAttribute('aria-expanded', isOpen);
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
