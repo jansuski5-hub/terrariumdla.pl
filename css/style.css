@@ -13,7 +13,7 @@
   --text: #E8EAE6;
   --text-dim: #9AA0A0;
   --radius: 10px;
-  --maxw: 1180px;
+  --maxw: 1720px;
 }
 
 /* --- Reset --- */
@@ -84,7 +84,7 @@ nav a:hover::after { transform: scaleX(1); }
 /* ---------- HERO (zdjęcie above-the-fold) ---------- */
 .hero-photo {
   position: relative;
-  min-height: 62vh;
+  min-height: max(62vh, calc(min(800px, 90vw) + 130px));
   display: flex;
   align-items: flex-end;
   border-bottom: 1px solid var(--border);
@@ -107,7 +107,9 @@ nav a:hover::after { transform: scaleX(1); }
 .hero-box {
   background: rgba(30, 32, 35, .74); backdrop-filter: blur(6px);
   border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 40px 56px; max-width: 1280px;
+  padding: 48px 56px;
+  width: min(800px, 90vw); height: min(800px, 90vw);
+  display: flex; flex-direction: column; justify-content: center;
 }
 .hero-box h1 { font-size: clamp(28px, 4vw, 42px); line-height: 1.15; letter-spacing: -.5px; font-weight: 750; color: var(--text); }
 .hero-box p.lead { color: var(--text-dim); font-size: 16px; margin-top: 14px; }
@@ -115,7 +117,7 @@ nav a:hover::after { transform: scaleX(1); }
 @media (max-width: 700px) {
   .hero-photo { min-height: 78vh; align-items: flex-end; }
   .hero-photo-inner { flex-direction: column; align-items: stretch; padding-left: 20px; }
-  .hero-box { padding: 26px 28px; max-width: none; }
+  .hero-box { padding: 26px 28px; width: auto; height: auto; }
 }
 
 .btn {
