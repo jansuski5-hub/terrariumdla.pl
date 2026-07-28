@@ -4,10 +4,10 @@ name: Deploy to cPanel (FTPS)
 # Strona jest statycznym HTML — brak kroku budowania, kopiujemy pliki 1:1.
 #
 # Wymagane sekrety repo (Settings → Secrets and variables → Actions):
-#   FTP_SERVER    — adres serwera FTPS, np. ftp.terrariumdla.pl
-#   FTP_USERNAME  — login konta FTP z cPanel
-#   FTP_PASSWORD  — hasło konta FTP
-#   FTP_SERVER_DIR (opcjonalnie) — katalog docelowy na serwerze, domyślnie public_html/
+#   FTP_SERVER      — adres serwera FTPS, np. ftp.terrariumdla.pl
+#   FTP_USERNAME    — login konta FTP z cPanel
+#   FTP_PASSWORD    — hasło konta FTP
+#   FTP_TARGET_DIR  — katalog docelowy na serwerze, np. public_html/
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
-          server-dir: ${{ secrets.FTP_SERVER_DIR || 'public_html/' }}
+          server-dir: ${{ secrets.FTP_TARGET_DIR }}
           exclude: |
             **/.git*
             **/.git*/**
