@@ -1,4 +1,4 @@
-# Plan linkowania wewnętrznego — terrariumdla.pl
+# Plan linkowania wewnętrznego: terrariumdla.pl
 
 Lipiec 2026. Dotyczy wszystkich 209 zaplanowanych podstron (`priorytet-podstron.csv`) w 5 falach publikacji oraz strony głównej.
 
@@ -12,7 +12,7 @@ Struktura URL: rodzina / gatunek / temat, np. `/weze/waz-zbozowy/przewodnik/`, `
 
 Rodziny i liczba zaplanowanych podstron: węże (43), bezkręgowce (55), gekony (21), agamy (11), żółwie (10), kameleony (3), jaszczurki inne (7), płazy (7), sprzęt (15), rośliny (9), opieka uniwersalna i ogólna (26), karma (1), inne zwierzęta (1).
 
-Każdy gatunek ma jeden filar (przewodnik) i kilka satelitów (cena, terrarium, odmiany, konkretna odmiana barwna). Filar musi istnieć, zanim opublikujesz satelitę tego gatunku — patrz `SITE_WORKFLOW.md`.
+Każdy gatunek ma jeden filar (przewodnik) i kilka satelitów (cena, terrarium, odmiany, konkretna odmiana barwna). Filar musi istnieć, zanim opublikujesz satelitę tego gatunku; patrz `SITE_WORKFLOW.md`.
 
 ## Co liczy się jako okazja do linku
 
@@ -56,11 +56,11 @@ Fraza liczy się jako okazja do linku, gdy spełnione są trzy warunki:
 | termostat, termometr | `/sprzet/termostat-termometr/` |
 | wymiary terrarium | `/sprzet/wymiary-terrarium/` |
 | gdzie kupić terrarium | `/sprzet/gdzie-kupic/` |
-| legalność hodowli gada | `/poradniki/legalnosc-hodowli/` |
-| kwarantanna nowego gada | `/poradniki/kwarantanna-nowego-gada/` |
-| start w terrarystyce, jak zacząć | `/poradniki/start-w-terrarystyce/` |
+| legalność hodowli gada | `/opieka-uniwersalna/legalnosc-hodowli/` |
+| kwarantanna nowego gada | `/opieka-uniwersalna/kwarantanna-nowego-gada/` |
+| start w terrarystyce, jak zacząć | `/opieka-uniwersalna/start-w-terrarystyce/` |
 
-Aktualizuj tę tabelę razem z każdą nową falą publikacji — nowy filar gatunku dopisujesz od razu, żeby kolejne podstrony mogły linkować do niego od pierwszego dnia.
+Aktualizuj tę tabelę razem z każdą nową falą publikacji; nowy filar gatunku dopisujesz od razu, żeby kolejne podstrony mogły linkować do niego od pierwszego dnia.
 
 ## Zasady rozstawu linków
 
@@ -97,9 +97,9 @@ Próg to podłoga, nie sufit. Dłuższe strony mogą go przekraczać, gdy linki 
 
 **Klaster sprzętu.** `/sprzet/index.html` linkuje do wszystkich 15 podstron sprzętowych. Każda strona gatunku linkuje do przynajmniej jednej strony sprzętu w sekcji „czego potrzebujesz” (standing rule w `SITE_WORKFLOW.md`). Strony sprzętu linkują z powrotem do gatunków, dla których dany sprzęt jest szczególnie istotny.
 
-**Klaster poradników.** `/poradniki/index.html` linkuje do wszystkich poradników ogólnych. Poradniki linkują do gatunków, których dotyczą (np. `/poradniki/kwarantanna-nowego-gada/` linkuje do kilku filarów gatunkowych jako przykłady).
+**Klaster opieki uniwersalnej.** `/opieka-uniwersalna/index.html` linkuje do wszystkich poradników ogólnych. Poradniki linkują do gatunków, których dotyczą (np. `/opieka-uniwersalna/kwarantanna-nowego-gada/` linkuje do kilku filarów gatunkowych jako przykłady).
 
-**Dzikie gatunki (zaskroniec, padalec).** To ruch identyfikacyjny, nie hodowlany — każda taka strona linkuje do `/weze/ogolne/terrarium/` i do filarów gatunków hodowlanych („nie ten wąż w ogrodzie? sprawdź hodowlane gatunki jak wąż zbożowy”), żeby przekierować zasięg identyfikacyjny w stronę treści hodowlanych.
+**Dzikie gatunki (zaskroniec, padalec).** To ruch identyfikacyjny, nie hodowlany; każda taka strona linkuje do `/weze/ogolne/terrarium/` i do filarów gatunków hodowlanych („nie ten wąż w ogrodzie? sprawdź hodowlane gatunki jak wąż zbożowy”), żeby przekierować zasięg identyfikacyjny w stronę treści hodowlanych.
 
 ## Publikacja: checklista dla każdej nowej lub edytowanej podstrony
 
@@ -108,10 +108,10 @@ Próg to podłoga, nie sufit. Dłuższe strony mogą go przekraczać, gdy linki 
 3. Zamień ogólnikową ramkę „zobacz też” na dwa-trzy linki specyficzne dla tej strony: hub rodziny lub filar, jeden pokrewny gatunek, jedna strona sprzętu lub poradnika.
 4. Gdy dwa gatunki z tej samej rodziny mają już oba filary, dodaj między nimi wzajemny link w naturalnym zdaniu porównującym, nie tylko w ramce „zobacz też”.
 5. Uruchom `python3 scripts/link_audit.py <ścieżka-do-nowej-strony>` przed commitem. To twarda brama: kończy się kodem 1, jeśli strona ma za mało linków w treści albo zawiera martwy link wewnętrzny.
-6. Sprawdź balans tagów i to, że strona jest wpięta w `index.html` swojej rodziny i w `sitemap.xml` — patrz `SITE_WORKFLOW.md`.
+6. Sprawdź balans tagów i to, że strona jest wpięta w `index.html` swojej rodziny i w `sitemap.xml`; patrz `SITE_WORKFLOW.md`.
 
 ## Bieżący stan
 
-Serwis jest na starcie: opublikowany jest wyłącznie szkielet strony głównej z treścią placeholder. Zero podstron gatunkowych, zero hubów rodzin poza wpisami w nawigacji i stopce. Ten plan obowiązuje od pierwszej opublikowanej podstrony fali 1 — nie czekaj z jego stosowaniem do „później”, bo naprawianie linkowania wstecz na 209 stronach jest droższe niż robienie tego dobrze od pierwszej strony.
+Serwis jest na starcie: opublikowany jest wyłącznie szkielet strony głównej z treścią placeholder. Zero podstron gatunkowych, zero hubów rodzin poza wpisami w nawigacji i stopce. Ten plan obowiązuje od pierwszej opublikowanej podstrony fali 1; nie czekaj z jego stosowaniem do „później”, bo naprawianie linkowania wstecz na 209 stronach jest droższe niż robienie tego dobrze od pierwszej strony.
 
 Gdy powstaną pierwsze huby rodzin i filary, zaktualizuj słownik kotwic powyżej i odnotuj w `SITE_WORKFLOW.md`, które strony przeszły audyt `link_audit.py`.

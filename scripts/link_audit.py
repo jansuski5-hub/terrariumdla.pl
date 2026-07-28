@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-link_audit.py — brama jakości linkowania wewnętrznego dla terrariumdla.pl
+link_audit.py: brama jakości linkowania wewnętrznego dla terrariumdla.pl
 
 Liczy <a href> wewnątrz <main>, pomijając ramkę breadcrumbs, nagłówek i stopkę,
 i sprawdza, czy każdy wewnętrzny href prowadzi do istniejącego pliku lub
-katalogu z index.html. Nie sprawdza <img src> — obrazy weryfikuj ręcznie
+katalogu z index.html. Nie sprawdza <img src>; obrazy weryfikuj ręcznie
 (patrz SITE_WORKFLOW.md).
 
 Użycie:
@@ -31,7 +31,7 @@ STRICT_RULES = [
     (re.compile(r"^[a-z-]+/index\.html$"), "hub rodziny", 10),
     (re.compile(r".*/przewodnik/index\.html$"), "filar gatunku", 10),
     (re.compile(r"^sprzet/"), "strona sprzętu", 6),
-    (re.compile(r"^poradniki/"), "poradnik ogólny", 6),
+    (re.compile(r"^opieka-uniwersalna/"), "poradnik ogólny", 6),
     (re.compile(r"^blog/"), "wpis blogowy", 5),
 ]
 DEFAULT_ARCHETYPE = ("satelita gatunku", 5)

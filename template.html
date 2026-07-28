@@ -12,38 +12,42 @@
 <body>
 
 <!-- ==========================================================
-     WZORZEC PODSTRONY — skopiuj ten plik przy tworzeniu nowej
+     WZORZEC PODSTRONY. Skopiuj ten plik przy tworzeniu nowej
      treści (patrz plan-podstron.csv dla URL/tytułu/frazy głównej).
      Zastąp: <title>, meta description, canonical, breadcrumbs, H1,
-     treść w <main> oraz nawigację "aktywna strona" jeśli potrzeba.
+     treść w <article>. Nagłówek i stopka są kopiowane ręcznie,
+     przy zmianie menu zaktualizuj już opublikowane strony (patrz
+     SITE_WORKFLOW.md, standing rules).
      ========================================================== -->
 
-<header class="site-header">
-  <div class="container nav">
-    <a href="/" class="nav-logo">terrarium<span>dla</span>.pl</a>
-    <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false" id="navToggle">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/weze/">Węże</a></li>
-      <li><a href="/gekony/">Gekony</a></li>
-      <li><a href="/agamy/">Agamy</a></li>
-      <li><a href="/kameleony/">Kameleony</a></li>
-      <li><a href="/zolwie/">Żółwie</a></li>
-      <li><a href="/bezkregowce/">Bezkręgowce</a></li>
-      <li><a href="/poradniki/">Opieka uniwersalna</a></li>
-    </ul>
+<header>
+  <div class="wrap hrow">
+    <a href="/" class="logo">terrarium<span>dla</span>.pl</a>
+    <nav>
+      <ul>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/weze/">Węże</a></li>
+        <li><a href="/gekony/">Gekony</a></li>
+        <li><a href="/agamy/">Agamy</a></li>
+        <li><a href="/kameleony/">Kameleony</a></li>
+        <li><a href="/zolwie/">Żółwie</a></li>
+        <li><a href="/bezkregowce/">Bezkręgowce</a></li>
+        <li><a href="/opieka-uniwersalna/">Opieka</a></li>
+      </ul>
+    </nav>
+    <input class="search" type="search" placeholder="Szukaj gatunku...">
   </div>
 </header>
 
 <main>
-  <div class="container">
+  <div class="wrap">
 
     <nav class="breadcrumbs" aria-label="Okruszki">
       <a href="/">Start</a> / <a href="/RODZINA/">Rodzina</a> / Bieżąca podstrona
     </nav>
 
     <article>
-      <h1>Nagłówek H1 — zawiera frazę główną</h1>
+      <h1>Nagłówek H1: zawiera frazę główną</h1>
 
       <p>Treść wprowadzająca...</p>
 
@@ -55,11 +59,15 @@
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div class="fabout">
+        <div class="logo">terrarium<span>dla</span>.pl</div>
+        <p>Osobisty dziennik terrarystyczny. Wymiary, temperatury i obserwacje z własnych terrariów, nie przepisane ogólniki.</p>
+      </div>
       <div>
-        <h4>Rodziny</h4>
+        <h4>Gatunki</h4>
         <ul>
           <li><a href="/weze/">Węże</a></li>
           <li><a href="/gekony/">Gekony</a></li>
@@ -67,42 +75,36 @@
           <li><a href="/kameleony/">Kameleony</a></li>
           <li><a href="/zolwie/">Żółwie</a></li>
           <li><a href="/bezkregowce/">Bezkręgowce</a></li>
-          <li><a href="/plazy/">Płazy</a></li>
-          <li><a href="/inne-gady/">Inne gady</a></li>
         </ul>
       </div>
       <div>
-        <h4>Zasoby</h4>
+        <h4>Opieka</h4>
         <ul>
-          <li><a href="/sprzet/">Sprzęt</a></li>
-          <li><a href="/karma/">Karma</a></li>
-          <li><a href="/poradniki/">Opieka uniwersalna</a></li>
-          <li><a href="/rosliny/">Rośliny do terrarium</a></li>
+          <li><a href="/opieka-uniwersalna/zdrowie/">Zdrowie i choroby</a></li>
+          <li><a href="/opieka-uniwersalna/karmienie/">Karmienie</a></li>
+          <li><a href="/opieka-uniwersalna/terrarium/">Terrarium i sprzęt</a></li>
+          <li><a href="/opieka-uniwersalna/ogolne/rozpoznanie-plci/">Rozpoznanie płci</a></li>
+          <li><a href="/opieka-uniwersalna/ogolne/zimowanie-brumacja/">Zimowanie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Serwis</h4>
+        <ul>
           <li><a href="/blog/">Blog</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>O serwisie</h4>
-        <ul>
-          <li><a href="/o-mnie/">O mnie</a></li>
+          <li><a href="/o-nas/">O mnie</a></li>
           <li><a href="/kontakt/">Kontakt</a></li>
           <li><a href="/polityka-prywatnosci/">Polityka prywatności</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; <span id="year"></span> terrariumdla.pl — czysta forma natury, terrarium dla Ciebie</span>
-      <span>Zbudowane w Polsce 🇵🇱</span>
+    <div class="fbottom">
+      <span>&copy; <span id="year"></span> terrariumdla.pl</span>
+      <span>Czysta forma natury, terrarium dla Ciebie</span>
     </div>
   </div>
 </footer>
 
 <script>
-  document.getElementById('navToggle').addEventListener('click', function () {
-    var links = document.getElementById('navLinks');
-    var isOpen = links.classList.toggle('is-open');
-    this.setAttribute('aria-expanded', isOpen);
-  });
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 

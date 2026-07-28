@@ -3,205 +3,330 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>terrariumdla.pl — terrarium dla węża, gekona, agamy i nie tylko</title>
-<meta name="description" content="Praktyczny przewodnik po terrarystyce: wymiary, ceny, temperatury i sprzęt. Konkrety zamiast ogólników — terrarium dla węża, gekona, agamy, żółwia i innych gatunków.">
+<title>terrariumdla.pl | Dziennik terrarystyczny: gatunki, wymiary, obserwacje</title>
+<meta name="description" content="Notatki z własnych terrariów: wymiary, temperatury, karmienie i zachowanie dla węży, gekonów, agam, kameleonów, żółwi i bezkręgowców. Konkrety, nie ogólniki.">
 <link rel="canonical" href="https://terrariumdla.pl/">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container nav">
-    <a href="/" class="nav-logo">terrarium<span>dla</span>.pl</a>
-    <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false" id="navToggle">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/weze/">Węże</a></li>
-      <li><a href="/gekony/">Gekony</a></li>
-      <li><a href="/agamy/">Agamy</a></li>
-      <li><a href="/kameleony/">Kameleony</a></li>
-      <li><a href="/zolwie/">Żółwie</a></li>
-      <li><a href="/bezkregowce/">Bezkręgowce</a></li>
-      <li><a href="/poradniki/">Opieka uniwersalna</a></li>
-    </ul>
+<header>
+  <div class="wrap hrow">
+    <a href="/" class="logo">terrarium<span>dla</span>.pl</a>
+    <nav>
+      <ul>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/weze/">Węże</a></li>
+        <li><a href="/gekony/">Gekony</a></li>
+        <li><a href="/agamy/">Agamy</a></li>
+        <li><a href="/kameleony/">Kameleony</a></li>
+        <li><a href="/zolwie/">Żółwie</a></li>
+        <li><a href="/bezkregowce/">Bezkręgowce</a></li>
+        <li><a href="/opieka-uniwersalna/">Opieka</a></li>
+      </ul>
+    </nav>
+    <input class="search" type="search" placeholder="Szukaj gatunku...">
   </div>
 </header>
 
 <main>
-
-  <!-- Hero: H1 statyczny (SEO), animacja tylko w podtytule -->
-  <section class="hero container">
-    <h1>Terrarium dla Ciebie</h1>
-    <p class="hero-tagline">
-      Terrarium dla
-      <span class="rotator-list">
-        <span>węża</span><span>żółwia</span><span>gekona</span><span>agamy</span>
-        <span>kameleona</span><span>modliszki</span><span>ptasznika</span>
-        <span>straszyka</span><span>mrówek</span><span>Ciebie</span>
-      </span>
-    </p>
-    <p class="hero-sub">Czysta forma natury. Konkrety zamiast opisów ogólnych: wymiary, ceny i temperatury dla każdego gatunku.</p>
-  </section>
-
-  <!-- Tabela porównawcza / gatunki startowe -->
-  <section class="section container">
-    <div class="section-title">
-      <h2>Gatunki dla początkujących</h2>
-      <a href="/poradniki/start-w-terrarystyce/">Jak zacząć w terrarystyce →</a>
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Notatki z terrariów, nie <em>ogólniki ze sklepu</em></h1>
+      <p class="lead">Wymiary w centymetrach, temperatury w stopniach, częstotliwość karmienia. Dla gatunków, które faktycznie trzymam albo trzymałem: od węża zbożowego po ptasznika. To dziennik, nie sklep. Na razie zbieram tu wiedzę, nie towar.</p>
+      <div class="btns">
+        <a href="#gatunki" class="btn btn-primary">Zobacz gatunki</a>
+        <a href="/opieka-uniwersalna/poradniki/start-w-terrarystyce/" class="btn btn-ghost">Zacznij tutaj, jeśli to Twój pierwszy raz</a>
+      </div>
     </div>
-    <p class="text-muted">Minimalne wymiary terrarium dla dorosłego osobnika i orientacyjny poziom trudności hodowli.</p>
+
+    <div class="picker">
+      <h3>Gatunki, o których piszę najwięcej</h3>
+
+      <a class="picker-row" href="/weze/waz-zbozowy/przewodnik/">
+        <span><b>Wąż zbożowy</b><small>100×50×50 cm, karmienie raz na 7–10 dni</small></span>
+        <span class="tag t-easy">łatwy</span>
+      </a>
+      <a class="picker-row" href="/gekony/gekon-lamparci/przewodnik/">
+        <span><b>Gekon lamparci</b><small>60×40×40 cm, bez UVB przy dobrej diecie</small></span>
+        <span class="tag t-easy">łatwy</span>
+      </a>
+      <a class="picker-row" href="/plazy/aksolotl/przewodnik/">
+        <span><b>Aksolotl</b><small>80×35×35 cm akwarium, woda 16–20°C</small></span>
+        <span class="tag t-mid">średni</span>
+      </a>
+      <a class="picker-row" href="/agamy/agama-brodata/przewodnik/">
+        <span><b>Agama brodata</b><small>120×60×60 cm, wymaga UVB i punktu grzewczego</small></span>
+        <span class="tag t-mid">średni</span>
+      </a>
+      <a class="picker-row" href="/kameleony/kameleon-jemenski/przewodnik/">
+        <span><b>Kameleon jemeński</b><small>60×60×120 cm, zraszanie kilka razy dziennie</small></span>
+        <span class="tag t-hard">trudny</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ KATEGORIE ============ -->
+<section id="gatunki">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Gatunki według grupy</h2>
+        <p>Każdy gatunek ma osobny przewodnik: wymiary terrarium, biologia, karmienie, odmiany barwne.</p>
+      </div>
+    </div>
+    <div class="cats">
+      <a class="cat" href="/weze/">
+        <span class="ico">🐍</span>
+        <h3>Węże</h3>
+        <p>Wąż zbożowy, pyton królewski, boa dusiciel, a także zaskroniec z ogrodu.</p>
+        <span class="count">3 gatunki hodowlane</span>
+      </a>
+      <a class="cat" href="/gekony/">
+        <span class="ico">🦎</span>
+        <h3>Gekony</h3>
+        <p>Gekon lamparci i orzęsiony, odmiany barwne, wymagania termiczne.</p>
+        <span class="count">2 gatunki</span>
+      </a>
+      <a class="cat" href="/agamy/">
+        <span class="ico">🐉</span>
+        <h3>Agamy</h3>
+        <p>Agama brodata: kolory, karmienie, oświetlenie UVB, brumacja.</p>
+        <span class="count">1 gatunek</span>
+      </a>
+      <a class="cat" href="/kameleony/">
+        <span class="ico">🌿</span>
+        <h3>Kameleony</h3>
+        <p>Kameleon jemeński, terrarium pionowe, nawilżanie i zraszanie.</p>
+        <span class="count">1 gatunek</span>
+      </a>
+      <a class="cat" href="/zolwie/">
+        <span class="ico">🐢</span>
+        <h3>Żółwie</h3>
+        <p>Lądowe, wodno-lądowe, grecki i stepowy. Akwaterraria i zimowanie.</p>
+        <span class="count">4 gatunki</span>
+      </a>
+      <a class="cat" href="/bezkregowce/">
+        <span class="ico">🕷️</span>
+        <h3>Bezkręgowce</h3>
+        <p>Ptaszniki, modliszki, straszyki, formikaria z mrówkami.</p>
+        <span class="count">4 grupy</span>
+      </a>
+      <a class="cat" href="/plazy/">
+        <span class="ico">🐸</span>
+        <h3>Płazy</h3>
+        <p>Aksolotl, salamandra plamista, traszka grzebieniasta, rzekotka.</p>
+        <span class="count">4 gatunki</span>
+      </a>
+      <a class="cat" href="/opieka-uniwersalna/">
+        <span class="ico">🩺</span>
+        <h3>Opieka uniwersalna</h3>
+        <p>Wylinka, rozpoznanie płci, krzywica, roztocza, czyszczenie terrarium.</p>
+        <span class="count">tematy wspólne dla wszystkich gatunków</span>
+      </a>
+      <a class="cat" href="/blog/">
+        <span class="ico">📓</span>
+        <h3>Blog</h3>
+        <p>Prawo, gatunki dziko żyjące w Polsce, hodowla karmówki, obserwacje.</p>
+        <span class="count">nowe wpisy w miarę pisania</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TABELA PORÓWNAWCZA ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Porównanie gatunków dla początkujących</h2>
+        <p>Minimalne wymiary terrarium dla dorosłego osobnika, nie dla młodego.</p>
+      </div>
+    </div>
+
     <div class="table-wrap">
       <table class="compare-table">
         <thead>
           <tr>
             <th>Gatunek</th>
-            <th>Min. wymiary terrarium</th>
+            <th>Terrarium (min.)</th>
+            <th>Temperatura</th>
+            <th>Karmienie</th>
+            <th>Dożywa</th>
             <th>Trudność</th>
-            <th>Przewodnik</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Wąż zbożowy</td>
-            <td>90×45×45 cm</td>
-            <td><span class="badge easy">Łatwy</span></td>
-            <td><a href="/weze/waz-zbozowy/przewodnik/">Zobacz przewodnik</a></td>
+            <td><a href="/weze/waz-zbozowy/przewodnik/">Wąż zbożowy</a></td>
+            <td class="num">100×50×50 cm</td>
+            <td class="num">24–30°C</td>
+            <td>1 mysz / 7–10 dni</td>
+            <td class="num">15–20 lat</td>
+            <td><span class="tag t-easy">łatwy</span></td>
           </tr>
           <tr>
-            <td>Gekon lamparci</td>
-            <td>60×45×30 cm</td>
-            <td><span class="badge easy">Łatwy</span></td>
-            <td><a href="/gekony/gekon-lamparci/przewodnik/">Zobacz przewodnik</a></td>
+            <td><a href="/gekony/gekon-lamparci/przewodnik/">Gekon lamparci</a></td>
+            <td class="num">60×40×40 cm</td>
+            <td class="num">26–32°C</td>
+            <td>owady co 2–3 dni</td>
+            <td class="num">15–20 lat</td>
+            <td><span class="tag t-easy">łatwy</span></td>
           </tr>
           <tr>
-            <td>Agama brodata</td>
-            <td>120×60×60 cm</td>
-            <td><span class="badge medium">Średni</span></td>
-            <td><a href="/agamy/agama-brodata/przewodnik/">Zobacz przewodnik</a></td>
+            <td><a href="/gekony/gekon-orzesiony/przewodnik/">Gekon orzęsiony</a></td>
+            <td class="num">45×45×60 cm</td>
+            <td class="num">22–26°C</td>
+            <td>pokarm gotowy 3× / tydz.</td>
+            <td class="num">15–20 lat</td>
+            <td><span class="tag t-easy">łatwy</span></td>
           </tr>
           <tr>
-            <td>Aksolotl</td>
-            <td>80×35×35 cm (akwarium)</td>
-            <td><span class="badge medium">Średni</span></td>
-            <td><a href="/plazy/aksolotl/przewodnik/">Zobacz przewodnik</a></td>
+            <td><a href="/plazy/aksolotl/przewodnik/">Aksolotl</a></td>
+            <td class="num">80×35×35 cm (akwarium)</td>
+            <td class="num">16–20°C (woda)</td>
+            <td>2–3× w tygodniu</td>
+            <td class="num">10–15 lat</td>
+            <td><span class="tag t-mid">średni</span></td>
           </tr>
           <tr>
-            <td>Pyton królewski</td>
-            <td>90×45×45 cm</td>
-            <td><span class="badge medium">Średni</span></td>
-            <td><a href="/weze/pyton-krolewski/przewodnik/">Zobacz przewodnik</a></td>
+            <td><a href="/weze/pyton-krolewski/przewodnik/">Pyton królewski</a></td>
+            <td class="num">120×60×60 cm</td>
+            <td class="num">27–32°C</td>
+            <td>1 szczur / 10–14 dni</td>
+            <td class="num">20–30 lat</td>
+            <td><span class="tag t-mid">średni</span></td>
+          </tr>
+          <tr>
+            <td><a href="/agamy/agama-brodata/przewodnik/">Agama brodata</a></td>
+            <td class="num">120×60×60 cm</td>
+            <td class="num">28–42°C</td>
+            <td>owady + warzywa codziennie</td>
+            <td class="num">8–12 lat</td>
+            <td><span class="tag t-mid">średni</span></td>
+          </tr>
+          <tr>
+            <td><a href="/kameleony/kameleon-jemenski/przewodnik/">Kameleon jemeński</a></td>
+            <td class="num">60×60×120 cm</td>
+            <td class="num">24–35°C</td>
+            <td>owady codziennie</td>
+            <td class="num">5–8 lat</td>
+            <td><span class="tag t-hard">trudny</span></td>
           </tr>
         </tbody>
       </table>
     </div>
-  </section>
+    <p class="text-dim" style="font-size:13px;margin-top:12px">
+      Wartości do zweryfikowania przy pisaniu każdego przewodnika osobno. Traktuj tę tabelę jako punkt startowy, nie ostateczne źródło.
+    </p>
+  </div>
+</section>
 
-  <!-- Karty kategorii -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="mt-0">Wybierz kategorię</h2>
-      <div class="grid">
-        <div class="card">
-          <h3><a href="/weze/">Węże</a></h3>
-          <p>Hodowla węży i identyfikacja gatunków dzikich w Polsce.</p>
-        </div>
-        <div class="card">
-          <h3><a href="/gekony/">Gekony</a></h3>
-          <p>Lamparci, orzęsiony i inne gatunki dla początkujących.</p>
-        </div>
-        <div class="card">
-          <h3><a href="/agamy/">Agamy</a></h3>
-          <p>Agama brodata i pokrewne gatunki jaszczurek.</p>
-        </div>
-        <div class="card">
-          <h3><a href="/kameleony/">Kameleony</a></h3>
-          <p>Wymagająca, ale spektakularna grupa gadów.</p>
-        </div>
-        <div class="card">
-          <h3><a href="/zolwie/">Żółwie</a></h3>
-          <p>Żółwie lądowe i wodno-lądowe, w tym czerwonolicy.</p>
-        </div>
-        <div class="card">
-          <h3><a href="/bezkregowce/">Bezkręgowce</a></h3>
-          <p>Ptaszniki, modliszki, straszyki i skorpiony.</p>
-        </div>
-        <div class="card">
-          <h3><a href="/plazy/">Płazy</a></h3>
-          <p>Aksolotl, salamandra, traszka i rzekotka.</p>
-        </div>
-        <div class="card">
-          <h3><a href="/sprzet/">Sprzęt</a></h3>
-          <p>Maty grzewcze, lampy, termostaty i podłoże — dla każdego gatunku.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Najczęstsze problemy -->
-  <section class="section container">
-    <h2 class="mt-0">Najczęstsze problemy</h2>
-    <div class="grid">
-      <div class="card">
-        <h3><a href="/poradniki/legalnosc-hodowli/">Czy hodowla gada jest legalna?</a></h3>
-        <p>Przepisy dotyczące gatunków egzotycznych w Polsce.</p>
-      </div>
-      <div class="card">
-        <h3><a href="/poradniki/kwarantanna-nowego-gada/">Kwarantanna nowego gada</a></h3>
-        <p>Jak bezpiecznie wprowadzić nowe zwierzę do domu.</p>
-      </div>
-      <div class="card">
-        <h3><a href="/weze-w-polsce/zaskroniec-czy-zmija/">To zaskroniec czy żmija?</a></h3>
-        <p>Jak odróżnić dzikie węże spotykane w Polsce.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-title">
-        <h2 class="mt-0">Z bloga</h2>
-        <a href="/blog/">Wszystkie wpisy →</a>
-      </div>
-      <div class="grid">
-        <div class="card blog-card">
-          <time datetime="2026-07-28">28 lipca 2026</time>
-          <h3><a href="/blog/">Tytuł wpisu #1</a></h3>
-          <p>Krótki zajawka wpisu blogowego.</p>
-        </div>
-        <div class="card blog-card">
-          <time datetime="2026-07-28">28 lipca 2026</time>
-          <h3><a href="/blog/">Tytuł wpisu #2</a></h3>
-          <p>Krótki zajawka wpisu blogowego.</p>
-        </div>
-        <div class="card blog-card">
-          <time datetime="2026-07-28">28 lipca 2026</time>
-          <h3><a href="/blog/">Tytuł wpisu #3</a></h3>
-          <p>Krótki zajawka wpisu blogowego.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kalkulator kosztów startowych -->
-  <section class="section container">
-    <div class="calc-bar">
+<!-- ============ PROBLEMY / OPIEKA ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
       <div>
-        <h3 class="mt-0" style="margin-bottom:0.25rem;">Ile kosztuje start w terrarystyce?</h3>
-        <p class="text-muted mb-0">Policz orientacyjny koszt zestawu startowego dla wybranego gatunku.</p>
+        <h2>Coś jest nie tak ze zwierzakiem?</h2>
+        <p>Najczęściej powtarzające się problemy, niezależnie od gatunku.</p>
       </div>
-      <a href="/sprzet/kalkulator-kosztow/" class="btn btn-primary">Otwórz kalkulator</a>
+      <a href="/opieka-uniwersalna/">Wszystkie tematy opieki →</a>
     </div>
-  </section>
+    <div class="probs">
+      <a class="prob" href="/weze/ogolne/wylinka/">
+        <h4>Nie zrzucił wylinki w całości</h4>
+        <p>Resztki skóry na ogonie i oczach. Kiedy wystarczy podnieść wilgotność, a kiedy trzeba interweniować.</p>
+      </a>
+      <a class="prob" href="/opieka-uniwersalna/karmienie/czestotliwosc-karmienia/">
+        <h4>Odmawia jedzenia</h4>
+        <p>Ile tygodni głodówki jest normalne u pytona królewskiego, a kiedy to objaw choroby.</p>
+      </a>
+      <a class="prob" href="/opieka-uniwersalna/zdrowie/roztocza-pasozyty/">
+        <h4>Roztocza w terrarium</h4>
+        <p>Czarne punkty pod łuskami i w wodzie. Jak wyparzyć terrarium i czym leczyć zwierzę.</p>
+      </a>
+      <a class="prob" href="/opieka-uniwersalna/zdrowie/krzywica-mbd/">
+        <h4>Krzywica (MBD)</h4>
+        <p>Drżenie kończyn, miękka szczęka, wygięty kręgosłup. Niedobór wapnia i braki w UVB.</p>
+      </a>
+      <a class="prob" href="/opieka-uniwersalna/ogolne/rozpoznanie-plci/">
+        <h4>Samiec czy samica</h4>
+        <p>Pory przedkloakalne, wybrzuszenia u nasady ogona, sondowanie. Dla węży, gekonów i agam.</p>
+      </a>
+      <a class="prob" href="/opieka-uniwersalna/ogolne/dziwne-zachowania/">
+        <h4>Dziwnie się zachowuje</h4>
+        <p>Ciągłe chowanie się, tarcie nosem o szybę, ziewanie. Co jest normą, a co sygnałem stresu.</p>
+      </a>
+    </div>
+  </div>
+</section>
 
+<!-- ============ BLOG / DZIENNIK ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Z bloga</h2>
+        <p>Obserwacje i tematy ogólne, które nie należą do żadnego pojedynczego gatunku.</p>
+      </div>
+      <a href="/blog/">Wszystkie wpisy →</a>
+    </div>
+    <div class="posts">
+      <a class="post" href="/blog/legalnosc-hodowli-gadow-w-polsce/">
+        <div class="thumb" data-ico="⚖️"></div>
+        <div class="body">
+          <span class="meta">Prawo</span>
+          <h3>Jakie gady można legalnie trzymać w Polsce</h3>
+          <p>Załączniki CITES, rejestracja w starostwie, gatunki wymagające zezwolenia.</p>
+        </div>
+      </a>
+      <a class="post" href="/blog/zaskroniec-czy-zmija/">
+        <div class="thumb" data-ico="🌾"></div>
+        <div class="body">
+          <span class="meta">Gatunki dzikie</span>
+          <h3>Zaskroniec, żmija czy padalec: jak rozpoznać węża w ogrodzie</h3>
+          <p>Kształt źrenicy, żółte plamy za głową, zachowanie przy spotkaniu z człowiekiem.</p>
+        </div>
+      </a>
+      <a class="post" href="/blog/karaczany-hodowla-karmowa/">
+        <div class="thumb" data-ico="🪲"></div>
+        <div class="body">
+          <span class="meta">Karmówka</span>
+          <h3>Hodowla karaczanów: taniej niż kupowanie świerszczy</h3>
+          <p>Pojemnik, temperatura, tempo rozmnażania i ile owadów daje jedna kolonia miesięcznie.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ O AUTORZE (zamiast CTA sprzedażowego) ============ -->
+<section style="padding-top:8px">
+  <div class="wrap">
+    <div class="strip">
+      <div>
+        <h2>Cześć, jestem Wojtek</h2>
+        <p>Ten serwis powstaje z notatek z własnych terrariów: węży, agam, gekonów, ptaszników i modliszek. Opisuję oświetlenie, wilgotność, dobór podłoża i wymiary terrarium osobno dla każdego gatunku, bo to, co sprawdza się u węża zbożowego, nie sprawdzi się u kameleona.</p>
+      </div>
+      <a href="/o-nas/" class="btn btn-primary">Przeczytaj, jak zaczynałem</a>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div class="fabout">
+        <div class="logo">terrarium<span>dla</span>.pl</div>
+        <p>Osobisty dziennik terrarystyczny. Wymiary, temperatury i obserwacje z własnych terrariów, nie przepisane ogólniki.</p>
+      </div>
       <div>
-        <h4>Rodziny</h4>
+        <h4>Gatunki</h4>
         <ul>
           <li><a href="/weze/">Węże</a></li>
           <li><a href="/gekony/">Gekony</a></li>
@@ -209,42 +334,36 @@
           <li><a href="/kameleony/">Kameleony</a></li>
           <li><a href="/zolwie/">Żółwie</a></li>
           <li><a href="/bezkregowce/">Bezkręgowce</a></li>
-          <li><a href="/plazy/">Płazy</a></li>
-          <li><a href="/inne-gady/">Inne gady</a></li>
         </ul>
       </div>
       <div>
-        <h4>Zasoby</h4>
+        <h4>Opieka</h4>
         <ul>
-          <li><a href="/sprzet/">Sprzęt</a></li>
-          <li><a href="/karma/">Karma</a></li>
-          <li><a href="/poradniki/">Opieka uniwersalna</a></li>
-          <li><a href="/rosliny/">Rośliny do terrarium</a></li>
+          <li><a href="/opieka-uniwersalna/zdrowie/">Zdrowie i choroby</a></li>
+          <li><a href="/opieka-uniwersalna/karmienie/">Karmienie</a></li>
+          <li><a href="/opieka-uniwersalna/terrarium/">Terrarium i sprzęt</a></li>
+          <li><a href="/opieka-uniwersalna/ogolne/rozpoznanie-plci/">Rozpoznanie płci</a></li>
+          <li><a href="/opieka-uniwersalna/ogolne/zimowanie-brumacja/">Zimowanie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Serwis</h4>
+        <ul>
           <li><a href="/blog/">Blog</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>O serwisie</h4>
-        <ul>
-          <li><a href="/o-mnie/">O mnie</a></li>
+          <li><a href="/o-nas/">O mnie</a></li>
           <li><a href="/kontakt/">Kontakt</a></li>
           <li><a href="/polityka-prywatnosci/">Polityka prywatności</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; <span id="year"></span> terrariumdla.pl — czysta forma natury, terrarium dla Ciebie</span>
-      <span>Zbudowane w Polsce 🇵🇱</span>
+    <div class="fbottom">
+      <span>&copy; <span id="year"></span> terrariumdla.pl</span>
+      <span>Treści poglądowe, serwis w budowie</span>
     </div>
   </div>
 </footer>
 
 <script>
-  document.getElementById('navToggle').addEventListener('click', function () {
-    var links = document.getElementById('navLinks');
-    var isOpen = links.classList.toggle('is-open');
-    this.setAttribute('aria-expanded', isOpen);
-  });
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 

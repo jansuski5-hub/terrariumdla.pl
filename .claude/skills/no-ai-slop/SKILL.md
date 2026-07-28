@@ -1,9 +1,9 @@
 ---
 name: no-ai-slop
-description: Zasady pisania tekstów, które nie brzmią jak wygenerowane przez AI — dla terrariumdla.pl. Użyj zawsze, gdy piszesz lub redagujesz dowolny tekst na stronę — przewodniki gatunkowe, artykuły blogowe, opisy sprzętu, meta description, treści na stronę główną.
+description: "Zasady pisania tekstów, które nie brzmią jak wygenerowane przez AI, dla terrariumdla.pl. Użyj zawsze, gdy piszesz lub redagujesz dowolny tekst na stronę: przewodniki gatunkowe, artykuły blogowe, opisy sprzętu, meta description, treści na stronę główną."
 ---
 
-# no-ai-slop — zasady pisania dla terrariumdla.pl
+# no-ai-slop: zasady pisania dla terrariumdla.pl
 
 ## Cel
 
@@ -15,12 +15,12 @@ Nie jest to system cytowań ani szablon do wypełnienia. Chodzi o samo pisanie: 
 
 Głos to precyzja kogoś, kto faktycznie hodował dany gatunek, nie kogoś, kto przepisał trzy inne poradniki. Czyta się to jak notatki hodowcy, który zmierzył temperaturę w punkcie grzewczym, policzył koszt zestawu startowego i wie, dlaczego akurat te wymiary terrarium, a nie inne. Każde twierdzenie niesie sprawdzalny szczegół: konkretny wymiar w centymetrach, cenę w złotych, zakres temperatury w stopniach, częstotliwość karmienia, realny czas życia gatunku.
 
-Sceptycyzm wobec złych praktyk (np. trzymanie węża zbożowego w terrarium 40×30×30 cm) wyraża się przez precyzję opisu konsekwencji, nie przez przymiotniki czy oburzenie. Zamiast „to fatalny pomysł" — napisz, co się stanie: wąż nie ma miejsca na pełne rozprostowanie, częściej odmawia jedzenia, trudniej utrzymać gradient temperatur.
+Sceptycyzm wobec złych praktyk (np. trzymanie węża zbożowego w terrarium 40×30×30 cm) wyraża się przez precyzję opisu konsekwencji, nie przez przymiotniki czy oburzenie. Zamiast „to fatalny pomysł", napisz, co się stanie: wąż nie ma miejsca na pełne rozprostowanie, częściej odmawia jedzenia, trudniej utrzymać gradient temperatur.
 
 Dwa źródła trzymają szczegóły robocze:
 
-- ten plik (`SKILL.md`) — zasady antyslopowe z przykładami ŹLE/DOBRZE
-- `references/ai-writing-detection.md` — lista zabronionych słów i fraz po polsku, wzorce strukturalne do wyłapania
+- ten plik (`SKILL.md`): zasady antyslopowe z przykładami ŹLE/DOBRZE
+- `references/ai-writing-detection.md`: lista zabronionych słów i fraz po polsku, wzorce strukturalne do wyłapania
 
 ## Zasady operacyjne
 
@@ -34,11 +34,11 @@ Nienegocjowalne. Złamanie którejkolwiek dyskwalifikuje tekst.
 
 1. **Bez pauz (—).** Znak jest zabroniony. Użyj przecinka, kropki, dwukropka, nawiasu albo przebuduj zdanie.
 
-2. **Bez niepodpartych statystyk.** Każda liczba musi być prawdziwa i przypisana do źródła — Ahrefs, dane producenta sprzętu, własny pomiar, konkretna publikacja. Jeśli nie wiesz, skąd wziąć liczbę, nie pisz jej. Wymyślona liczba jest gorsza niż brak liczby.
+2. **Bez niepodpartych statystyk.** Każda liczba musi być prawdziwa i przypisana do źródła: Ahrefs, dane producenta sprzętu, własny pomiar, konkretna publikacja. Jeśli nie wiesz, skąd wziąć liczbę, nie pisz jej. Wymyślona liczba jest gorsza niż brak liczby.
 
 3. **Bez dopowiedzeń w nawiasach w nagłówkach.** Zaufaj czytelnikowi.
 
-4. **Bez wzmacniaczy.** „Niezwykle", „drastycznie", „wyjątkowo", „znacząco", „niesamowicie", „naprawdę", „absolutnie", „dosłownie" — zabronione. Udowodnij faktem albo wytnij słowo.
+4. **Bez wzmacniaczy.** Zabronione: „niezwykle", „drastycznie", „wyjątkowo", „znacząco", „niesamowicie", „naprawdę", „absolutnie", „dosłownie". Udowodnij faktem albo wytnij słowo.
 
 5. **Bez pustych stwierdzeń.** Każde twierdzenie musi kończyć się konkretnym, sprawdzalnym szczegółem. Jeśli nie może, usuń zdanie.
 
@@ -63,7 +63,7 @@ Nienegocjowalne. Złamanie którejkolwiek dyskwalifikuje tekst.
 
 14. **Bez sztucznego entuzjazmu.** Bez wykrzykników, bez klaskania. Podaj fakty. To one niosą ciężar przekonania.
 
-15. **Bez słów-wytrychów.** „Pomaga zapewnić", „może potencjalnie", „w pewnym sensie" — albo coś działa, albo nie. Zdecyduj się albo wytnij.
+15. **Bez słów-wytrychów.** Zabronione: „pomaga zapewnić", „może potencjalnie", „w pewnym sensie". Albo coś działa, albo nie: zdecyduj się albo wytnij.
 
 16. **Bez narracyjnych, dramatycznych albo AI-ogólnikowych nagłówków.** Bez ramowania fabularnego („Pułapka pierwszego terrarium"), tajemniczości clickbaitowej („Ukryty koszt hodowli gada"), struktury clickbaitowej („Dlaczego 9 na 10 początkujących popełnia ten błąd"), niejasnych nagłówków analitycznych („Szerszy kontekst", „Ogólny trend"). Nagłówek opisuje, co jest w sekcji, nie co to znaczy. Nazwij temat, nie abstrakcję.
 

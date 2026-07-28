@@ -1,16 +1,16 @@
-# Wykrywanie tekstu wygenerowanego przez AI — słownik dla terrariumdla.pl
+# Wykrywanie tekstu wygenerowanego przez AI: słownik dla terrariumdla.pl
 
 Referencja robocza do `SKILL.md`. Skanuj każdy szkic tekstu pod kątem tych kategorii przed publikacją.
 
 ## Zabronione czasowniki ("AI-czasowniki")
 
-wykorzystać (zamiast "użyć"), umożliwiać, stanowić, obejmować (jako wypełniacz), skupiać się na, zapewniać (jako wytrych bez konkretu), oferować (jako wytrych — "terrarium oferuje przestrzeń" zamiast "terrarium ma 90 cm długości"), cieszyć się popularnością, odgrywać rolę, przyczyniać się do, sprzyjać, wzbogacać, kształtować, definiować (metaforycznie).
+wykorzystać (zamiast "użyć"), umożliwiać, stanowić, obejmować (jako wypełniacz), skupiać się na, zapewniać (jako wytrych bez konkretu), oferować (jako wytrych; "terrarium oferuje przestrzeń" zamiast "terrarium ma 90 cm długości"), cieszyć się popularnością, odgrywać rolę, przyczyniać się do, sprzyjać, wzbogacać, kształtować, definiować (metaforycznie).
 
 Zamienniki: użyć, dać, mieć, pomóc, pokazać, wymagać, potrzebować, kosztować, ważyć, mierzyć.
 
 ## Zabronione przymiotniki i przysłówki
 
-kompleksowy, holistyczny, kluczowy (jako domyślny przymiotnik), fascynujący, niezwykły, wyjątkowy, niesamowity, imponujący, doskonały, idealny (bez definicji "dla czego"), bogaty (w kontekście "bogata oferta"), szeroki (bez liczby — "szeroki wybór" zamiast "12 gatunków"), różnorodny (bez wyliczenia), dynamicznie rozwijający się, innowacyjny, rewolucyjny, kompletny (jako etykieta marketingowa — użyj tylko jeśli faktycznie nic nie brakuje i to widać z treści).
+kompleksowy, holistyczny, kluczowy (jako domyślny przymiotnik), fascynujący, niezwykły, wyjątkowy, niesamowity, imponujący, doskonały, idealny (bez definicji "dla czego"), bogaty (w kontekście "bogata oferta"), szeroki (bez liczby; "szeroki wybór" zamiast "12 gatunków"), różnorodny (bez wyliczenia), dynamicznie rozwijający się, innowacyjny, rewolucyjny, kompletny (jako etykieta marketingowa; użyj tylko jeśli faktycznie nic nie brakuje i to widać z treści).
 
 ## Wzmacniacze (zabronione bez wyjątku)
 
@@ -61,12 +61,12 @@ Dobry nagłówek nazywa temat sekcji wprost: "Wymiary terrarium dla dorosłego w
 - Każdy akapit zaczynający się od tego samego typu zdania (np. zawsze definicja na początku).
 - Lista punktowana, w której każdy punkt ma dokładnie taką samą liczbę słów i taką samą strukturę gramatyczną.
 - Zdania kończące się identyczną frazą podsumowującą w kilku kolejnych akapitach ("...co czyni go świetnym wyborem", powtórzone 4 razy w jednym artykule).
-- Konstrukcja kontrastowa "X, nie Y" nadużywana jako tik stylistyczny w wielu zdaniach pod rząd — rozbij na osobne zdania albo zmień łącznik za każdym razem (zamiast, a nie, w przeciwieństwie do, natomiast).
+- Konstrukcja kontrastowa "X, nie Y" nadużywana jako tik stylistyczny w wielu zdaniach pod rząd; rozbij na osobne zdania albo zmień łącznik za każdym razem (zamiast, a nie, w przeciwieństwie do, natomiast).
 
 ## Dodatkowe zasady specyficzne dla treści terrarystycznych
 
-- Nie pisz "terrarium powinno być odpowiedniej wielkości" — podaj wymiar w cm.
-- Nie pisz "gad wymaga odpowiedniej temperatury" — podaj zakres w °C i miejsce pomiaru (punkt grzewczy vs. chłodny koniec).
-- Nie pisz "karmienie regularne" — podaj częstotliwość (np. co 7 dni dla młodego węża zbożowego, co 10–14 dni dla dorosłego).
-- Nie pisz "koszt umiarkowany" — podaj kwotę w złotych albo widełki cenowe z datą, kiedy sprawdzone.
+- Nie pisz "terrarium powinno być odpowiedniej wielkości"; podaj wymiar w cm.
+- Nie pisz "gad wymaga odpowiedniej temperatury"; podaj zakres w °C i miejsce pomiaru (punkt grzewczy vs. chłodny koniec).
+- Nie pisz "karmienie regularne"; podaj częstotliwość (np. co 7 dni dla młodego węża zbożowego, co 10–14 dni dla dorosłego).
+- Nie pisz "koszt umiarkowany"; podaj kwotę w złotych albo widełki cenowe z datą, kiedy sprawdzone.
 - Każde stwierdzenie o legalności hodowli musi wskazywać konkretny przepis lub rejestr, nie ogólnik "sprawdź przepisy".
