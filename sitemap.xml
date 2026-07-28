@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  sitemap.xml — terrariumdla.pl
+
+  Rozbudowuj przy każdej nowej opublikowanej podstronie (patrz standing rules
+  w SITE_WORKFLOW.md: "Nowe podstrony muszą być wpięte w index.html swojej
+  rodziny oraz w sitemap.xml"). <lastmod> aktualizuj przy realnej zmianie
+  treści, nie automatycznie przy każdym commicie.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://terrariumdla.pl/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
