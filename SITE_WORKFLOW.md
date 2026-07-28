@@ -51,6 +51,18 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-07-28 (sesja 4)_
+
+**Zrobione (ta sesja; SEO homepage wg briefu Surfera):**
+- Nowy hero: zdjęcie węża boa (`assets/img/pexels-botanphotography-29378239.jpg`, dodane przez Wojciecha bezpośrednio do repo) na całą szerokość, nagłówek „Cześć, jestem Wojtek” + opis w półprzezroczystym boxie (`.hero-box`, `rgba(30,32,35,.74)` + blur), przycisk „Przeczytaj, jak zaczynałem” obok. Usunięto stary `.hero-grid` i kartę `.picker` (element po prawej).
+- Usunięto sekcję „Porównanie gatunków dla początkujących” (tabela porównawcza) i zdublowaną sekcję „Cześć, jestem Wojtek” z dołu strony (treść przeniesiona do hero).
+- Nowy favicon: głowa węża z rozwidlonym językiem zamiast kropki (`assets/img/favicon.svg`), zweryfikowany wizualnie przez konwersję SVG→PNG (`convert` + librsvg w sandboxie). Ta sama ikona jako `.logo-mark` w prawym rogu headera, obok pola wyszukiwania.
+- Zoptymalizowano treść strony głównej pod `surfer-guidelines-terrarium-28-07-2026.txt` (80 fraz kluczowych z zadanym zakresem wystąpień + 12 pytań FAQ). Dodano nowe sekcje: „Rodzaje terrariów”, „Wyposażenie terrarium”, „Jakie zwierzęta trzyma się w terrarium”, „Kilka liczb o gatunkach” (callouty z faktami od Wojciecha: długości gatunków, wymiary terrarium, wilgotność, temperatura), oraz FAQ (`<details>/<summary>`, 12 pytań z briefu, bez windowania liczby nagłówków bo `<summary>` nie jest tagiem nagłówkowym).
+- Policzono pokrycie skryptem (regex + zliczanie substring case-insensitive na tekście, alt, title, meta description): wynik końcowy 80/80 fraz z co najmniej jednym wystąpieniem, 57/80 z pełnym minimum z briefu. Nie dobijano do górnych/wysokich progów (np. „ptaszników” min 15, „zwierzęta” min 11) celowo, żeby nie przejść w keyword stuffing; Wojciech potwierdził, że strona nie musi mieć ~2000 słów z briefu.
+- Samosprawdzenie własnej nowej prozy: złapano i poprawiono kilka świeżo wprowadzonych naruszeń zasady 25 (kontrast negacyjny, „nie tylko X, to Y” itp.) przed commitem, nie po.
+- Zweryfikowano: balans tagów (`html/head/body/header/main/footer/section/article/nav/div/table/thead/tbody/tr/td/th/ul/li/details/summary/strong`), `html.parser` bez błędów, `link_audit.py index.html` (21/5 linków, wszystkie martwe linki to strony jeszcze nienapisane, zgodnie z rzeczywistym stanem repo), balans klamer w `style.css` (133/133).
+- **Odkryto commit Wojciecha spoza tej sesji**: `7f64869 "ds"` (dodanie zdjęcia węża do `assets/img/`), już wypchnięty na `origin/main` zanim ta sesja się zaczęła. Nasz commit `b387e0e` jest na tym oparty.
+
 _Ostatnia aktualizacja: 2026-07-28 (sesja 3)_
 
 **Zrobione (ta sesja; restyling homepage + zmiana fazy):**
