@@ -27,46 +27,22 @@
       </ul>
     </nav>
     <input class="search" type="search" placeholder="Szukaj gatunku...">
+    <a href="/" class="logo-mark" aria-label="Strona główna terrariumdla.pl">
+      <img src="/assets/img/favicon.svg" alt="Wąż z rozwidlonym językiem, logo terrariumdla.pl" width="30" height="30">
+    </a>
   </div>
 </header>
 
 <main>
 <!-- ============ HERO ============ -->
-<div class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <h1>Notatki z <em>moich terrariów</em></h1>
-      <p class="lead">Wymiary w centymetrach, temperatury w stopniach, częstotliwość karmienia. Dla gatunków, które faktycznie trzymam albo trzymałem: od węża zbożowego po ptasznika. Dziennik budowany podstrona po podstronie, w miarę jak dopisuję kolejne obserwacje.</p>
-      <div class="btns">
-        <a href="#gatunki" class="btn btn-primary">Zobacz gatunki</a>
-        <a href="/opieka-uniwersalna/poradniki/start-w-terrarystyce/" class="btn btn-ghost">Zacznij tutaj, jeśli to Twój pierwszy raz</a>
-      </div>
+<div class="hero-photo">
+  <img src="/assets/img/pexels-botanphotography-29378239.jpg" alt="Wąż boa wśród liści, naturalne środowisko odwzorowane w terrarium tropikalnym" class="hero-photo-img" width="4504" height="3217">
+  <div class="wrap hero-photo-inner">
+    <div class="hero-box">
+      <h1>Cześć, jestem Wojtek</h1>
+      <p class="lead">Ten serwis powstaje z notatek z własnych terrariów: węży, agam, gekonów, ptaszników i modliszek. Opisuję oświetlenie, wilgotność, dobrane podłoże i wymiary terrarium osobno dla każdego gatunku, bo każdy ma inne wymagania.</p>
     </div>
-
-    <div class="picker">
-      <h3>Gatunki, o których piszę najwięcej</h3>
-
-      <a class="picker-row" href="/weze/waz-zbozowy/przewodnik/">
-        <span><b>Wąż zbożowy</b><small>100×50×50 cm, karmienie raz na 7–10 dni</small></span>
-        <span class="tag t-easy">łatwy</span>
-      </a>
-      <a class="picker-row" href="/gekony/gekon-lamparci/przewodnik/">
-        <span><b>Gekon lamparci</b><small>60×40×40 cm, bez UVB przy dobrej diecie</small></span>
-        <span class="tag t-easy">łatwy</span>
-      </a>
-      <a class="picker-row" href="/plazy/aksolotl/przewodnik/">
-        <span><b>Aksolotl</b><small>80×35×35 cm akwarium, woda 16–20°C</small></span>
-        <span class="tag t-mid">średni</span>
-      </a>
-      <a class="picker-row" href="/agamy/agama-brodata/przewodnik/">
-        <span><b>Agama brodata</b><small>120×60×60 cm, wymaga UVB i punktu grzewczego</small></span>
-        <span class="tag t-mid">średni</span>
-      </a>
-      <a class="picker-row" href="/kameleony/kameleon-jemenski/przewodnik/">
-        <span><b>Kameleon jemeński</b><small>60×60×120 cm, zraszanie kilka razy dziennie</small></span>
-        <span class="tag t-hard">trudny</span>
-      </a>
-    </div>
+    <a href="/o-nas/" class="btn btn-primary hero-cta">Przeczytaj, jak zaczynałem</a>
   </div>
 </div>
 
@@ -138,91 +114,85 @@
   </div>
 </section>
 
-<!-- ============ TABELA PORÓWNAWCZA ============ -->
+<!-- ============ RODZAJE TERRARIÓW ============ -->
 <section style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <h2>Porównanie gatunków dla początkujących</h2>
-        <p>Minimalne wymiary terrarium dla dorosłego osobnika.</p>
+        <h2>Rodzaje terrariów</h2>
+        <p>Wybór dobranego terrarium zaczyna się od typu środowiska.</p>
       </div>
     </div>
+    <p>Terraria dzielą się na suche, tropikalne i półpustynne, w zależności od tego, jaką wilgotność i temperaturę ma odwzorowywać naturalne środowisko danego gatunku. Terrarium suche wymaga podłoża z piasku i kamieni oraz punktowego ogrzewania, bez którego gady pustynne nie osiągają wysokich temperatur potrzebnych do trawienia. <strong>Terrarium tropikalne</strong> musi utrzymywać wilgotność na poziomie 90%, co w praktyce oznacza zraszanie, dobrane podłoże z włókna kokosowego i szczelną pokrywę, bo w terrariach zamkniętych wilgoć krąży w obiegu. Wysoka wilgotność sprzyja też rozwojowi pleśni, dlatego warto regularnie sprawdzać wentylację. Terrarium półpustynne łączy oba podejścia: umiarkowaną wilgotność w jednej części zbiornika i suchy, nasłoneczniony punkt grzewczy w drugiej.</p>
+    <p>Idealne terrarium dla początkujących terrarystów to zwykle terrarium szklane z przednim otwieraniem: łatwe czyszczenie, dobra wentylacja i pełna kontrola nad wyposażeniem. Szklane terrarium sprawdza się też u zaawansowanych hodowców, którzy budują większy zbiornik pod konkretny gatunek, na przykład terrarium dla ptasznika naziemnego o niskiej wysokości albo terrarium pionowe dla kameleonów.</p>
+  </div>
+</section>
 
-    <div class="table-wrap">
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th>Gatunek</th>
-            <th>Terrarium (min.)</th>
-            <th>Temperatura</th>
-            <th>Karmienie</th>
-            <th>Dożywa</th>
-            <th>Trudność</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="/weze/waz-zbozowy/przewodnik/">Wąż zbożowy</a></td>
-            <td class="num">100×50×50 cm</td>
-            <td class="num">24–30°C</td>
-            <td>1 mysz / 7–10 dni</td>
-            <td class="num">15–20 lat</td>
-            <td><span class="tag t-easy">łatwy</span></td>
-          </tr>
-          <tr>
-            <td><a href="/gekony/gekon-lamparci/przewodnik/">Gekon lamparci</a></td>
-            <td class="num">60×40×40 cm</td>
-            <td class="num">26–32°C</td>
-            <td>owady co 2–3 dni</td>
-            <td class="num">15–20 lat</td>
-            <td><span class="tag t-easy">łatwy</span></td>
-          </tr>
-          <tr>
-            <td><a href="/gekony/gekon-orzesiony/przewodnik/">Gekon orzęsiony</a></td>
-            <td class="num">45×45×60 cm</td>
-            <td class="num">22–26°C</td>
-            <td>pokarm gotowy 3× / tydz.</td>
-            <td class="num">15–20 lat</td>
-            <td><span class="tag t-easy">łatwy</span></td>
-          </tr>
-          <tr>
-            <td><a href="/plazy/aksolotl/przewodnik/">Aksolotl</a></td>
-            <td class="num">80×35×35 cm (akwarium)</td>
-            <td class="num">16–20°C (woda)</td>
-            <td>2–3× w tygodniu</td>
-            <td class="num">10–15 lat</td>
-            <td><span class="tag t-mid">średni</span></td>
-          </tr>
-          <tr>
-            <td><a href="/weze/pyton-krolewski/przewodnik/">Pyton królewski</a></td>
-            <td class="num">120×60×60 cm</td>
-            <td class="num">27–32°C</td>
-            <td>1 szczur / 10–14 dni</td>
-            <td class="num">20–30 lat</td>
-            <td><span class="tag t-mid">średni</span></td>
-          </tr>
-          <tr>
-            <td><a href="/agamy/agama-brodata/przewodnik/">Agama brodata</a></td>
-            <td class="num">120×60×60 cm</td>
-            <td class="num">28–42°C</td>
-            <td>owady + warzywa codziennie</td>
-            <td class="num">8–12 lat</td>
-            <td><span class="tag t-mid">średni</span></td>
-          </tr>
-          <tr>
-            <td><a href="/kameleony/kameleon-jemenski/przewodnik/">Kameleon jemeński</a></td>
-            <td class="num">60×60×120 cm</td>
-            <td class="num">24–35°C</td>
-            <td>owady codziennie</td>
-            <td class="num">5–8 lat</td>
-            <td><span class="tag t-hard">trudny</span></td>
-          </tr>
-        </tbody>
-      </table>
+<!-- ============ WYPOSAŻENIE ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Wyposażenie terrarium</h2>
+        <p>Ten sam zestaw kategorii sprzętu wraca w każdym przewodniku gatunkowym, tylko parametry się zmieniają.</p>
+      </div>
     </div>
-    <p class="text-dim" style="font-size:13px;margin-top:12px">
-      Wartości do zweryfikowania przy pisaniu każdego przewodnika osobno. Traktuj tę tabelę jako punkt startowy.
-    </p>
+    <p><strong>Ogrzewanie i temperatura.</strong> Kable grzewcze i maty budują gradient temperatur: wysokie temperatury po jednej stronie zbiornika, chłodniejszy koniec po drugiej. Termostatu używa się właściwie zawsze, bo bez niego mata czy kabel grzewczy nie utrzyma stabilnej temperatury i może przegrzać terrarium.</p>
+    <p><strong>Oświetlenie i wentylacja.</strong> Oświetlenie UVB jest ważne dla zdrowia gadów w terrarium, szczególnie jaszczurek i węży aktywnych w dzień. Osobne światła do roślin przydają się w terrariach tropikalnych. Wentylację zapewnia siatka w pokrywie, dobrana tak, żeby nie obniżała wilgotności poniżej wymaganej dla danego gatunku.</p>
+    <p><strong>Podłoże, dekoracje i rośliny.</strong> Do wyboru: włókno kokosowe, kora, piasek dla gatunków suchych albo tło strukturalne do zawieszania roślin epifitycznych. Gałęzie, korzenie, kamienie i tuby korkowe dają zwierzętom kryjówki i przestrzeń do wspinania, co wspiera naturalne zachowanie gatunku. Rośliny żywe (tropikalne do terrariów wilgotnych, sukulenty do suchych) regulują wilgotność lepiej niż rośliny sztuczne, ale te drugie bywają gotowym rozwiązaniem tam, gdzie żywe korzenie kolidowałyby z ogrzewaniem.</p>
+    <p>Do tego miska na wodę, kryjówki po obu stronach gradientu temperatur, żeby zwierzę mogło wybierać między ukryciem a komfortem termicznym, i harmonogram czyszczenia dopasowany do gatunku. To minimum, od którego zaczyna się bezpieczne i estetyczne terrarium, obojętnie czy mowa o wężu, gekonie czy ptaszniku.</p>
+    <p>Dobór wyposażenia wpływa na bezpieczeństwo i codzienną aktywność zwierzaka. Dobrane terrarium dla dorosłych osobników różni się rozmiarem i wyposażeniem od zestawu startowego dla młodego zwierzęcia. Po zdobyciu doświadczenia hodowcy budują część sprzętu sami, choć gotowe rozwiązania spośród dostępnych produktów wystarczają większości początkujących. Wykonane z naturalnych materiałów wyposażenie, korek, drewno, kamień, pasuje do wnętrza domu lepiej niż plastikowe zamienniki i wymaga dokładnej dezynfekcji przy czyszczeniu. Dla ptaszników naziemnych i innych gatunków o niskiej aktywności ważny jest też dostęp do pokarmu bez zbędnego stresu, bo samodzielne złapanie zdobyczy wspiera naturalne trawienie. Przygotowanie terrarium to codzienna troska o swojego zwierzaka.</p>
+    <p>Bezpieczeństwo zwierzęcia zależy też od jakości produktów: tani termostat potrafi zawieść i przegrzać zbiornik, dlatego warto sprawdzać realne parametry sprzętu przed zakupem. Harmonogram czyszczenia obejmuje trzy rzeczy: czysta miska na wodę, kamienie i dekoracje bez śladów pleśni, sprawny termostat.</p>
+  </div>
+</section>
+
+<!-- ============ ZWIERZĘTA DO TERRARIUM ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Jakie zwierzęta trzyma się w terrarium</h2>
+      </div>
+    </div>
+    <p>Zwierzęta do terrarium dzielą się na gady, płazy, pajęczaki i owady. Gady to węże, jaszczurek (gekony, agamy, kameleony) i żółwie lądowe. Płazy w hodowli domowej to głównie aksolotl, salamandry, traszki i rzekotki, wymagające wyższej wilgotności niż większość gadów. Wśród pajęczaków najczęściej stosuje się ptaszniki i skorpiony, a inne pajęczaki, jak niektóre gatunki roztoczy, trafiają do terrarium przypadkiem. Owady reprezentują straszyki, patyczaki i modliszki: małe wymagania co do przestrzeni, ale konkretne wymagania co do wilgotności i temperatury zależne od gatunku.</p>
+    <p>Umiarkowana wilgotność i wysokie temperatury sprawdzają się u większości jaszczurek dziennych, jak agama brodata. Wysoka wilgotność i niższe, stabilne temperatury pasują raczej płazom i niektórym gatunkom węży, jak boa czy pyton. Część jaszczurek potrzebuje mocnego światła, a najważniejsza jest wtedy przestrzeń do wspinania. Dobrane terrarium uwzględnia oba parametry naraz: wilgotność i temperaturę, obok samych wymiarów zbiornika.</p>
+  </div>
+</section>
+
+<!-- ============ CIEKAWOSTKI GATUNKOWE ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Kilka liczb o gatunkach</h2>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="callout">
+        <span class="callout-label">Wąż zbożowy</span>
+        <p>Osiąga do 180 cm długości. Terrarium dla dorosłego osobnika: minimum 100×50×50 cm.</p>
+      </div>
+      <div class="callout">
+        <span class="callout-label">Żółw grecki</span>
+        <p>Może dorastać do 36 cm. Terrarium powinno mieć minimum 8-krotną długość jego pancerza.</p>
+      </div>
+      <div class="callout">
+        <span class="callout-label">Skorpion włoski</span>
+        <p>Żyje do 8 lat przy odpowiednich warunkach: stabilna temperatura i suche podłoże.</p>
+      </div>
+      <div class="callout">
+        <span class="callout-label">Drzewołaz złocisty</span>
+        <p>Osiąga do 4 cm długości. Wymaga wilgotności 90% i temperatury 25–26°C.</p>
+      </div>
+      <div class="callout">
+        <span class="callout-label">Straszyk australijski</span>
+        <p>Osiąga do 16 cm długości, jeden z większych gatunków patyczaków w hodowli.</p>
+      </div>
+      <div class="callout">
+        <span class="callout-label">Ptasznik naziemny</span>
+        <p>Terrarium dla dorosłego osobnika: 30×20×20 cm, niska wysokość zamiast dużej kubatury.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -304,18 +274,67 @@
   </div>
 </section>
 
-<!-- ============ O AUTORZE (zamiast CTA sprzedażowego) ============ -->
-<section style="padding-top:8px">
+<!-- ============ FAQ ============ -->
+<section style="padding-top:0">
   <div class="wrap">
-    <div class="strip">
+    <div class="sec-head">
       <div>
-        <h2>Cześć, jestem Wojtek</h2>
-        <p>Ten serwis powstaje z notatek z własnych terrariów: węży, agam, gekonów, ptaszników i modliszek. Opisuję oświetlenie, wilgotność, dobór podłoża i wymiary terrarium osobno dla każdego gatunku, bo to, co sprawdza się u węża zbożowego, nie sprawdzi się u kameleona.</p>
+        <h2>Najczęściej zadawane pytania</h2>
       </div>
-      <a href="/o-nas/" class="btn btn-primary">Przeczytaj, jak zaczynałem</a>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Co można trzymać w terrarium 30x30x30?</summary>
+        <p>Niewielki zbiornik 30x30x30 cm sprawdzi się dla młodego gekona, ptasznika naziemnego albo skorpiona. Dorosłe osobniki większości węży, jaszczurek i żółwi potrzebują większego zbiornika, dopasowanego do docelowej długości ciała.</p>
+      </details>
+      <details>
+        <summary>Jakie zwierzę do terrarium na początek?</summary>
+        <p>Dla początkujących terrarystów najczęściej poleca się gekona lamparciego albo węża zbożowego: łatwe w hodowli, umiarkowana wilgotność, odpowiednie temperatury bez ekstremów, dostępna literatura i doświadczeni hodowcy do konsultacji.</p>
+      </details>
+      <details>
+        <summary>Z czego najlepiej zrobić terrarium?</summary>
+        <p>Szklane terrarium to najczęściej stosowane rozwiązanie: łatwe czyszczenie, dobra widoczność zwierzęcia, gotowe modele z wentylacją i zamkiem bezpieczeństwa. Terraria szklane z przednim otwieraniem ułatwiają serwis bez stresowania zwierzęcia.</p>
+      </details>
+      <details>
+        <summary>Co ile wymieniać podłoże w terrarium?</summary>
+        <p>Zależy od rodzaju podłoża i gatunku: punktowe czyszczenie odchodów co kilka dni, pełna wymiana podłoża, gdy traci strukturę albo zaczyna nieprzyjemnie pachnieć wilgocią. Włókno kokosowe i podłoża tropikalne wymagają częstszej wymiany niż piasek w terrarium suchym.</p>
+      </details>
+      <details>
+        <summary>Ile kosztuje terrarium z wyposażeniem?</summary>
+        <p>Koszt zależy od wielkości zbiornika, rodzaju ogrzewania, oświetlenia, podłoża i dekoracji. Zestaw startowy dla początkującego terrarysty i zestaw dla zaawansowanego hodowcy z większym zbiornikiem to zupełnie inne budżety. Konkretne ceny sprzętu opisuję przy poszczególnych gatunkach.</p>
+      </details>
+      <details>
+        <summary>Jakie terrarium będzie najlepsze dla pająka?</summary>
+        <p>Dla ptasznika naziemnego liczy się szerokość zbiornika: terrarium 30×20×20 cm z niskim poziomem podłoża ogranicza ryzyko upadku. Dobrane podłoże z włókna kokosowego i jedna kryjówka wystarczą większości gatunków naziemnych.</p>
+      </details>
+      <details>
+        <summary>Czym jest terrarystyka?</summary>
+        <p>Terrarystyka to hobby polegające na hodowli zwierząt egzotycznych, takich jak gady, płazy, pajęczaki i owady, w warunkach odwzorowujących ich naturalne środowisko: odpowiednią temperaturę, wilgotność i wyposażenie.</p>
+      </details>
+      <details>
+        <summary>Jakie są zwierzęta terrarystyczne?</summary>
+        <p>Gady (węże, jaszczurki, żółwie lądowe), płazy (aksolotl, salamandry, traszki, rzekotki), pajęczaki (ptaszniki, skorpiony) i owady (straszyki, patyczaki, modliszki).</p>
+      </details>
+      <details>
+        <summary>Czy terrarystyka to hobby?</summary>
+        <p>Tak, i to wymagające regularności: karmienie, kontrola temperatury i wilgotności, czyszczenie zbiornika. Dla początkujących hobbystów najlepszym startem jest jeden łatwy gatunek.</p>
+      </details>
+      <details>
+        <summary>Co to znaczy terrarium?</summary>
+        <p>Terrarium to szklane naczynie do uprawy roślin lub hodowli drobnych zwierząt, zamknięte lub częściowo otwarte, z kontrolowaną temperaturą i wilgotnością wewnątrz.</p>
+      </details>
+      <details>
+        <summary>Co trzyma się w terrarium?</summary>
+        <p>Najczęściej gady, płazy, pajęczaki i owady, ale terraria roślinne bez zwierząt też się zdarzają: rośliny tropikalne w zamkniętym, wilgotnym zbiorniku tworzą samowystarczalny mikroekosystem.</p>
+      </details>
+      <details>
+        <summary>Czym się różni terrarium od akwarium?</summary>
+        <p>Akwarium jest wypełnione wodą i przeznaczone dla zwierząt wodnych. Terrarium odwzorowuje środowisko lądowe albo częściowo wodne, z kontrolą temperatury powietrza, wilgotności i oświetlenia zamiast parametrów wody.</p>
+      </details>
     </div>
   </div>
 </section>
+
 </main>
 
 <footer>

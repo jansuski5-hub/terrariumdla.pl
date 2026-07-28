@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="#16181A"/>
-  <path d="M18 44c0-14 8-24 14-24s14 10 14 24" fill="none" stroke="#98FB98" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="32" cy="20" r="4" fill="#50C878"/>
+  <!-- głowa węża -->
+  <path d="M12 30 C12 21 22 15 33 16 C42 17 48 23 50 30 C48 32 44 32.5 41 31.5 C39 34 34 35.5 28 35 C18 34 12 32.5 12 30 Z" fill="#50C878"/>
+  <circle cx="20" cy="24" r="2.1" fill="#16181A"/>
+  <!-- rozwidlony język -->
+  <path d="M48 30 L58 32" stroke="#98FB98" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  <path d="M58 32 L63 27" stroke="#98FB98" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <path d="M58 32 L63 37" stroke="#98FB98" stroke-width="2.2" stroke-linecap="round" fill="none"/>
 </svg>
