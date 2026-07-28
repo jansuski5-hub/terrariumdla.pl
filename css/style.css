@@ -101,20 +101,21 @@ nav a:hover::after { transform: scaleX(1); }
 .hero-photo-inner {
   position: relative; z-index: 2;
   display: flex; align-items: flex-end; gap: 20px; flex-wrap: wrap;
-  padding: 40px 24px 44px;
+  padding: 40px 24px 44px 4vw;
   width: 100%;
 }
 .hero-box {
   background: rgba(30, 32, 35, .74); backdrop-filter: blur(6px);
   border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 26px 30px; max-width: 560px;
+  padding: 34px 46px; max-width: 730px;
 }
 .hero-box h1 { font-size: clamp(28px, 4vw, 42px); line-height: 1.15; letter-spacing: -.5px; font-weight: 750; color: var(--text); }
 .hero-box p.lead { color: var(--text-dim); font-size: 16px; margin-top: 14px; }
 .hero-cta { flex-shrink: 0; }
 @media (max-width: 700px) {
   .hero-photo { min-height: 78vh; align-items: flex-end; }
-  .hero-photo-inner { flex-direction: column; align-items: stretch; }
+  .hero-photo-inner { flex-direction: column; align-items: stretch; padding-left: 20px; }
+  .hero-box { padding: 26px 28px; max-width: none; }
 }
 
 .btn {
