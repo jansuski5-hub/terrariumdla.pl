@@ -51,6 +51,19 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-07-28 (sesja 5)_
+
+**Zrobione (ta sesja; poprawki UX po feedbacku Wojciecha na screenie homepage):**
+- Favicon skorygowany do v3: Wojciech sprecyzował, że wersja z sesji 4 (pełna głowa węża) poszła za daleko; miał zostać oryginalny łuk z sesji 1, tylko kropka zamieniona na rozwidlony język. Poprawiono `assets/img/favicon.svg` zgodnie z tym, zweryfikowano wizualnie (SVG→PNG przez `convert` + librsvg).
+- Trzy sekcje z sesji 4 („Rodzaje terrariów”, „Wyposażenie terrarium”, „Jakie zwierzęta trzyma się w terrarium”) zgłoszone jako ściana tekstu; skrócone i przebudowane na siatki kart (`.mini-grid`/`.mini-card`, nowy komponent w `style.css`: karta z ikoną emoji, nagłówkiem, jednym krótkim zdaniem). Wojciech jawnie zniósł priorytet pełnego pokrycia słów kluczowych Surfera na rzecz czytelności („Surfer nie musi być idealny, ważne żeby nie straszyło ścianą treści”); pokrycie fraz z sesji 4 spadło w tych trzech sekcjach, to świadomy kompromis.
+- Samosprawdzenie: złapano i poprawiono 1 pauzę (—) w komentarzu `style.css` i 1 nawrót konstrukcji negacyjnej („nie od gatunku”) w nowym zdaniu wstępu do „Rodzaje terrariów”.
+- Zweryfikowano: balans tagów (`section`/`div`/`main`/`header`/`footer`, wszystkie pary równe), `link_audit.py index.html` (21/5 linków, martwe linki to wyłącznie strony jeszcze nienapisane, zgodnie ze stanem repo).
+- Commit `1e79c05`.
+
+**Następne / otwarte (przeniesione z sesji 4, nadal aktualne):**
+- Zero opublikowanych podstron treściowych poza `index.html`. Fala 1 (filary gatunków) jeszcze nie napisana.
+- Rozważyć, czy inne sekcje homepage (poza trzema poprawionymi) też warto przerobić na format kartowy zamiast prozy, jeśli Wojciech uzna to za spójniejsze.
+
 _Ostatnia aktualizacja: 2026-07-28 (sesja 4)_
 
 **Zrobione (ta sesja; SEO homepage wg briefu Surfera):**
