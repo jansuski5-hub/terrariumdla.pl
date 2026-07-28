@@ -86,6 +86,17 @@ Nienegocjowalne. Złamanie którejkolwiek dyskwalifikuje tekst.
 
 24. **Bez narracji o procesie researchu.** Podaj fakty, które możesz potwierdzić, i po cichu pomiń to, czego nie możesz. Nie pisz „nie udało się znaleźć danych na temat..." ani „brak dostępnych informacji o...". Jeśli fakt jest niepewny, usuń go. Nie mów czytelnikowi, że szukałeś.
 
+25. **Bez definiowania przez zaprzeczenie (kontrast negacyjny).** Wzorzec „to X, nie Y", „nie chodzi o X, tylko o Y", „nie jest to X, lecz Y", „X, a nie Y" jest zabroniony w każdej formie, nie tylko w dosłownym wariancie z przecinkiem. Czytelnik nie potrzebuje wiedzieć, czym coś NIE jest, żeby zrozumieć, czym jest. Napisz od razu fakt, informację, konkret, bez wzmianki o odrzuconej alternatywie. Jeśli zdanie da się skrócić przez usunięcie części po „nie”/„a nie”/„zamiast” bez utraty sensu, to znak, że ta część nie niosła informacji i nie powinna była się tam znaleźć.
+
+    ŹLE: „To dziennik, nie sklep. Na razie zbieram tu wiedzę, nie towar."
+    DOBRZE: „To dziennik z notatkami z moich terrariów: pomiary, obserwacje, rzeczy, które sam sprawdziłem."
+
+    ŹLE: „Konkrety, nie ogólniki."
+    DOBRZE: „Wymiary w centymetrach, temperatury w stopniach, częstotliwość karmienia."
+
+    ŹLE: „Minimalne wymiary terrarium dla dorosłego osobnika, nie dla młodego."
+    DOBRZE: „Minimalne wymiary terrarium dla dorosłego osobnika."
+
 ## Lista zabronionych słów i fraz
 
 Pełna, skategoryzowana lista zabronionych czasowników, przymiotników, rzeczowników, wzmacniaczy, fraz otwierających, przejściowych i zamykających, wzorców nagłówków i wzorców strukturalnych żyje w `references/ai-writing-detection.md`. Sprawdź każdy tekst względem tego pliku przed oddaniem. Jeśli w tekście pojawi się zabronione słowo lub fraza, tekst nie przechodzi.

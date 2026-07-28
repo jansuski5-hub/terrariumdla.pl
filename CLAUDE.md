@@ -2,7 +2,7 @@
 
 Wytyczne dla Claude pracującego w tym repozytorium. Statyczna strona HTML o terrarystyce: węże, gekony, agamy, kameleony, żółwie, bezkręgowce, płazy, sprzęt, karma, opieka uniwersalna. Bez frameworka, bez procesu budowania, pliki HTML publikowane wprost przez GitHub Actions na cPanel (patrz `.github/workflows/deploy.yml`).
 
-**Faza obecna: informacyjnie, nie sprzedażowo.** Serwis ma teraz działać jak osobisty dziennik terrarystyczny: wiedza, doświadczenia, zdjęcia, opisy gatunkowe, opieka. Bez nacisku na afiliację czy sprzedaż sprzętu. Afiliacja (terraria, sprzęt, rośliny) wchodzi w kolejnej fazie, gdy serwis zacznie łapać realny ruch. Nie dodawaj CTA sprzedażowych (kalkulatory kosztów jako główny hak, „kup teraz”) na obecnym etapie bez wyraźnej prośby Wojciecha.
+**Faza obecna: informacyjna.** Serwis ma teraz działać jak osobisty dziennik terrarystyczny: wiedza, doświadczenia, zdjęcia, opisy gatunkowe, opieka. Bez nacisku na afiliację czy sprzedaż sprzętu. Afiliacja (terraria, sprzęt, rośliny) wchodzi w kolejnej fazie, gdy serwis zacznie łapać realny ruch. Nie dodawaj CTA sprzedażowych (kalkulatory kosztów jako główny hak, „kup teraz”) na obecnym etapie bez wyraźnej prośby Wojciecha.
 
 ## Kolejność czytania na starcie nowej sesji
 
@@ -42,4 +42,4 @@ internal-linking-plan.md        polityka linkowania wewnętrznego
 
 ## Kontekst biznesowy w skrócie
 
-209 podstron w 5 falach publikacji, priorytet wg wolumenu wyszukiwań (dane Ahrefs, źródła: `plan-podstron.csv`, `priorytet-podstron.csv`). Fala 1 (fundament, 30 stron): 12 filarów gatunków, potem zaskroniec/padalec (ruch identyfikacyjny), potem strony cenowe i „terrarium dla X”. Docelowo: blog → sklep na subdomenie → forum. Monetyzacja przez afiliację sprzętu, nie reklamę displayową (CPC 0,02–0,06 USD w tej niszy).
+209 podstron w 5 falach publikacji, priorytet wg wolumenu wyszukiwań (dane Ahrefs, źródła: `plan-podstron.csv`, `priorytet-podstron.csv`). Fala 1 (fundament, 30 stron): 12 filarów gatunków, potem zaskroniec/padalec (ruch identyfikacyjny), potem strony cenowe i „terrarium dla X”. Docelowo: blog → sklep na subdomenie → forum. Monetyzacja przez afiliację sprzętu, dopasowaną do niskiego CPC w tej niszy (0,02–0,06 USD).

@@ -99,7 +99,7 @@ Próg to podłoga, nie sufit. Dłuższe strony mogą go przekraczać, gdy linki 
 
 **Klaster opieki uniwersalnej.** `/opieka-uniwersalna/index.html` linkuje do wszystkich poradników ogólnych. Poradniki linkują do gatunków, których dotyczą (np. `/opieka-uniwersalna/kwarantanna-nowego-gada/` linkuje do kilku filarów gatunkowych jako przykłady).
 
-**Dzikie gatunki (zaskroniec, padalec).** To ruch identyfikacyjny, nie hodowlany; każda taka strona linkuje do `/weze/ogolne/terrarium/` i do filarów gatunków hodowlanych („nie ten wąż w ogrodzie? sprawdź hodowlane gatunki jak wąż zbożowy”), żeby przekierować zasięg identyfikacyjny w stronę treści hodowlanych.
+**Dzikie gatunki (zaskroniec, padalec).** To ruch identyfikacyjny: ktoś zobaczył węża w ogrodzie i sprawdza, czy to zagrożenie. Każda taka strona linkuje do `/weze/ogolne/terrarium/` i do filarów gatunków hodowlanych („nie ten wąż w ogrodzie? sprawdź hodowlane gatunki jak wąż zbożowy”), żeby przekierować zasięg identyfikacyjny w stronę treści hodowlanych.
 
 ## Publikacja: checklista dla każdej nowej lub edytowanej podstrony
 

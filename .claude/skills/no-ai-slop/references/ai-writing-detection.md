@@ -61,7 +61,28 @@ Dobry nagłówek nazywa temat sekcji wprost: "Wymiary terrarium dla dorosłego w
 - Każdy akapit zaczynający się od tego samego typu zdania (np. zawsze definicja na początku).
 - Lista punktowana, w której każdy punkt ma dokładnie taką samą liczbę słów i taką samą strukturę gramatyczną.
 - Zdania kończące się identyczną frazą podsumowującą w kilku kolejnych akapitach ("...co czyni go świetnym wyborem", powtórzone 4 razy w jednym artykule).
-- Konstrukcja kontrastowa "X, nie Y" nadużywana jako tik stylistyczny w wielu zdaniach pod rząd; rozbij na osobne zdania albo zmień łącznik za każdym razem (zamiast, a nie, w przeciwieństwie do, natomiast).
+
+## Kontrast negacyjny ("X, nie Y"): zasada 25, zero tolerancji
+
+To nie jest tik do rotowania między wariantami, tylko wzorzec do usunięcia całkowicie. Każda z tych form liczy się jako naruszenie zasady 25:
+
+- "To X, nie Y." / "X, nie Y."
+- "Nie chodzi o X, tylko o Y."
+- "Nie jest to X, lecz Y."
+- "X, a nie Y."
+- "Zamiast X, Y." (gdy X jest odrzuconą alternatywą, nie realną opcją, którą czytelnik rozważał)
+- "W przeciwieństwie do X, Y."
+
+Test: usuń fragment po „nie"/„a nie"/„zamiast"/„w przeciwieństwie do" i przeczytaj zdanie ponownie. Jeśli nadal ma sens i niesie tę samą informację, fragment o odrzuconej alternatywie był zbędny i nie powinien wrócić w innej formie. Jeśli zdanie się rozpada, prawdopodobnie próbowałeś przemycić przez kontrast fakt, który powinien stać osobno, wprost.
+
+Przykłady z tej strony, złapane i poprawione:
+
+| Źle (kontrast negacyjny) | Dobrze (fakt wprost) |
+|---|---|
+| "To dziennik, nie sklep. Na razie zbieram tu wiedzę, nie towar." | "To dziennik z notatkami z moich terrariów." |
+| "Konkrety, nie ogólniki." | "Wymiary w centymetrach, temperatury w stopniach." |
+| "Minimalne wymiary terrarium dla dorosłego osobnika, nie dla młodego." | "Minimalne wymiary terrarium dla dorosłego osobnika." |
+| "Osobisty dziennik terrarystyczny. Wymiary, temperatury i obserwacje z własnych terrariów, nie przepisane ogólniki." | "Osobisty dziennik terrarystyczny: wymiary, temperatury i obserwacje z własnych terrariów." |
 
 ## Dodatkowe zasady specyficzne dla treści terrarystycznych
 
