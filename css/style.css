@@ -1,5 +1,5 @@
 /* ==========================================================================
-   terrariumdla.pl — arkusz główny
+   terrariumdla.pl: arkusz główny
    Statyczny HTML, bez frameworka. Paleta: 2 akcenty (miętowy + szmaragdowy).
    ========================================================================== */
 
@@ -133,6 +133,13 @@ nav a:hover::after { transform: scaleX(1); }
 .t-easy { background: rgba(152, 251, 152, .16); color: var(--mint); }
 .t-mid { background: rgba(80, 200, 120, .16); color: var(--emerald); }
 .t-hard { background: rgba(154, 160, 160, .14); color: var(--text-dim); }
+
+/* ---------- MINI-KARTY (kompaktowe bloki tematyczne, bez linku) ---------- */
+.mini-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+.mini-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; }
+.mini-card .ico { font-size: 22px; line-height: 1; margin-bottom: 9px; display: block; filter: saturate(.75); }
+.mini-card h3 { font-size: 15px; font-weight: 650; margin-bottom: 5px; }
+.mini-card p { color: var(--text-dim); font-size: 13.5px; line-height: 1.5; }
 
 /* ---------- SECTION ---------- */
 section { padding: 56px 0; }
