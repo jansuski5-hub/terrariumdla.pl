@@ -51,6 +51,14 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-07-29 (sesja 6)_
+
+**Zrobione (ta sesja; wymuszenie kanonicznego adresu):**
+- Dodano `.htaccess` (root) z regułą `mod_rewrite`: każde żądanie po `http://` albo z `www.` (w dowolnej kombinacji) dostaje 301 na `https://terrariumdla.pl%{REQUEST_URI}`. Jedna reguła z `[OR]` obsługuje oba przypadki naraz.
+- Zweryfikowano, że `.htaccess` nie trafia na listę `exclude` w `.github/workflows/deploy.yml` (wzorzec `**/.git*` łapie `.git`/`.gitattributes`/`.gitkeep`, nie `.htaccess`), więc plik pojedzie na serwer przy najbliższym pushu.
+- `<link rel="canonical">` w `index.html` już wskazywał `https://terrariumdla.pl/` (bez www) od wcześniej; ta zmiana dodaje wymuszenie po stronie serwera, nie tylko deklarację.
+- **Nie zweryfikowano na żywym serwerze** (sandbox bez dostępu do produkcyjnego cPanel/DNS): po wypchnięciu commitu i wdrożeniu warto ręcznie sprawdzić `http://terrariumdla.pl`, `https://www.terrariumdla.pl`, `http://www.terrariumdla.pl` w przeglądarce albo `curl -I`, żeby potwierdzić 301 na czystą wersję https bez www.
+
 _Ostatnia aktualizacja: 2026-07-28 (sesja 5)_
 
 **Zrobione (ta sesja; poprawki UX po feedbacku Wojciecha na screenie homepage):**

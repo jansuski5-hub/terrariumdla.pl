@@ -1,0 +1,9 @@
+# Wymuszenie jednej kanonicznej wersji adresu: https, bez www.
+# Każde żądanie na http://, https://www., czy http://www. trafia
+# przez jedno przekierowanie 301 na https://terrariumdla.pl/...
+
+RewriteEngine On
+
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://terrariumdla.pl%{REQUEST_URI} [L,R=301]
