@@ -34,8 +34,12 @@
   src: url('/assets/fonts/FragmentMono-Italic.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Recoleta'; font-style: normal; font-weight: 400; font-display: swap;
-  src: url('/assets/fonts/Recoleta-Regular.otf') format('opentype');
+  font-family: 'Fraunces'; font-style: normal; font-weight: 100 900; font-display: swap;
+  src: url('/assets/fonts/Fraunces-Variable.ttf') format('truetype-variations');
+}
+@font-face {
+  font-family: 'Fraunces'; font-style: italic; font-weight: 100 900; font-display: swap;
+  src: url('/assets/fonts/Fraunces-Italic-Variable.ttf') format('truetype-variations');
 }
 
 /* --- Reset --- */
@@ -53,7 +57,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 ul, ol { list-style: none; }
 table { border-collapse: collapse; width: 100%; }
 
-h1, h2, h3, h4 { line-height: 1.25; font-weight: 400; font-family: 'Recoleta', Georgia, serif; }
+h1, h2, h3, h4 { line-height: 1.25; font-weight: 400; font-family: 'Fraunces', Georgia, serif; }
 p { margin: 0; }
 .mono, .tag, .count, .callout-label, .post .meta, .btn, .hero-tagline .rotator {
   font-family: 'Fragment Mono', ui-monospace, Menlo, monospace;
@@ -129,7 +133,7 @@ nav a:hover::after { transform: scaleX(1); }
   width: 100%;
 }
 .hero-tagline {
-  font-family: 'Recoleta', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-weight: 400;
   font-size: clamp(32px, 5.2vw, 68px);
   line-height: 1.1;
