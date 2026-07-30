@@ -51,6 +51,18 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-07-30 (sesja 7)_
+
+**Zrobione (ta sesja; ikony kategorii, iteracje hero-boxu, potem duża przebudowa homepage):**
+- Zaprojektowano 9 własnych ikon SVG (linia, mięta/szmaragd) dla kart „Gatunki według grupy” zamiast emoji: węże, gekony, agamy, kameleony, żółwie, bezkręgowce, płazy, opieka uniwersalna, blog. Zweryfikowane wizualnie przez render SVG→PNG (`convert`).
+- Kilka iteracji rozmiaru/pozycji `.hero-box` (powiększenie, przesunięcie w lewo, kształt kwadratu, odstępy) i `.hero-cta` (przezroczysty przycisk z animowaną linią-wężem na hover); **wszystkie te elementy zostały później usunięte** w tej samej sesji, patrz niżej. Historia zostaje w git, nie trzeba jej odtwarzać.
+- **Duża przebudowa struktury strony głównej na wyraźne życzenie Wojciecha**: nowy układ to Header → zdjęcie hero z rotującym logotypem „Terrarium dla [gekona / węża / ptasznika / agamy / kameleona / żółwia / skorpiona / płaza / Ciebie]” (czysty CSS, `@keyframes` + `animation-delay` per słowo, bez JS, z `prefers-reduced-motion`) → krótki tekst wprowadzający pod zdjęciem (dostarczony przez Wojciecha, wklejony niemal dosłownie, dodane tylko linki wewnętrzne do węży/agam/gekonów/bezkręgowców/bloga żeby domknąć próg linkowy) → „Z bloga” → FAQ skrócone z 12 do 5 pytań (start dla początkujących, materiał na terrarium, koszt, definicja terrarystyki, terrarium vs akwarium) → Footer.
+- **Usunięto z homepage**: sekcje „Gatunki według grupy” (siatka `.cats`, w tym nowe ikony z tej samej sesji), „Rodzaje terrariów”, „Wyposażenie terrarium”, „Jakie zwierzęta trzyma się w terrarium”, „Kilka liczb o gatunkach”, „Coś jest nie tak ze zwierzakiem?”. CSS tych komponentów (`.cats`/`.cat`, `.mini-grid`/`.mini-card`, `.grid`/`.callout`, `.probs`/`.prob`) zostało w `style.css` nietknięte, do ewentualnego użycia na stronach hubów rodzin w przyszłości; nieużywane teraz na homepage, ale nie martwy kod w sensie architektury komponentów.
+- **Dodano własne fonty** (folder źródłowy `Fonts/` w repo, wdrożone pliki w `assets/fonts/`): Karla (wariable, body/`--font: Karla`), Fragment Mono (akcenty: `.tag`, `.count`, `.callout-label`, `.post .meta`, `.btn`, słowo w rotatorze), Recoleta (nagłówki, h1-h4 i `.sec-head h2`). `@font-face` w `style.css`, `font-display: swap`.
+- **Uwaga licencyjna, wymaga decyzji Wojciecha**: `Fonts/Recoleta-RegularDEMO.otf` to wersja demo komercyjnego kroju (Latinotype). Wersje demo tego typu fontów zwykle NIE mają licencji na użycie webfont/komercyjne na żywej stronie, tylko podgląd/użytek osobisty; w repo nie było pliku licencji dla Recolety (Karla i Fragment Mono mają `OFL.txt`, w porządku do użycia komercyjnego). Zanim strona pójdzie na produkcję z tym fontem, sprawdzić warunki licencji Recolety u Latinotype albo zastąpić fontem z pełną licencją webfont.
+- Zweryfikowano: balans tagów, brace/parens w `style.css` (163/163, 167/167), `link_audit.py index.html` (9/5 linków po dodaniu linków w tekście wprowadzającym, martwe linki to wyłącznie strony jeszcze nienapisane), brak em-dash (—) we własnej prozie (tekst od Wojciecha zawiera en-dash – to jego oryginalny tekst, wklejony bez zmian).
+- Odkryto kolejny commit Wojciecha spoza tej sesji: `0222fe5 "Wymuszenie https bez www przez .htaccess"`, już na `origin/main`.
+
 _Ostatnia aktualizacja: 2026-07-29 (sesja 6)_
 
 **Zrobione (ta sesja; wymuszenie kanonicznego adresu):**
