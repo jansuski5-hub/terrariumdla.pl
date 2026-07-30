@@ -48,7 +48,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font: 16px/1.65 'Karla', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font: 18px/1.65 'Karla', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
@@ -223,7 +223,7 @@ nav a:hover::after { transform: scaleX(1); }
 section { padding: 56px 0; }
 .sec-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 26px; gap: 20px; flex-wrap: wrap; }
 .sec-head h2 { font-size: 28px; letter-spacing: -.3px; font-weight: 400; }
-.sec-head p { color: var(--text-dim); font-size: 15px; margin-top: 5px; }
+.sec-head p { color: var(--text-dim); font-size: 17px; margin-top: 5px; }
 .sec-head a { font-size: 14px; font-weight: 600; white-space: nowrap; font-family: 'Fragment Mono', monospace; }
 
 /* ---------- INTRO (tekst o serwisie pod zdjeciem hero) ---------- */
@@ -288,9 +288,9 @@ section { padding: 56px 0; }
   justify-content: center; font-size: 38px; opacity: .5;
 }
 .post .body { padding: 16px 18px 19px; }
-.post .meta { color: var(--emerald); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; }
-.post h3 { font-size: 16px; font-weight: 650; margin: 8px 0 7px; line-height: 1.35; }
-.post p { color: var(--text-dim); font-size: 13.5px; line-height: 1.55; }
+.post .meta { color: var(--emerald); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; }
+.post h3 { font-size: 19px; font-weight: 650; margin: 8px 0 7px; line-height: 1.35; }
+.post p { color: var(--text-dim); font-size: 15.5px; line-height: 1.55; }
 
 /* ---------- PASEK / STRIP (info, nie sprzedaż) ---------- */
 .strip {
@@ -316,26 +316,27 @@ section { padding: 56px 0; }
   padding: 4px 20px;
 }
 .faq summary {
-  cursor: pointer; padding: 14px 0; font-weight: 650; font-size: 15px; color: var(--text);
+  cursor: pointer; padding: 16px 0; font-weight: 650; font-size: 18px; color: var(--text);
   list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px;
 }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after {
-  content: '+'; color: var(--emerald); font-size: 20px; font-weight: 400; flex-shrink: 0;
+  content: '+'; color: var(--emerald); font-size: 22px; font-weight: 400; flex-shrink: 0;
 }
 .faq details[open] summary::after { content: '\2212'; }
 .faq details[open] summary { color: var(--mint); }
-.faq details p { color: var(--text-dim); font-size: 14.5px; line-height: 1.6; padding-bottom: 16px; margin: 0; }
+.faq details p { color: var(--text-dim); font-size: 16.5px; line-height: 1.6; padding-bottom: 16px; margin: 0; }
 
 /* ---------- FOOTER ---------- */
 footer { border-top: 1px solid var(--border); margin-top: 20px; padding: 48px 0 34px; background: #131517; }
-.fcols { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 34px; }
-footer h4 { font-size: 12.5px; text-transform: uppercase; letter-spacing: .9px; color: var(--emerald); margin-bottom: 14px; font-weight: 700; }
+.fcols { display: grid; grid-template-columns: 1.3fr 1.3fr 1fr 1fr; gap: 34px; }
+footer h4 { font-size: 14px; text-transform: uppercase; letter-spacing: .9px; color: var(--emerald); margin-bottom: 14px; font-weight: 700; }
 footer ul { list-style: none; }
 footer li { margin-bottom: 9px; }
-footer li a { color: var(--text-dim); font-size: 14px; }
+footer li a { color: var(--text-dim); font-size: 15.5px; }
+.fanimals { display: flex; gap: 32px; justify-content: center; }
 footer li a:hover { color: var(--mint); }
-.fabout p { color: var(--text-dim); font-size: 14px; max-width: 330px; margin-top: 12px; }
+.fabout p { color: var(--text-dim); font-size: 15.5px; max-width: 330px; margin-top: 12px; }
 .fbottom {
   border-top: 1px solid var(--border); margin-top: 36px; padding-top: 22px;
   display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
