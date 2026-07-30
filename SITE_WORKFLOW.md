@@ -51,6 +51,17 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-07-30 (sesja 9)_
+
+**Zrobione (ta sesja; wszystkie rodziny maja teraz realny hub, wieksze fonty, stopka):**
+- **Cala Fala 1 rodzinna ma teraz prawdziwa strone hub**: dopisano `weze/`, `gekony/`, `agamy/`, `kameleony/`, `zolwie/index.html` (wczesniej tylko `.gitkeep`), tym samym stylem co `ptaszniki/skorpiony/modliszki/zaby` z sesji 8: ogolne, sprawdzalne fakty hodowlane bez zmyslonych statystyk, zgodnie z `no-ai-slop`. Wszystkie 9 rodzin ma teraz min. 5/5 linkow w `<main>`, jedyne martwe linki to `/blog/...` i `/opieka-uniwersalna/...`, ktore same jeszcze nie istnieja (spojne z reszta serwisu).
+- **Wojciech zglosil, ze tekst na desktopie wyglada za malo** (blog, FAQ, stopka). Powod: `--maxw` zostal poszerzony w sesji 6 (1180->1720px) pod inny layout hero, ale rozmiary fontow tresci zostaly ze starego, waskiego projektu. Zwiekszono: body 16->18px, `.post h3` 16->19px, `.post p` 13.5->15.5px, `.faq summary` 15->18px, `.faq details p` 14.5->16.5px, `footer li a` 14->15.5px, `.sec-head p` 15->17px, `.fabout p` 14->15.5px.
+- **Stopka**: kolumna "Gatunki" zmieniona na "Zwierzeta" (Wojciech: "to nie sa gatunki"), rozbita na dwie podkolumny (`.fanimals`, flex + `justify-content:center`) z 7 pozycjami: Weze/Agamy/Gekony/Ptaszniki w pierwszej, Skorpiony/Modliszki/Zaby w drugiej. Kameleony i Zolwie usuniete z tej sekcji stopki (zostaja w nav headera, tam ich nie ruszano, bo nie bylo o to prosby).
+- **Diagnostyka rotatora "terrarium dla X"**: Wojciech zglosil w incognito natychmiastowy widok "Ciebie" zamiast animacji od poczatku listy. To najprawdopodobniej NIE jest blad: sekwencyjna animacja (sesja 8) konczy sie na stale po ok. 14.4s i zostaje na "Ciebie" przez `animation-fill-mode: both`. Jesli od zaladowania strony do spojrzenia minelo wiecej niz ~15s (bardzo latwe przy przelaczaniu kart/screenshotach), user zobaczy wylacznie stan koncowy, poprawny z zalozenia. Nie da sie tego potwierdzic bez realnej przegladarki w tym sandboxie; jesli Wojciech obejrzy strone od pierwszej sekundy po twardym odswiezeniu i nadal nie zobaczy przejscia miedzy slowami, dopiero wtedy to realny blad CSS do dalszej diagnozy.
+- Dodano `?v=8` do linku `style.css` na kazdej stronie (cache-busting), na wypadek buforowania niezaleznego od cache przegladarki (serwer/CDN po stronie hostingu).
+- `sitemap.xml` rozszerzony o 5 nowych URLi (`weze/gekony/agamy/kameleony/zolwie`), priorytet 0.8 (wyzszy niz nowe rodziny bezkregowe/plazie, bo to filary z wiekszym wolumenem w `plan-podstron.csv`).
+- Zweryfikowano: `link_audit.py` na wszystkich 9 rodzin + homepage (kazda >=5/5 linkow), brak pauzy i kontrastu negacyjnego, brak zabronionych slow z `ai-writing-detection.md` (spot-check), balans tagow we wszystkich nowych plikach. Zlapano i poprawiono przy pisaniu: 3 naruszenia zasady 25 w `agamy/index.html`, przypadkowe cyrylickie „языком” w `kameleony/index.html` (literowka, poprawiono na „językiem”), 1 zabronione slowo „kluczowy” w `zolwie/index.html`.
+
 _Ostatnia aktualizacja: 2026-07-30 (sesja 8)_
 
 **Zrobione (ta sesja; nowa taksonomia + header + rotator + pierwsze prawdziwe podstrony rodzinne):**
