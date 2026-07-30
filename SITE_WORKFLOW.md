@@ -51,6 +51,18 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-07-30 (sesja 8)_
+
+**Zrobione (ta sesja; nowa taksonomia + header + rotator + pierwsze prawdziwe podstrony rodzinne):**
+- **Zmiana taksonomii na wyraźne życzenie Wojciecha**: „Bezkręgowce” jako parasol zniknęło z nav/stopki. Zamiast tego cztery nowe rodziny na tym samym poziomie co węże/gekony/agamy: `/ptaszniki/`, `/skorpiony/`, `/modliszki/`, `/zaby/`, każda z prawdziwą stroną hub (skopiowaną z `template.html`, treść pisana od zera zgodnie z `no-ai-slop`, bez zmyślonych statystyk, tylko ogólnie znane, sprawdzalne fakty hodowlane). To odchodzi od zagnieżdżenia `/bezkregowce/ptasznik/...` z `plan-podstron.csv`; oryginalny plik planistyczny nie ma wpisów dla skorpionów ani żab w ogóle, więc nie było tu konfliktu z realnymi danymi Ahrefs, tylko z wcześniejszym zagnieżdżeniem katalogów.
+- Header (pasek nawigacji) powiększony ok. 3x: wysokość, logo, linki nav, pole wyszukiwania, ikona logo-mark. Osobny override na `max-width: 900px` sprowadza rozmiary do użytecznych na mobile.
+- Rotator w hero przebudowany po raz trzeci: teraz pełna lista 7 słów (węża, agamy, gekona, ptasznika, skorpiona, modliszki, żaby) przechodzi jednorazowo, sekwencyjnie (nie w pętli), i ląduje na „Ciebie” na stałe (`animation-fill-mode: both`, jedno przejście na słowo, bez `iteration-count: infinite`). Poprzednie dwie wersje (nieskończona pętla 9 słów z ujemnym `animation-delay`, potem uproszczona wersja 2-słowna) Wojciech zgłaszał jako „nadal się nie zmienia” mimo wyczyszczenia cache przeglądarki.
+- **Zdiagnozowano, że to prawdopodobnie nie jest kwestia CSS**: `git status` pokazuje, że lokalne commity były w pełni zsynchronizowane z `origin/main` w momencie zgłoszenia problemu, a Wojciech potwierdził wyczyszczenie cache przeglądarki. Sandbox nie ma dostępu do sieci, więc nie da się sprawdzić logów GitHub Actions ani realnej odpowiedzi serwera. **Otwarte pytanie do Wojciecha**: sprawdzić zakładkę Actions w repo na GitHubie, czy ostatnie joby deploy (FTPS) faktycznie kończą się sukcesem (zielony check), zanim dalej debianuje się CSS, które lokalnie wygląda poprawnie za każdym razem.
+- Tekst wprowadzający pod hero zaktualizowany: linki do węży/agam/gekonów/ptaszników/skorpionów/modliszek/żab wskazują teraz na nowe, realne URL-e zamiast na `/bezkregowce/`.
+- `sitemap.xml` rozszerzony o 4 nowe strony. Poprawiono przy okazji pauzę (—) w komentarzu XML.
+- Zweryfikowano: balans tagów w 4 nowych plikach i w `template.html`/`index.html`, `link_audit.py` na nowych stronach (5/5 linków każda, martwe linki to wyłącznie `/blog/...` i inne jeszcze nienapisane rodziny, spójne z resztą serwisu), brak pauzy i kontrastu negacyjnego we własnej nowej prozie.
+- **Otwarte**: katalog `bezkregowce/.gitkeep` zostaje pusty w repo (nie da się go usunąć w tym sandboxie, rename/mv działa, unlink nie); nieszkodliwe, ale można kiedyś posprzątać ręcznie z komputera. Strony hub dla ptaszniki/skorpiony/modliszki/zaby są startowe, bez zdjęć i bez podstron gatunkowych (satelitów); kolejny krok to realne zdjęcia i pierwsze podstrony gatunkowe w tych rodzinach, zgodnie z zasadą „filar przed satelitą”.
+
 _Ostatnia aktualizacja: 2026-07-30 (sesja 7)_
 
 **Zrobione (ta sesja; ikony kategorii, iteracje hero-boxu, potem duża przebudowa homepage):**
