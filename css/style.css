@@ -74,12 +74,12 @@ header {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
-.hrow { display: flex; align-items: center; gap: 28px; height: 64px; }
-.logo { font-size: 19px; font-weight: 700; color: var(--text); letter-spacing: -.3px; white-space: nowrap; }
+.hrow { display: flex; align-items: center; gap: 28px; min-height: 190px; flex-wrap: wrap; padding: 18px 0; }
+.logo { font-size: 57px; font-weight: 700; color: var(--text); letter-spacing: -.3px; white-space: nowrap; }
 .logo span { color: var(--emerald); }
 .logo:hover { text-decoration: none; }
-nav ul { display: flex; gap: 22px; list-style: none; flex-wrap: wrap; }
-nav a { color: var(--text-dim); font-size: 14.5px; font-weight: 500; padding: 6px 0; position: relative; }
+nav ul { display: flex; gap: 30px; list-style: none; flex-wrap: wrap; }
+nav a { color: var(--text-dim); font-size: 24px; font-weight: 500; padding: 8px 0; position: relative; }
 nav a:hover { color: var(--mint); text-decoration: none; }
 nav a::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
@@ -88,18 +88,27 @@ nav a::after {
 nav a:hover::after { transform: scaleX(1); }
 .search {
   margin-left: auto; background: var(--surface); border: 1px solid var(--border);
-  color: var(--text-dim); border-radius: 6px; padding: 7px 12px; font-size: 13.5px;
-  min-width: 180px; font-family: inherit;
+  color: var(--text-dim); border-radius: 6px; padding: 14px 20px; font-size: 20px;
+  min-width: 260px; font-family: inherit;
 }
 .search:focus { outline: none; border-color: var(--emerald); color: var(--text); }
 .logo-mark {
   display: flex; align-items: center; justify-content: center;
-  width: 34px; height: 34px; border-radius: 50%;
+  width: 68px; height: 68px; border-radius: 50%;
   background: var(--surface); border: 1px solid var(--border);
   flex-shrink: 0; transition: border-color .15s, transform .15s;
 }
 .logo-mark:hover { border-color: var(--emerald); transform: scale(1.06); }
-.logo-mark img { width: 19px; height: 19px; }
+.logo-mark img { width: 38px; height: 38px; }
+@media (max-width: 900px) {
+  .hrow { min-height: 0; padding: 14px 0; gap: 16px; }
+  .logo { font-size: 30px; }
+  nav ul { gap: 16px; }
+  nav a { font-size: 15px; }
+  .search { min-width: 140px; font-size: 14px; padding: 8px 12px; }
+  .logo-mark { width: 40px; height: 40px; }
+  .logo-mark img { width: 22px; height: 22px; }
+}
 
 /* ---------- BREADCRUMBS (podstrony wewnętrzne) ---------- */
 .breadcrumbs {
@@ -143,27 +152,37 @@ nav a:hover::after { transform: scaleX(1); }
 }
 .hero-tagline .rotator {
   display: inline-block; position: relative;
-  min-width: 9.5ch; height: 1.05em; overflow: visible; vertical-align: bottom;
+  min-width: 10ch; height: 1.05em; overflow: visible; vertical-align: bottom;
   color: var(--mint); font-family: inherit; font-weight: 700;
 }
 .hero-tagline .rotator span {
   position: absolute; left: 0; top: 0; white-space: nowrap;
-  animation-duration: 4s; animation-timing-function: ease; animation-fill-mode: forwards;
+  opacity: 0;
+  animation-duration: 1.8s; animation-timing-function: ease; animation-fill-mode: both;
+  animation-iteration-count: 1;
 }
-.hero-tagline .rotator span:first-child {
-  opacity: 1; animation-name: hero-word-out;
-}
-.hero-tagline .rotator span:last-child {
-  opacity: 0; animation-name: hero-word-in;
-}
-@keyframes hero-word-out {
+.hero-tagline .rotator span:nth-child(1) { animation-name: hero-word-first; animation-delay: 0s; }
+.hero-tagline .rotator span:nth-child(2) { animation-name: hero-word-mid; animation-delay: 1.8s; }
+.hero-tagline .rotator span:nth-child(3) { animation-name: hero-word-mid; animation-delay: 3.6s; }
+.hero-tagline .rotator span:nth-child(4) { animation-name: hero-word-mid; animation-delay: 5.4s; }
+.hero-tagline .rotator span:nth-child(5) { animation-name: hero-word-mid; animation-delay: 7.2s; }
+.hero-tagline .rotator span:nth-child(6) { animation-name: hero-word-mid; animation-delay: 9s; }
+.hero-tagline .rotator span:nth-child(7) { animation-name: hero-word-mid; animation-delay: 10.8s; }
+.hero-tagline .rotator span:nth-child(8) { animation-name: hero-word-last; animation-delay: 12.6s; }
+@keyframes hero-word-first {
   0% { opacity: 1; }
-  65% { opacity: 1; }
+  80% { opacity: 1; }
   100% { opacity: 0; }
 }
-@keyframes hero-word-in {
+@keyframes hero-word-mid {
   0% { opacity: 0; }
-  65% { opacity: 0; }
+  15% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes hero-word-last {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
   100% { opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
