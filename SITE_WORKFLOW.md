@@ -51,6 +51,15 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-07-30 (sesja 10)_
+
+**Zrobione (ta sesja; poprawka layoutu stopki + czyszczenie nav headera):**
+- **Naprawiono zepsuty layout kolumny "Zwierzęta" w stopce**, zgłoszony przez Wojciecha na screenie jako wizualnie oderwany od nagłówka i przesunięty w prawo. Przyczyna: `.fcols` miało tor gridowy `1.3fr` dla tej kolumny (zamiast `1fr` jak reszta), a `.fanimals` miało `justify-content: center`, co centrowało wąski blok dwóch podkolumn wewnątrz sztucznie poszerzonego toru, tworząc odstęp od lewostronnego nagłówka "Zwierzęta" nad nim. Fix: tor z powrotem na `1fr`, `justify-content: center` usunięte z `.fanimals` (teraz `display:flex; gap:24px;` bez centrowania) — dwie podkolumny siedzą teraz przy lewej krawędzi, bezpośrednio pod nagłówkiem, spójnie z kolumnami Opieka/Serwis.
+- **Usunięto Kameleony, Żółwie i Opiekę z nawigacji w headerze** na wyraźne życzenie Wojciecha ("nie mam zamiaru pisac" o kameleonach/żółwiach; Opieka też ma zniknąć z tego miejsca). Zmiana objęła `<nav><ul>` we wszystkich 11 plikach HTML (`index.html`, `template.html` i 9 stron rodzinnych). Nav teraz: Blog, Węże, Gekony, Agamy, Ptaszniki, Skorpiony, Modliszki, Żaby — dokładnie lista, którą Wojciech podał wcześniej dla rotatora/tekstu wprowadzającego, teraz spójna też w headerze.
+- **Ważne rozróżnienie**: kolumna "Opieka" w stopce (z podlinkami zdrowie/karmienie/terrarium/rozpoznanie-płci/zimowanie) NIE została ruszona — instrukcja "Opieki tez nie ma tam byc" odczytana jako dotycząca wyłącznie nav headera (to samo zdanie co "z headingu"), nie szczegółowej sekcji stopki. Jeśli to złe zrozumienie, trzeba to jeszcze poprawić.
+- **Pliki `kameleony/index.html` i `zolwie/index.html` zostają na dysku**, tylko odpięte z nav i ze stopki; dalej dostępne pod bezpośrednim URL i wpięte w `sitemap.xml`. Nie usunięto ich, bo nie było wyraźnej prośby o usunięcie, a sandbox i tak nie potrafi trwale kasować plików.
+- Zweryfikowano: brak Kameleony/Żółwie/Opieka w żadnym bloku `<nav>` (sprawdzone `awk`+`grep` na wszystkich 11 plikach), balans `<nav>`/`</nav>` bez zmian, `link_audit.py` bez nowych regresji (nav jest wykluczony z audytu `<main>`, więc liczby linków identyczne jak w sesji 9; martwe linki to nadal tylko jeszcze nienapisane `/blog/...` i `/opieka-uniwersalna/...`, spójne z resztą serwisu).
+
 _Ostatnia aktualizacja: 2026-07-30 (sesja 9)_
 
 **Zrobione (ta sesja; wszystkie rodziny maja teraz realny hub, wieksze fonty, stopka):**
