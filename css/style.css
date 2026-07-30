@@ -16,13 +16,35 @@
   --maxw: 1720px;
 }
 
+/* --- Fonty własne (folder assets/fonts/) --- */
+@font-face {
+  font-family: 'Karla'; font-style: normal; font-weight: 200 800; font-display: swap;
+  src: url('/assets/fonts/Karla-Variable.ttf') format('truetype-variations');
+}
+@font-face {
+  font-family: 'Karla'; font-style: italic; font-weight: 200 800; font-display: swap;
+  src: url('/assets/fonts/Karla-Italic-Variable.ttf') format('truetype-variations');
+}
+@font-face {
+  font-family: 'Fragment Mono'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/assets/fonts/FragmentMono-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Fragment Mono'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url('/assets/fonts/FragmentMono-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Recoleta'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/assets/fonts/Recoleta-Regular.otf') format('opentype');
+}
+
 /* --- Reset --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font: 16px/1.65 'Karla', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
@@ -31,8 +53,11 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 ul, ol { list-style: none; }
 table { border-collapse: collapse; width: 100%; }
 
-h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
+h1, h2, h3, h4 { line-height: 1.25; font-weight: 400; font-family: 'Recoleta', Georgia, serif; }
 p { margin: 0; }
+.mono, .tag, .count, .callout-label, .post .meta, .btn, .hero-tagline .rotator {
+  font-family: 'Fragment Mono', ui-monospace, Menlo, monospace;
+}
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
@@ -81,10 +106,10 @@ nav a:hover::after { transform: scaleX(1); }
 .breadcrumbs a { color: var(--text-dim); }
 .breadcrumbs a:hover { color: var(--mint); }
 
-/* ---------- HERO (zdjęcie above-the-fold) ---------- */
+/* ---------- HERO (zdjęcie above-the-fold + logotyp z rotatorem) ---------- */
 .hero-photo {
   position: relative;
-  min-height: max(62vh, calc(min(800px, 90vw) + 130px));
+  min-height: 56vh;
   display: flex;
   align-items: flex-end;
   border-bottom: 1px solid var(--border);
@@ -100,58 +125,50 @@ nav a:hover::after { transform: scaleX(1); }
 }
 .hero-photo-inner {
   position: relative; z-index: 2;
-  display: flex; align-items: flex-end; gap: 20px; flex-wrap: wrap;
-  padding: 40px 24px 84px 4vw;
+  padding: 40px 24px 48px 4vw;
   width: 100%;
 }
-.hero-box {
-  background: rgba(30, 32, 35, .74); backdrop-filter: blur(6px);
-  border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 48px 56px;
-  width: min(800px, 90vw); height: calc(min(800px, 90vw) - 100px);
-  display: flex; flex-direction: column; justify-content: center;
-}
-.hero-box h1 { font-size: clamp(34px, 4.6vw, 56px); line-height: 1.15; letter-spacing: -.5px; font-weight: 750; color: var(--text); }
-.hero-box p.lead { color: var(--text-dim); font-size: clamp(18px, 1.7vw, 21px); line-height: 1.9; margin-top: 22px; }
-.hero-cta {
-  flex-shrink: 0;
-  position: relative;
-  overflow: hidden;
-}
-.btn-primary.hero-cta {
-  background: rgba(30, 32, 35, .55);
-  backdrop-filter: blur(4px);
-  border: 1px solid var(--emerald);
+.hero-tagline {
+  font-family: 'Recoleta', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(32px, 5.2vw, 68px);
+  line-height: 1.1;
+  letter-spacing: -.5px;
   color: var(--text);
-  padding: 18px 38px;
-  font-size: 16.5px;
+  text-shadow: 0 2px 20px rgba(0,0,0,.5);
 }
-.btn-primary.hero-cta::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--mint), var(--emerald));
-  transition: height .35s ease, background-image .35s ease;
+.hero-tagline .rotator {
+  display: inline-block; position: relative;
+  min-width: 9.5ch; height: 1.05em; overflow: visible; vertical-align: bottom;
+  color: var(--mint); font-style: normal;
 }
-.btn-primary.hero-cta:hover {
-  background: rgba(152, 251, 152, .1);
-  border-color: var(--mint);
+.hero-tagline .rotator span {
+  position: absolute; left: 0; top: 0; white-space: nowrap;
+  opacity: 0; animation: hero-rotate 21.6s infinite;
 }
-.btn-primary.hero-cta:hover::before {
-  height: 10px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='10' viewBox='0 0 40 10'><path d='M0 5 Q5 1 10 5 T20 5 T30 5 T40 5' fill='none' stroke='%2398FB98' stroke-width='2' stroke-linecap='round'/></svg>");
-  background-repeat: repeat-x;
-  background-size: 40px 10px;
-  animation: hero-cta-slither 1.1s linear infinite;
+.hero-tagline .rotator span:nth-child(1) { animation-delay: 0s; }
+.hero-tagline .rotator span:nth-child(2) { animation-delay: -2.4s; }
+.hero-tagline .rotator span:nth-child(3) { animation-delay: -4.8s; }
+.hero-tagline .rotator span:nth-child(4) { animation-delay: -7.2s; }
+.hero-tagline .rotator span:nth-child(5) { animation-delay: -9.6s; }
+.hero-tagline .rotator span:nth-child(6) { animation-delay: -12s; }
+.hero-tagline .rotator span:nth-child(7) { animation-delay: -14.4s; }
+.hero-tagline .rotator span:nth-child(8) { animation-delay: -16.8s; }
+.hero-tagline .rotator span:nth-child(9) { animation-delay: -19.2s; }
+@keyframes hero-rotate {
+  0% { opacity: 0; }
+  1% { opacity: 1; }
+  9% { opacity: 1; }
+  11% { opacity: 0; }
+  100% { opacity: 0; }
 }
-@keyframes hero-cta-slither {
-  from { background-position-x: 0; }
-  to { background-position-x: 40px; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-tagline .rotator span { animation: none; opacity: 0; }
+  .hero-tagline .rotator span:first-child { opacity: 1; }
 }
 @media (max-width: 700px) {
-  .hero-photo { min-height: 78vh; align-items: flex-end; }
-  .hero-photo-inner { flex-direction: column; align-items: stretch; padding-left: 20px; }
-  .hero-box { padding: 26px 28px; width: auto; height: auto; }
+  .hero-photo { min-height: 46vh; }
+  .hero-photo-inner { padding-left: 20px; }
 }
 
 .btn {
@@ -181,9 +198,13 @@ nav a:hover::after { transform: scaleX(1); }
 /* ---------- SECTION ---------- */
 section { padding: 56px 0; }
 .sec-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 26px; gap: 20px; flex-wrap: wrap; }
-.sec-head h2 { font-size: 26px; letter-spacing: -.5px; font-weight: 700; }
+.sec-head h2 { font-size: 28px; letter-spacing: -.3px; font-weight: 400; }
 .sec-head p { color: var(--text-dim); font-size: 15px; margin-top: 5px; }
-.sec-head a { font-size: 14px; font-weight: 600; white-space: nowrap; }
+.sec-head a { font-size: 14px; font-weight: 600; white-space: nowrap; font-family: 'Fragment Mono', monospace; }
+
+/* ---------- INTRO (tekst o serwisie pod zdjeciem hero) ---------- */
+.intro-text { max-width: 760px; margin: 0 auto; text-align: center; }
+.intro-text p { color: var(--text-dim); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.85; }
 
 /* ---------- CATEGORY GRID ---------- */
 .cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
