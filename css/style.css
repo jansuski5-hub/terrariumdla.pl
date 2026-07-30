@@ -329,12 +329,12 @@ section { padding: 56px 0; }
 
 /* ---------- FOOTER ---------- */
 footer { border-top: 1px solid var(--border); margin-top: 20px; padding: 48px 0 34px; background: #131517; }
-.fcols { display: grid; grid-template-columns: 1.3fr 1.3fr 1fr 1fr; gap: 34px; }
+.fcols { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 34px; }
 footer h4 { font-size: 14px; text-transform: uppercase; letter-spacing: .9px; color: var(--emerald); margin-bottom: 14px; font-weight: 700; }
 footer ul { list-style: none; }
 footer li { margin-bottom: 9px; }
 footer li a { color: var(--text-dim); font-size: 15.5px; }
-.fanimals { display: flex; gap: 32px; justify-content: center; }
+.fanimals { display: flex; gap: 24px; }
 footer li a:hover { color: var(--mint); }
 .fabout p { color: var(--text-dim); font-size: 15.5px; max-width: 330px; margin-top: 12px; }
 .fbottom {
