@@ -59,7 +59,7 @@ table { border-collapse: collapse; width: 100%; }
 
 h1, h2, h3, h4 { line-height: 1.25; font-weight: 400; font-family: 'Fraunces', Georgia, serif; }
 p { margin: 0; }
-.mono, .tag, .count, .callout-label, .post .meta, .btn, .hero-tagline .rotator {
+.mono, .tag, .count, .callout-label, .post .meta, .btn {
   font-family: 'Fragment Mono', ui-monospace, Menlo, monospace;
 }
 
@@ -113,7 +113,7 @@ nav a:hover::after { transform: scaleX(1); }
 /* ---------- HERO (zdjęcie above-the-fold + logotyp z rotatorem) ---------- */
 .hero-photo {
   position: relative;
-  min-height: 56vh;
+  min-height: 64vh;
   display: flex;
   align-items: flex-end;
   border-bottom: 1px solid var(--border);
@@ -129,13 +129,13 @@ nav a:hover::after { transform: scaleX(1); }
 }
 .hero-photo-inner {
   position: relative; z-index: 2;
-  padding: 40px 24px 48px 4vw;
+  padding: 40px 24px 96px 4vw;
   width: 100%;
 }
 .hero-tagline {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 400;
-  font-size: clamp(32px, 5.2vw, 68px);
+  font-size: clamp(64px, 10.4vw, 136px);
   line-height: 1.1;
   letter-spacing: -.5px;
   color: var(--text);
@@ -144,35 +144,36 @@ nav a:hover::after { transform: scaleX(1); }
 .hero-tagline .rotator {
   display: inline-block; position: relative;
   min-width: 9.5ch; height: 1.05em; overflow: visible; vertical-align: bottom;
-  color: var(--mint); font-style: normal;
+  color: var(--mint); font-family: inherit; font-weight: 700;
 }
 .hero-tagline .rotator span {
   position: absolute; left: 0; top: 0; white-space: nowrap;
-  opacity: 0; animation: hero-rotate 21.6s infinite;
+  animation-duration: 4s; animation-timing-function: ease; animation-fill-mode: forwards;
 }
-.hero-tagline .rotator span:nth-child(1) { animation-delay: 0s; }
-.hero-tagline .rotator span:nth-child(2) { animation-delay: -2.4s; }
-.hero-tagline .rotator span:nth-child(3) { animation-delay: -4.8s; }
-.hero-tagline .rotator span:nth-child(4) { animation-delay: -7.2s; }
-.hero-tagline .rotator span:nth-child(5) { animation-delay: -9.6s; }
-.hero-tagline .rotator span:nth-child(6) { animation-delay: -12s; }
-.hero-tagline .rotator span:nth-child(7) { animation-delay: -14.4s; }
-.hero-tagline .rotator span:nth-child(8) { animation-delay: -16.8s; }
-.hero-tagline .rotator span:nth-child(9) { animation-delay: -19.2s; }
-@keyframes hero-rotate {
-  0% { opacity: 0; }
-  1% { opacity: 1; }
-  9% { opacity: 1; }
-  11% { opacity: 0; }
+.hero-tagline .rotator span:first-child {
+  opacity: 1; animation-name: hero-word-out;
+}
+.hero-tagline .rotator span:last-child {
+  opacity: 0; animation-name: hero-word-in;
+}
+@keyframes hero-word-out {
+  0% { opacity: 1; }
+  65% { opacity: 1; }
   100% { opacity: 0; }
 }
+@keyframes hero-word-in {
+  0% { opacity: 0; }
+  65% { opacity: 0; }
+  100% { opacity: 1; }
+}
 @media (prefers-reduced-motion: reduce) {
-  .hero-tagline .rotator span { animation: none; opacity: 0; }
-  .hero-tagline .rotator span:first-child { opacity: 1; }
+  .hero-tagline .rotator span { animation: none; }
+  .hero-tagline .rotator span:first-child { opacity: 0; }
+  .hero-tagline .rotator span:last-child { opacity: 1; }
 }
 @media (max-width: 700px) {
-  .hero-photo { min-height: 46vh; }
-  .hero-photo-inner { padding-left: 20px; }
+  .hero-photo { min-height: 58vh; }
+  .hero-photo-inner { padding-left: 20px; padding-bottom: 56px; }
 }
 
 .btn {
@@ -207,8 +208,17 @@ section { padding: 56px 0; }
 .sec-head a { font-size: 14px; font-weight: 600; white-space: nowrap; font-family: 'Fragment Mono', monospace; }
 
 /* ---------- INTRO (tekst o serwisie pod zdjeciem hero) ---------- */
-.intro-text { max-width: 760px; margin: 0 auto; text-align: center; }
-.intro-text p { color: var(--text-dim); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.85; }
+/* szerokość taka sama jak siatka kafelków "Z bloga" (.posts), bez dodatkowego zawężania */
+.intro-text p {
+  color: var(--text-dim);
+  font-size: clamp(20px, 2.1vw, 34px);
+  line-height: 1.6;
+  text-align: justify;
+  hyphens: auto;
+}
+@media (max-width: 700px) {
+  .intro-text p { font-size: 18px; line-height: 1.75; text-align: left; hyphens: none; }
+}
 
 /* ---------- CATEGORY GRID ---------- */
 .cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
