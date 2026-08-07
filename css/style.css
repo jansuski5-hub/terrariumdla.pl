@@ -278,8 +278,10 @@ section { padding: 56px 0; }
   hyphens: auto;
 }
 .intro-text p.text-mint { color: var(--mint); }
+.intro-text p.intro-note { text-align: center; margin-top: 28px; }
 @media (max-width: 700px) {
   .intro-text p { font-size: 18px; line-height: 1.75; text-align: left; hyphens: none; }
+  .intro-text p.intro-note { text-align: center; }
 }
 
 /* ---------- CATEGORY GRID ---------- */
