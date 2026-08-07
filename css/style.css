@@ -118,9 +118,17 @@ nav a:hover::after { transform: scaleX(1); }
 @media (max-width: 900px) {
   .hrow { min-height: 0; padding: 14px 0; gap: 16px; }
   .logo { font-size: 30px; }
-  nav ul { gap: 16px; }
+  /* Nav i jego <ul> tracą własne pudełka: <li> stają się bezpośrednimi
+     elementami .hrow i zawijają się razem z resztą (logo, lupa, avatar)
+     w jednym strumieniu flex. Dzięki temu lupa nie unosi się nad tekstem
+     linków, tylko płynie w tekście i ląduje obok ostatniego linku (Żaby). */
+  nav, nav ul { display: contents; }
+  .hrow li { list-style: none; }
   nav a { font-size: 15px; }
-  .search { right: 56px; width: 36px; height: 36px; font-size: 14px; }
+  .search {
+    position: static; top: auto; right: auto; transform: none;
+    width: 36px; height: 36px; font-size: 14px;
+  }
   .search:hover, .search:focus { width: 170px; padding: 0 14px 0 34px; }
   .logo-mark { width: 40px; height: 40px; }
   .logo-mark img { width: 22px; height: 22px; }
@@ -394,7 +402,6 @@ article li { margin-bottom: .4rem; }
 }
 @media (max-width: 640px) {
   .hrow { height: auto; flex-wrap: wrap; padding: 12px 0; gap: 12px; }
-  .search { right: 52px; }
   .cats, .probs, .posts, .fcols { grid-template-columns: 1fr; }
   .table-wrap { overflow-x: auto; }
 }
