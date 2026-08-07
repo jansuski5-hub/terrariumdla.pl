@@ -20,7 +20,7 @@ Nie ufaj wpisowi „gotowe” z poprzedniej sesji bez zweryfikowania go samodzie
 - Żadnych niepodpartych statystyk ani zmyślonych faktów o gatunkach, cenach czy przepisach; patrz zasady 2, 18, 19 w skillu no-ai-slop.
 - Każda nowa podstrona: sprawdź `internal-linking-plan.md` pod kątem progu linków dla danego typu strony i słownika kotwic.
 - Każda nowa podstrona musi być wpięta w indeks swojej rodziny (np. `/weze/index.html`) i w `sitemap.xml`.
-- Struktura URL: trójpoziomowa, rodzina/gatunek/temat; np. `/weze/waz-zbozowy/przewodnik/`. Kopiuj `template.html` jako punkt startowy dla nowej podstrony.
+- Struktura URL: trójpoziomowa, rodzina/gatunek/temat; np. `/weze/waz-zbozowy/opis/`. Kopiuj `template.html` jako punkt startowy dla nowej podstrony.
 - Paleta i komponenty: `css/style.css`. Nie twórz nowych kolorów ani nowych wzorców komponentów bez potrzeby; rozszerzaj istniejące klasy (`.card`, `.compare-table`, `.badge`, `.btn`).
 
 ## Struktura repo

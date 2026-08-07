@@ -42,7 +42,7 @@ Nie ufaj wpisowi „gotowe” z poprzedniej sesji bez weryfikacji. Sprawdzaj sam
 `scripts/link_audit.py` liczy `<a href>` wewnątrz `<main>`, pomijając breadcrumbs, nagłówek i stopkę, i sprawdza, czy każdy wewnętrzny href prowadzi do istniejącego pliku lub katalogu z `index.html`. Kod wyjścia 1 oznacza, że coś trzeba poprawić przed commitem.
 
 ```
-python3 scripts/link_audit.py weze/waz-zbozowy/przewodnik/index.html   # jeden plik
+python3 scripts/link_audit.py weze/waz-zbozowy/opis/index.html   # jeden plik
 python3 scripts/link_audit.py weze gekony                              # jeden lub więcej katalogów
 python3 scripts/link_audit.py                                          # cała strona
 ```
@@ -54,10 +54,11 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 _Ostatnia aktualizacja: 2026-08-07 (sesja 11)_
 
 **Zrobione (ta sesja; kafelek gatunku na hubie węży):**
-- Dodano na `/weze/index.html` sekcję „Gatunki" z pierwszym kafelkiem gatunkowym: zdjęcie `assets/img/podkategoriaimperator.jpg` (dodane wcześniej przez Wojciecha do repo, 512x341) w zielonej ramce (`border: 3px solid var(--emerald)`), podpis „Boa imperator (Boa cesarski)" pod zdjęciem, cały kafelek klikalny do `/weze/boa-imperator/przewodnik/`.
+- Dodano na `/weze/index.html` sekcję „Gatunki" z pierwszym kafelkiem gatunkowym: zdjęcie `assets/img/podkategoriaimperator.jpg` (dodane wcześniej przez Wojciecha do repo, 512x341) w zielonej ramce (`border: 3px solid var(--emerald)`), podpis „Boa imperator (Boa cesarski)" pod zdjęciem, cały kafelek klikalny do `/weze/boa-imperator/opis/`.
 - Nowy komponent CSS `.species-tiles`/`.species-tile` w `style.css` (flex-wrap, żeby kolejne gatunki dało się dokładać obok), hover zmienia ramkę na miętowy akcent, spójny ze wzorcem `.cat`/`.post` reszty strony.
-- Dopisano wpis do słownika kotwic w `internal-linking-plan.md`: „boa imperator, boa cesarski” → `/weze/boa-imperator/przewodnik/`.
-- **Otwarte, ważne**: strona `/weze/boa-imperator/przewodnik/` (filar gatunku) jeszcze nie istnieje, więc kafelek to na razie martwy link wewnętrzny, potwierdzone przez `link_audit.py`. To spójne z resztą serwisu (te same dead linki do `/blog/` i `/opieka-uniwersalna/` widoczne od poprzednich sesji), ale ten konkretny link trzeba domknąć, zanim strona pójdzie na żywo: napisać filar boa imperator zgodnie z zasadą „filar przed satelitą” z `SITE_WORKFLOW.md`.
+- Dopisano wpis do słownika kotwic w `internal-linking-plan.md`: „boa imperator, boa cesarski” → `/weze/boa-imperator/opis/`.
+- **Zmiana konwencji URL na wyraźne życzenie Wojciecha**: segment filaru gatunkowego to teraz `/opis/`, nie `/przewodnik/`, dla wszystkich gatunków od teraz. Zaktualizowano wszędzie, gdzie ten segment występował: `CLAUDE.md` (przykład struktury URL), `internal-linking-plan.md` (architektura + cały słownik kotwic, 17 wpisów), `scripts/link_audit.py` (przykład w docstringu + regex klasyfikujący `filar gatunku` w `--strict`). Żadna strona z segmentem `/przewodnik/` nie została jeszcze opublikowana, więc to czysta zmiana konwencji bez przekierowań do zrobienia.
+- **Otwarte, ważne**: strona `/weze/boa-imperator/opis/` (filar gatunku) jeszcze nie istnieje, więc kafelek to na razie martwy link wewnętrzny, potwierdzone przez `link_audit.py`. To spójne z resztą serwisu (te same dead linki do `/blog/` i `/opieka-uniwersalna/` widoczne od poprzednich sesji), ale ten konkretny link trzeba domknąć, zanim strona pójdzie na żywo: napisać filar boa imperator zgodnie z zasadą „filar przed satelitą” z `SITE_WORKFLOW.md`.
 - Zweryfikowano: `python3 scripts/link_audit.py weze/index.html` (6/5 linków, próg przechodzi; 4 martwe linki wewnętrzne wypisane, wszystkie do stron jeszcze nienapisanych), balans tagów (`div`/`section`/`main`/`header`/`footer`/`article`/`a`/`nav`/`ul`, wszystkie pary równe).
 
 _Ostatnia aktualizacja: 2026-07-30 (sesja 10)_

@@ -8,7 +8,7 @@ Linkuj pierwszą sensowną wzmiankę każdej frazy lub bytu, który ma własną 
 
 ## Architektura, na której opiera się linkowanie
 
-Struktura URL: rodzina / gatunek / temat, np. `/weze/waz-zbozowy/przewodnik/`, `/weze/waz-zbozowy/cena/`, `/gekony/gekon-lamparci/terrarium/`. Wyjątki: strony identyfikacyjne dzikich gatunków (`/weze/dzikie-w-polsce/zaskroniec/`, `/weze/dzikie-w-polsce/padalec/`) i strony ogólne rodziny (`/weze/ogolne/terrarium/`).
+Struktura URL: rodzina / gatunek / temat, np. `/weze/waz-zbozowy/opis/`, `/weze/waz-zbozowy/cena/`, `/gekony/gekon-lamparci/terrarium/`. Wyjątki: strony identyfikacyjne dzikich gatunków (`/weze/dzikie-w-polsce/zaskroniec/`, `/weze/dzikie-w-polsce/padalec/`) i strony ogólne rodziny (`/weze/ogolne/terrarium/`).
 
 Rodziny i liczba zaplanowanych podstron: węże (43), bezkręgowce (55), gekony (21), agamy (11), żółwie (10), kameleony (3), jaszczurki inne (7), płazy (7), sprzęt (15), rośliny (9), opieka uniwersalna i ogólna (26), karma (1), inne zwierzęta (1).
 
@@ -26,32 +26,32 @@ Fraza liczy się jako okazja do linku, gdy spełnione są trzy warunki:
 
 | Wzmianka w treści | Cel linku |
 |---|---|
-| wąż zbożowy | `/weze/waz-zbozowy/przewodnik/` |
+| wąż zbożowy | `/weze/waz-zbozowy/opis/` |
 | ile kosztuje wąż zbożowy | `/weze/waz-zbozowy/cena/` |
-| pyton królewski | `/weze/pyton-krolewski/przewodnik/` |
-| boa dusiciel | `/weze/boa/przewodnik/` |
-| boa imperator, boa cesarski | `/weze/boa-imperator/przewodnik/` |
+| pyton królewski | `/weze/pyton-krolewski/opis/` |
+| boa dusiciel | `/weze/boa/opis/` |
+| boa imperator, boa cesarski | `/weze/boa-imperator/opis/` |
 | zaskroniec | `/weze/dzikie-w-polsce/zaskroniec/` |
 | padalec | `/weze/dzikie-w-polsce/padalec/` |
 | terrarium dla węża, jak urządzić terrarium dla węża | `/weze/ogolne/terrarium/` |
-| gekon lamparci | `/gekony/gekon-lamparci/przewodnik/` |
+| gekon lamparci | `/gekony/gekon-lamparci/opis/` |
 | terrarium dla gekona lamparciego | `/gekony/gekon-lamparci/terrarium/` |
-| gekon orzęsiony | `/gekony/gekon-orzesiony/przewodnik/` |
-| agama brodata | `/agamy/agama-brodata/przewodnik/` |
-| kameleon jemeński | `/kameleony/kameleon-jemenski/przewodnik/` |
-| żółw lądowy | `/zolwie/zolw-ladowy/przewodnik/` |
-| żółw wodno-lądowy | `/zolwie/zolw-wodno-ladowy/przewodnik/` |
-| aksolotl | `/plazy/aksolotl/przewodnik/` |
+| gekon orzęsiony | `/gekony/gekon-orzesiony/opis/` |
+| agama brodata | `/agamy/agama-brodata/opis/` |
+| kameleon jemeński | `/kameleony/kameleon-jemenski/opis/` |
+| żółw lądowy | `/zolwie/zolw-ladowy/opis/` |
+| żółw wodno-lądowy | `/zolwie/zolw-wodno-ladowy/opis/` |
+| aksolotl | `/plazy/aksolotl/opis/` |
 | aksolotl cena, ile kosztuje aksolotl | `/plazy/aksolotl/cena/` |
-| salamandra plamista | `/plazy/salamandra/przewodnik/` |
-| traszka grzebieniasta | `/plazy/traszka/przewodnik/` |
-| rzekotka drzewna | `/plazy/rzekotka/przewodnik/` |
-| modliszka | `/bezkregowce/modliszka/przewodnik/` |
-| ptasznik | `/bezkregowce/ptasznik/przewodnik/` |
-| patyczak, straszyk | `/bezkregowce/patyczak/przewodnik/` |
-| formikarium | `/bezkregowce/formikarium/przewodnik/` |
+| salamandra plamista | `/plazy/salamandra/opis/` |
+| traszka grzebieniasta | `/plazy/traszka/opis/` |
+| rzekotka drzewna | `/plazy/rzekotka/opis/` |
+| modliszka | `/bezkregowce/modliszka/opis/` |
+| ptasznik | `/bezkregowce/ptasznik/opis/` |
+| patyczak, straszyk | `/bezkregowce/patyczak/opis/` |
+| formikarium | `/bezkregowce/formikarium/opis/` |
 | waran, waran z komodo | `/jaszczurki-inne/waran/jako-zwierze-domowe/` |
-| jeż pigmejski | `/inne-zwierzeta/jez-pigmejski/przewodnik/` |
+| jeż pigmejski | `/inne-zwierzeta/jez-pigmejski/opis/` |
 | mata grzewcza | `/sprzet/mata-grzewcza/` |
 | lampa grzewcza, oświetlenie terrarium | `/sprzet/oswietlenie/` |
 | termostat, termometr | `/sprzet/termostat-termometr/` |
@@ -71,7 +71,7 @@ Użyj pierwszej sensownej wzmianki, potem przestań linkować ten sam cel na tej
 2. Unikaj dwóch linków w sąsiadujących krótkich zdaniach, gdy wyglądają jak lista niebieskiego tekstu.
 3. Jeśli pierwsza wzmianka jest w nagłówku, nagłówku tabeli, przycisku albo elemencie nawigacji, użyj kolejnej wzmianki w treści.
 4. Jeśli jedyna wzmianka jest w gęstej tabeli porównawczej, linkuj ją tam i unikaj kolejnego linku do tego samego adresu bezpośrednio pod tabelą.
-5. Jeśli akapit nazywa trzy powiązane pojęcia, linkuj najbardziej konkretne pierwsze. Wybierz `/weze/waz-zbozowy/przewodnik/` zamiast ogólnej strony węży, gdy fraza dotyczy konkretnie węża zbożowego.
+5. Jeśli akapit nazywa trzy powiązane pojęcia, linkuj najbardziej konkretne pierwsze. Wybierz `/weze/waz-zbozowy/opis/` zamiast ogólnej strony węży, gdy fraza dotyczy konkretnie węża zbożowego.
 6. Używaj naturalnej kotwicy ze zdania. Nie dodawaj sztucznych fraz dokładnego dopasowania tylko po to, by wymusić link.
 
 ## Minimalna gęstość linków wewnętrznych wg typu strony

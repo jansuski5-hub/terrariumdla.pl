@@ -10,7 +10,7 @@ katalogu z index.html. Nie sprawdza <img src>; obrazy weryfikuj ręcznie
 Użycie:
     python3 scripts/link_audit.py                       # cała strona
     python3 scripts/link_audit.py weze gekony            # jeden lub więcej katalogów
-    python3 scripts/link_audit.py weze/waz-zbozowy/przewodnik/index.html   # jeden plik
+    python3 scripts/link_audit.py weze/waz-zbozowy/opis/index.html   # jeden plik
     python3 scripts/link_audit.py --strict               # progi per archetyp z internal-linking-plan.md
 
 Kod wyjścia 1, jeśli którakolwiek strona nie przechodzi progu albo ma martwy
@@ -29,7 +29,7 @@ FLAT_FLOOR = 5  # minimalna liczba linków w <main>, tryb domyślny (bez --stric
 STRICT_RULES = [
     (re.compile(r"^index\.html$"), "strona główna", 20),
     (re.compile(r"^[a-z-]+/index\.html$"), "hub rodziny", 10),
-    (re.compile(r".*/przewodnik/index\.html$"), "filar gatunku", 10),
+    (re.compile(r".*/opis/index\.html$"), "filar gatunku", 10),
     (re.compile(r"^sprzet/"), "strona sprzętu", 6),
     (re.compile(r"^opieka-uniwersalna/"), "poradnik ogólny", 6),
     (re.compile(r"^blog/"), "wpis blogowy", 5),
