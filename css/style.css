@@ -394,7 +394,7 @@ article li { margin-bottom: .4rem; }
 }
 @media (max-width: 640px) {
   .hrow { height: auto; flex-wrap: wrap; padding: 12px 0; gap: 12px; }
-  .search { margin-left: 0; width: 100%; }
+  .search { right: 52px; }
   .cats, .probs, .posts, .fcols { grid-template-columns: 1fr; }
   .table-wrap { overflow-x: auto; }
 }
