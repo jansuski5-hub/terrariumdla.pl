@@ -74,7 +74,7 @@ header {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
-.hrow { display: flex; align-items: center; gap: 27px; min-height: 180px; flex-wrap: wrap; padding: 17px 0; }
+.hrow { position: relative; display: flex; align-items: center; gap: 27px; min-height: 180px; flex-wrap: wrap; padding: 17px 0; }
 .logo { font-size: 54px; font-weight: 700; color: var(--text); letter-spacing: -.3px; white-space: nowrap; }
 .logo span { color: var(--emerald); }
 .logo:hover { text-decoration: none; }
@@ -87,7 +87,11 @@ nav a::after {
 }
 nav a:hover::after { transform: scaleX(1); }
 .search {
-  margin-left: auto; font-family: inherit; font-size: 16px;
+  /* position: absolute so expanding on hover never resizes the flex line
+     (in-flow growth was pushing nav past the wrap threshold and causing
+     the header, and everything below it, to flicker between layouts) */
+  position: absolute; top: 50%; right: 92px; transform: translateY(-50%);
+  font-family: inherit; font-size: 16px; z-index: 5;
   width: 42px; height: 42px; padding: 0;
   background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239AA0A0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") no-repeat center / 18px;
   border: 1px solid var(--border); border-radius: 50%;
@@ -103,6 +107,7 @@ nav a:hover::after { transform: scaleX(1); }
 .search:hover::placeholder, .search:focus::placeholder { color: var(--text-dim); }
 .search:focus { outline: none; }
 .logo-mark {
+  margin-left: auto;
   display: flex; align-items: center; justify-content: center;
   width: 65px; height: 65px; border-radius: 50%;
   background: var(--surface); border: 1px solid var(--border);
@@ -115,7 +120,7 @@ nav a:hover::after { transform: scaleX(1); }
   .logo { font-size: 30px; }
   nav ul { gap: 16px; }
   nav a { font-size: 15px; }
-  .search { width: 36px; height: 36px; font-size: 14px; }
+  .search { right: 56px; width: 36px; height: 36px; font-size: 14px; }
   .search:hover, .search:focus { width: 170px; padding: 0 14px 0 34px; }
   .logo-mark { width: 40px; height: 40px; }
   .logo-mark img { width: 22px; height: 22px; }
