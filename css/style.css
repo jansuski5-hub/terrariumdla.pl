@@ -251,6 +251,20 @@ section { padding: 56px 0; }
 .cat p { color: var(--text-dim); font-size: 13.5px; line-height: 1.5; }
 .cat .count { color: var(--emerald); font-size: 12px; font-weight: 650; margin-top: 10px; display: block; }
 
+/* ---------- KAFELEK GATUNKU (zdjęcie + nazwa, hub rodziny) ---------- */
+.species-tiles { display: flex; flex-wrap: wrap; gap: 22px; margin: 1.8rem 0; }
+.species-tile { display: block; width: 200px; color: var(--text); }
+.species-tile img {
+  display: block; width: 100%; height: 150px; object-fit: cover;
+  border: 3px solid var(--emerald); border-radius: var(--radius); transition: border-color .15s, transform .15s;
+}
+.species-tile:hover img { border-color: var(--mint); transform: translateY(-2px); }
+.species-tile .species-tile-name {
+  display: block; margin-top: 10px; font-size: 15px; font-weight: 650;
+  text-align: center; color: var(--text); transition: color .15s;
+}
+.species-tile:hover .species-tile-name { color: var(--mint); text-decoration: none; }
+
 /* ---------- COMPARISON TABLE ---------- */
 .table-wrap { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--surface); overflow-x: auto; }
 .compare-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }

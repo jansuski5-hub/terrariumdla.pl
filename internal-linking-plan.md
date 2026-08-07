@@ -30,6 +30,7 @@ Fraza liczy się jako okazja do linku, gdy spełnione są trzy warunki:
 | ile kosztuje wąż zbożowy | `/weze/waz-zbozowy/cena/` |
 | pyton królewski | `/weze/pyton-krolewski/przewodnik/` |
 | boa dusiciel | `/weze/boa/przewodnik/` |
+| boa imperator, boa cesarski | `/weze/boa-imperator/przewodnik/` |
 | zaskroniec | `/weze/dzikie-w-polsce/zaskroniec/` |
 | padalec | `/weze/dzikie-w-polsce/padalec/` |
 | terrarium dla węża, jak urządzić terrarium dla węża | `/weze/ogolne/terrarium/` |
