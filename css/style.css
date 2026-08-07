@@ -99,13 +99,27 @@ nav a:hover::after { transform: scaleX(1); }
   transition: width .3s ease, border-radius .3s ease, background-position .3s ease, border-color .15s;
 }
 .search::placeholder { color: transparent; transition: color .2s ease; }
-.search:hover, .search:focus {
+/* Rozwijanie na dotyk wiążemy wyłącznie z :focus. Samo :hover na ekranach
+   dotykowych bywa "symulowane" przez przeglądarkę przy stuknięciu i potrafi
+   znikać w trakcie animacji szerokości, przez co pole rozwija się i od razu
+   się chowa. :focus nie ma tego problemu, bo trwa, dopóki pole faktycznie
+   ma fokus. */
+.search:focus {
   width: 240px; padding: 0 18px 0 42px; border-radius: 8px;
   background-position: 14px center;
   color: var(--text); border-color: var(--emerald); cursor: text;
+  outline: none;
 }
-.search:hover::placeholder, .search:focus::placeholder { color: var(--text-dim); }
-.search:focus { outline: none; }
+.search:focus::placeholder { color: var(--text-dim); }
+@media (hover: hover) and (pointer: fine) {
+  /* Prawdziwy hover myszką: tylko na urządzeniach, które go faktycznie mają. */
+  .search:hover {
+    width: 240px; padding: 0 18px 0 42px; border-radius: 8px;
+    background-position: 14px center;
+    color: var(--text); border-color: var(--emerald); cursor: text;
+  }
+  .search:hover::placeholder { color: var(--text-dim); }
+}
 .logo-mark {
   margin-left: auto;
   display: flex; align-items: center; justify-content: center;
@@ -129,9 +143,13 @@ nav a:hover::after { transform: scaleX(1); }
     position: static; top: auto; right: auto; transform: none;
     width: 36px; height: 36px; font-size: 14px;
   }
-  .search:hover, .search:focus { width: 170px; padding: 0 14px 0 34px; }
+  .search:focus { width: 170px; padding: 0 14px 0 34px; }
   .logo-mark { width: 40px; height: 40px; }
   .logo-mark img { width: 22px; height: 22px; }
+}
+@media (max-width: 900px) and (hover: hover) and (pointer: fine) {
+  /* Wąskie okno na desktopie z myszką (nie telefon) - hover ma dalej działać. */
+  .search:hover { width: 170px; padding: 0 14px 0 34px; }
 }
 
 /* ---------- BREADCRUMBS (podstrony wewnętrzne) ---------- */
