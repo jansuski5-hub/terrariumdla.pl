@@ -74,12 +74,12 @@ header {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
-.hrow { display: flex; align-items: center; gap: 28px; min-height: 190px; flex-wrap: wrap; padding: 18px 0; }
-.logo { font-size: 57px; font-weight: 700; color: var(--text); letter-spacing: -.3px; white-space: nowrap; }
+.hrow { display: flex; align-items: center; gap: 27px; min-height: 180px; flex-wrap: wrap; padding: 17px 0; }
+.logo { font-size: 54px; font-weight: 700; color: var(--text); letter-spacing: -.3px; white-space: nowrap; }
 .logo span { color: var(--emerald); }
 .logo:hover { text-decoration: none; }
-nav ul { display: flex; gap: 30px; list-style: none; flex-wrap: wrap; }
-nav a { color: var(--text-dim); font-size: 24px; font-weight: 500; padding: 8px 0; position: relative; }
+nav ul { display: flex; gap: 29px; list-style: none; flex-wrap: wrap; }
+nav a { color: var(--text-dim); font-size: 23px; font-weight: 500; padding: 8px 0; position: relative; }
 nav a:hover { color: var(--mint); text-decoration: none; }
 nav a::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
@@ -88,18 +88,18 @@ nav a::after {
 nav a:hover::after { transform: scaleX(1); }
 .search {
   margin-left: auto; background: var(--surface); border: 1px solid var(--border);
-  color: var(--text-dim); border-radius: 6px; padding: 14px 20px; font-size: 20px;
-  min-width: 260px; font-family: inherit;
+  color: var(--text-dim); border-radius: 6px; padding: 13px 19px; font-size: 19px;
+  min-width: 247px; font-family: inherit;
 }
 .search:focus { outline: none; border-color: var(--emerald); color: var(--text); }
 .logo-mark {
   display: flex; align-items: center; justify-content: center;
-  width: 68px; height: 68px; border-radius: 50%;
+  width: 65px; height: 65px; border-radius: 50%;
   background: var(--surface); border: 1px solid var(--border);
   flex-shrink: 0; transition: border-color .15s, transform .15s;
 }
 .logo-mark:hover { border-color: var(--emerald); transform: scale(1.06); }
-.logo-mark img { width: 38px; height: 38px; }
+.logo-mark img { width: 36px; height: 36px; }
 @media (max-width: 900px) {
   .hrow { min-height: 0; padding: 14px 0; gap: 16px; }
   .logo { font-size: 30px; }
@@ -122,7 +122,7 @@ nav a:hover::after { transform: scaleX(1); }
 /* ---------- HERO (zdjęcie above-the-fold + logotyp z rotatorem) ---------- */
 .hero-photo {
   position: relative;
-  min-height: 64vh;
+  min-height: 54.4vh;
   display: flex;
   align-items: flex-end;
   border-bottom: 1px solid var(--border);
@@ -144,7 +144,7 @@ nav a:hover::after { transform: scaleX(1); }
 .hero-tagline {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 400;
-  font-size: clamp(64px, 10.4vw, 136px);
+  font-size: clamp(54px, 8.8vw, 116px);
   line-height: 1.1;
   letter-spacing: -.5px;
   color: var(--text);
@@ -191,7 +191,7 @@ nav a:hover::after { transform: scaleX(1); }
   .hero-tagline .rotator span:last-child { opacity: 1; }
 }
 @media (max-width: 700px) {
-  .hero-photo { min-height: 58vh; }
+  .hero-photo { min-height: 49.3vh; }
   .hero-photo-inner { padding-left: 20px; padding-bottom: 56px; }
 }
 
