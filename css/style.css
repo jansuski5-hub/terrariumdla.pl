@@ -426,5 +426,6 @@ article li { margin-bottom: .4rem; }
 
 /* --- Utility --- */
 .text-dim { color: var(--text-dim); }
+.text-mint { color: var(--mint); }
 .mt-0 { margin-top: 0; }
 .mb-0 { margin-bottom: 0; }
