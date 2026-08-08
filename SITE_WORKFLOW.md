@@ -51,6 +51,16 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-08-08 (sesja 16)_
+
+**Zrobione (ta sesja; zmiana faviconu na wariant kameleona z mockupu Wojciecha):**
+- Wojciech przesłał planszę mockupu „10 przykładów favicon" (JPG 1536x1024, 10 kandydatów w siatce 5x2) i wybrał wariant nr 4: sylwetka kameleona na gałązce, ciemna zieleń na jasnozielonym tle, okrągły kadr.
+- **Wycięto ikonę 4 z planszy precyzyjnie**, nie ręcznym zgadywaniem: wykryto granice koła przez skan pikseli (Python/PIL, porównanie do koloru tła strony) zamiast szacowania współrzędnych na oko, żeby uniknąć zahaczenia o sąsiednie kafelki (3 i 5). Wynik: kwadrat 274x274 wycięty z `(938,309)`, potem okrągła maska alfa (`ImageMagick -compose CopyOpacity`), żeby narożniki kwadratu były przezroczyste zamiast tła planszy.
+- Przeskalowano do 256x256, zapisano jako `assets/img/favicon-chameleon.png` (84 KB). `assets/img/favicon-terrarium.png` z sesji 15 (poprzedni favicon, roślina w zbiorniku) zostaje w repo nieużywany, podobnie jak oryginalny `favicon.svg` (wąż, dalej używany jako `.logo-mark` w headerze).
+- **Podmieniono `<link rel="icon">` na wszystkich 12 plikach HTML** (te same co w sesji 15) z `favicon-terrarium.png` na `favicon-chameleon.png`, przez `sed` na dokładnym dopasowaniu ścieżki. `.logo-mark` w headerze znowu nietknięty, zgodnie z tą samą zasadą co sesja 15 (prośba dotyczyła faviconu).
+- Zweryfikowano: `html.parser` bez błędów na wszystkich 12 plików, wizualna kontrola wyciętej ikony przed zapisem (czysty krąg, bez fragmentów sąsiednich kafelków, przezroczyste tło poza kołem).
+- **Trzeci favicon w ciągu trzech sesji** (wąż SVG oryginalny → roślina w zbiorniku sesja 15 → kameleon sesja 16). Jeśli Wojciech ustabilizuje wybór, warto rozważyć uprzątnięcie nieużywanych plików `favicon.svg`/`favicon-terrarium.png` z `assets/img/`, ale nie kasować bez wyraźnej prośby (repo ma zasadę nieusuwania bez potrzeby).
+
 _Ostatnia aktualizacja: 2026-08-08 (sesja 15)_
 
 **Zrobione (ta sesja; nowy favicon na całej stronie):**
