@@ -51,7 +51,15 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
-_Ostatnia aktualizacja: 2026-08-08 (sesja 14)_
+_Ostatnia aktualizacja: 2026-08-08 (sesja 15)_
+
+**Zrobione (ta sesja; nowy favicon na całej stronie):**
+- Wojciech przesłał nową ikonę terrarium (płaska grafika, roślina + kamienie + podłoże, obrys czarny), PNG 204x197 z przezroczystością (RGBA, 88 KB).
+- Dopełniono do kwadratu 204x204 (przezroczyste marginesy, `-gravity center -extent`), przeskalowano do 256x256, zapisano jako `assets/img/favicon-terrarium.png` (99 KB). Oryginalny `assets/img/favicon.svg` (wąż z rozwidlonym językiem) zostaje w repo nietknięty.
+- **Podmieniono `<link rel="icon">` na wszystkich 12 plikach HTML, które go mają** (`index.html`, `template.html`, 9 hubów rodzin, `weze/boa-imperator/opis/index.html`): z `href="/assets/img/favicon.svg" type="image/svg+xml"` na `href="/assets/img/favicon-terrarium.png" type="image/png"`. Zmiana zrobiona przez `sed` na dokładnym, pełnym dopasowaniu linii, żeby nie ruszyć niczego innego.
+- **Świadomie nie ruszono `.logo-mark`** (ikona węża w prawym rogu headera, osobny element wizualny, też odwołujący się do `favicon.svg`): prośba dotyczyła favicony, nie loga w headerze. Jeśli Wojciech chce też zmienić logo w headerze na tę samą ikonę terrarium, to osobne zlecenie.
+- Zweryfikowano: `html.parser` bez błędów na wszystkich 12 zmienionych plików, `grep` potwierdza zero pozostałych referencji do starego tagu `<link rel="icon" href="/assets/img/favicon.svg"...>` i dokładnie 12 wystąpień nowego tagu. Obraz sprawdzony wizualnie (Read na finalnym PNG): przezroczyste tło, ostre krawędzie, brak artefaktów po skalowaniu.
+- **Nowa strona `weze/boa-imperator/opis/index.html`, gdyby powstała po tej sesji bez skopiowania z `template.html`, nie dostanie automatycznie nowego faviconu**: `template.html` już zaktualizowany, więc kolejne strony kopiowane od teraz będą miały poprawny tag od razu.
 
 **Zrobione (ta sesja; podmiana zdjęcia na filarze boa imperator):**
 - Wojciech przesłał nowe zdjęcie węża (znak wodny „TDC", ta sama seria co poprzednie zdjęcie z sesji 12), PNG 726x488, 530 KB. Przekonwertowano przez `convert` do JPG jakość 88, wynik 726x488, 65 KB, nadpisano `assets/img/boa-imperator-opis.jpg` (poprzedni plik 1280x868 zastąpiony, nie był używany nigdzie indziej w repo, sprawdzone przez grep).
