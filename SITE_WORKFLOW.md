@@ -51,6 +51,14 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-08-08 (sesja 14)_
+
+**Zrobione (ta sesja; podmiana zdjęcia na filarze boa imperator):**
+- Wojciech przesłał nowe zdjęcie węża (znak wodny „TDC", ta sama seria co poprzednie zdjęcie z sesji 12), PNG 726x488, 530 KB. Przekonwertowano przez `convert` do JPG jakość 88, wynik 726x488, 65 KB, nadpisano `assets/img/boa-imperator-opis.jpg` (poprzedni plik 1280x868 zastąpiony, nie był używany nigdzie indziej w repo, sprawdzone przez grep).
+- Zaktualizowano `width`/`height` w `<img>` na `/weze/boa-imperator/opis/index.html` (726x488) i `alt` pod nowy kadr (wąż zwinięty na korze, zbliżenie na głowę i wzór ubarwienia, zamiast poprzedniego opisu „na gałęzi").
+- Zweryfikowano wizualnie (Read na finalnym JPG): znak wodny widoczny, kadr ostry, brak artefaktów kompresji.
+- `link_audit.py --strict`: 14/10, bez regresji względem sesji 13 (zmiana obrazu nie dotyka linków).
+
 _Ostatnia aktualizacja: 2026-08-08 (sesja 13)_
 
 **Zrobione (ta sesja; przepisano treść filaru boa imperator na materiał od Wojciecha):**
