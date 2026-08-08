@@ -31,6 +31,9 @@ Fraza liczy się jako okazja do linku, gdy spełnione są trzy warunki:
 | pyton królewski | `/weze/pyton-krolewski/opis/` |
 | boa dusiciel | `/weze/boa/opis/` |
 | boa imperator, boa cesarski | `/weze/boa-imperator/opis/` |
+| ile kosztuje boa imperator | `/weze/boa-imperator/cena/` |
+| terrarium dla boa imperator | `/weze/boa-imperator/terrarium/` |
+| odmiany boa imperator | `/weze/boa-imperator/odmiany/` |
 | zaskroniec | `/weze/dzikie-w-polsce/zaskroniec/` |
 | padalec | `/weze/dzikie-w-polsce/padalec/` |
 | terrarium dla węża, jak urządzić terrarium dla węża | `/weze/ogolne/terrarium/` |

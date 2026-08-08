@@ -310,6 +310,17 @@ section { padding: 56px 0; }
 }
 .species-tile:hover .species-tile-name { color: var(--mint); text-decoration: none; }
 
+/* ---------- SPECIES PHOTO (zdjęcie hero na filarze gatunku) ---------- */
+.species-photo { margin: 1.6rem 0 2.4rem; text-align: center; }
+.species-photo img {
+  display: inline-block; max-width: 640px; width: 100%; height: auto;
+  border: 3px solid var(--emerald); border-radius: var(--radius);
+}
+.species-photo figcaption {
+  margin-top: 12px; font-size: 13px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .5px; color: var(--text-dim);
+}
+
 /* ---------- COMPARISON TABLE ---------- */
 .table-wrap { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--surface); overflow-x: auto; }
 .compare-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
