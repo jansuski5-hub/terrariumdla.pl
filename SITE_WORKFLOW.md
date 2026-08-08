@@ -51,6 +51,18 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-08-08 (sesja 13)_
+
+**Zrobione (ta sesja; przepisano treść filaru boa imperator na materiał od Wojciecha):**
+- **Zastąpiono treść `<article>` w `/weze/boa-imperator/opis/index.html`** materiałem dostarczonym bezpośrednio przez Wojciecha (własna wiedza/doświadczenie, nie wyszukiwanie), zamiast wcześniejszych faktów z sesji 12 znalezionych przez wyszukiwarkę. Struktura sekcji: opis, **stan prawny** (nowa sekcja, wcześniej celowo pominięta w sesji 12 z braku pewnego źródła), wielkość, terrarium, żywienie, aktywność (z osobistą notatką „mój własny osobnik lubi wędrować także w ciągu dnia", realne E-E-A-T), długość życia, odmiany barwne i cena, boa imperator dla początkujących, czego potrzebujesz.
+- **Liczby zaktualizowane, różnią się od sesji 12** (nowe źródło = Wojciech, nadpisuje wcześniejsze dane z wyszukiwania): terrarium dorosły 140x50x50 cm (wcześniej 120x80x80), 120 cm przy mniejszych liniach jak Hog Island; temperatura 30-32°C strefa ciepła / 24-26°C strefa chłodna / 20-22°C noc (wcześniej 25-28°C z punktem grzewczym do 35°C); wilgotność 60-70% z skokami do 80% przy wylince (wcześniej 60% dzień / 80-100% noc); długość życia 20-30 lat (nowa informacja, nie było jej w sesji 12); cena rozbita na 4 poziomy odmian zamiast jednego akapitu.
+- **Stan prawny domknięty**: CITES, rejestracja w urzędzie miasta/gminy, zgłoszenie miotu w powiatowym inspektoracie weterynarii. To rozwiązuje otwarty punkt z sesji 12 („nie udało się jednoznacznie potwierdzić polskiego rozporządzenia"); teraz oparte na tym, co podał Wojciech wprost, nie na wyszukiwaniu.
+- **Nowy pierwszy realny użytek komponentu `.compare-table`/`.table-wrap`** na stronie (wcześniej istniał tylko w CSS, żadna opublikowana podstrona go nie używała): tabela cen wg odmiany w sekcji „Odmiany barwne i cena". Brak zmian w CSS, komponent już istniał.
+- **14 linków wewnętrznych w `<main>`** (próg filaru 10-15 spełniony, ten sam zestaw celów co w sesji 12, bez regresji): powrót do `/weze/`, `/weze/boa/opis/`, 3 satelity boa imperator (cena/terrarium/odmiany), `/weze/waz-zbozowy/opis/` i `/weze/pyton-krolewski/opis/`, `/weze/ogolne/terrarium/`, 4 strony sprzętu, 2 strony opieki uniwersalnej. Wszystkie martwe (strony jeszcze nienapisane), spójne z resztą serwisu.
+- Zweryfikowano: `link_audit.py --strict` (14/10, przechodzi próg liczbowy), balans tagów włącznie z nowymi `table/thead/tbody/tr/td/th` (wszystkie pary równe), `html.parser` bez błędów, skan regex pełnej listy zabronionych słów/fraz z `ai-writing-detection.md` na czystym tekście `<article>` (zero trafień), skan wzorców kontrastu negacyjnego zasady 25 (zero trafień). Meta description zaktualizowany pod nową treść (dodano „stan prawny", „długość życia").
+- Nie zmieniano: zdjęcia, headera, stopki, kafelka na `/weze/index.html`, `sitemap.xml` (URL bez zmian, wszystko już wpięte z sesji 12).
+- **Otwarte, bez zmian z sesji 12**: satelity boa imperator (`cena/`, `terrarium/`, `odmiany/`) nadal nie istnieją. `weze/index.html` nadal poniżej progu linkowego (1/5), do naprawy w kolejnej sesji, poza zakresem tego zlecenia.
+
 _Ostatnia aktualizacja: 2026-08-08 (sesja 12)_
 
 **Zrobione (ta sesja; pierwsza opublikowana podstrona treściowa serwisu, filar boa imperator):**
