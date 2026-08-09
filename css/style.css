@@ -44,7 +44,7 @@
 
 /* --- Reset --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; zoom: .8; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -320,6 +320,16 @@ section { padding: 56px 0; }
   margin-top: 12px; font-size: 13px; font-weight: 700; text-transform: uppercase;
   letter-spacing: .5px; color: var(--text-dim);
 }
+
+/* ---------- PASEK TRUDNOŚCI HODOWLI (filar gatunku) ---------- */
+.difficulty { margin: -1rem 0 1.8rem; }
+.difficulty-label {
+  display: block; font-family: 'Fragment Mono', monospace; font-size: 13.2px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .6px; color: var(--text-dim); margin-bottom: 8px;
+}
+.difficulty-bars { display: flex; gap: 6px; max-width: 260px; }
+.difficulty-bar { flex: 1; height: 10px; border-radius: 4px; background: var(--surface); border: 1px solid var(--border); }
+.difficulty-bar.filled { background: var(--emerald); border-color: var(--emerald); }
 
 /* ---------- COMPARISON TABLE ---------- */
 .table-wrap { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--surface); overflow-x: auto; }

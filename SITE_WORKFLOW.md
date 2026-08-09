@@ -51,6 +51,90 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-08-09 (sesja 21)_
+
+**Zrobione (ta sesja; diagnoza „zoom 80% niewidoczny" + fix cache-bustingu):**
+- Wojciech poprosił o zmniejszenie strony głównej i podstron do poziomu 80%. Sprawdzone w repo: `html { zoom: .8; }` już było dodane bezpośrednio przez Wojciecha poza sesją (commit `10474fa "Update style.css"`, 11:30), globalnie przez `css/style.css`, więc obejmuje wszystkie 12 stron HTML (dzielą ten sam plik CSS).
+- Wojciech zgłosił, że efekt nie jest widoczny mimo że reguła jest w repo i na `origin/main`. **Przyczyna zidentyfikowana**: commit `10474fa` zmienił `style.css`, ale nie podbił cache-bustingu `?v=` na `<link rel="stylesheet">` (zostało `?v=13`, ta sama wartość co przed zmianą zoom). Przeglądarki i ewentualny cache po stronie hostingu mogły dalej serwować starą, scachowaną wersję `style.css` pod tym samym URL-em.
+- **Fix**: podbito `?v=13` na `?v=14` na wszystkich 12 plikach HTML (`index.html`, 9 hubów rodzin, `template.html`, `weze/boa-imperator/opis/index.html`), zgodnie z konwencją cache-bustingu z poprzednich sesji (np. sesja 15/16/19/20).
+- Zweryfikowano: `html.parser` bez błędów na wszystkich plikach `.html` w repo, `grep` potwierdza dokładnie 12 wystąpień `style.css?v=14` i zero pozostałych `?v=13`.
+- **Nie udało się zacommitować w tej sesji**: `.git/index.lock` istnieje i nie da się go usunąć (`Operation not permitted`), git zgłasza „Another git process seems to be running in this repository" — najpewniej Wojciech ma otwarty inny klient git (GitHub Desktop / edycję na GitHub.com) w tym samym repo równolegle z tą sesją. **Zmiany są zapisane na dysku** (13 plików: 12x HTML + ten wpis w `SITE_WORKFLOW.md`), ale nie scommitowane ani niewypchnięte. Wojciech musi zamknąć/zakończyć inny proces git i sam zacommitować + wypchnąć (albo poczekać, aż zwolni się lock, i poprosić o commit w kolejnej turze).
+- **Bez podglądu w przeglądarce** (sandbox bez headless browsera, jak w poprzednich sesjach), więc nie potwierdzono wizualnie, czy 80% zoom po stronie wygląda dobrze po odświeżeniu cache; to do potwierdzenia przez Wojciecha po deployu z nowym `?v=14`.
+
+_Ostatnia aktualizacja: 2026-08-09 (sesja 20)_
+
+**Zrobione (ta sesja; drobna korekta paska trudności hodowli):**
+- `.difficulty-label` z 12px na 13.2px (dokładnie +10%, na życzenie Wojciecha).
+- `.difficulty` z `margin: 0 0 1.8rem` na `margin: -1rem 0 1.8rem`: cały blok (etykieta + pasek) podniesiony o mniej więcej wysokość odstępu między akapitami (`article p` ma `margin-bottom: 1rem`), więc bliżej zdjęcia, z tym samym odstępem od pierwszego akapitu co wcześniej.
+- Cache-busting: `?v=12` na `?v=13` przy `style.css` na wszystkich 12 plikach.
+- Zweryfikowano: balans klamer w `style.css` (207/207), bez zmian w HTML poza wersją CSS.
+- **Nadal bez podglądu w przeglądarce** (sandbox bez headless browsera, jak w sesji 19); jeśli 10% na oko wygląda za mało albo za dużo, albo podniesienie o 1rem nie trafia w to, o co chodziło, popraw wartości i daj znać dokładnie w px/rem.
+
+_Ostatnia aktualizacja: 2026-08-09 (sesja 19)_
+
+**Zrobione (ta sesja; nowy komponent „pasek trudności hodowli" na filarze boa imperator):**
+- Nowy komponent CSS `.difficulty`/`.difficulty-label`/`.difficulty-bars`/`.difficulty-bar` w `style.css`, dopisany zaraz po `.species-photo`: etykieta w stylu `.tag`/figcaption (Fragment Mono, wielkie litery, `text-dim`), pod nią pasek 5 segmentów (`flex`, `gap: 6px`, `max-width: 260px`), segmenty domyślnie w kolorze `--surface`/`--border`, wypełnione w `--emerald`.
+- Wstawiony na `/weze/boa-imperator/opis/index.html` między `<figure class="species-photo">` a pierwszym akapitem, lewostronnie (bez `text-align: center` z figury nadrzędnej). Etykieta „Trudność hodowli", 1 z 5 segmentów wypełniony (boa imperator oceniony jako łatwy w hodowli, zgodnie z tym, co już strona mówi w sekcji „dla początkujących"). Dodano `role="img"` i `aria-label="Trudność hodowli: 1 z 5, wąż łatwy w hodowli"` na kontenerze pasków, żeby ocena była dostępna też dla czytników ekranu i nie tylko wizualna.
+- **Cache-busting**: zbito `?v=11` na `?v=12` przy `style.css` na wszystkich 12 plikach HTML, spójnie z poprzednimi bumpami przy nowych komponentach (sesja 12: `.species-photo`).
+- Zweryfikowano: `html.parser` bez błędów, balans tagów (`div`/`span` włącznie z nowymi elementami paska, wszystkie pary równe), balans klamer w `style.css` (207/207), `link_audit.py --strict` 14/10 bez regresji. **Bez renderu wizualnego w przeglądarce**: sandbox nie ma headless przeglądarki (sprawdzono `chromium`/`wkhtmltoimage`/`playwright`, żadne niedostępne), więc wygląd paska nie został potwierdzony na oko, tylko przez przegląd CSS. Wojciech powinien rzucić okiem po wdrożeniu, czy szerokość/wysokość segmentów wygląda dobrze w praktyce.
+- Komponent ograniczony na razie do tej jednej strony; jeśli Wojciech chce go używać na innych filarach gatunków, trzeba będzie dodać go ręcznie do każdej strony (brak systemu includes, ten sam dług techniczny co reszta serwisu) i ustalić poziom trudności per gatunek.
+
+_Ostatnia aktualizacja: 2026-08-09 (sesja 18)_
+
+**Zrobione (ta sesja; meta title/description na życzenie Wojciecha + potwierdzenie zdjęcia głównego):**
+- Wojciech podał własny, dokładny tekst do wstawienia bez zmian: `<title>Boa imperator (boa cesarski):  terrarium, cena | Terrarium Dla Ciebie</title>` i meta description „Boa imperator - opis gatunkowy, pochodzenie, wielkość terrarium, cena wg. odmian. Wygląd, długość, trudność hodowli." Wstawiono dosłownie, łącznie z podwójną spacją po dwukropku i „Terrarium Dla Ciebie" w brandingu. **Odnotowana rozbieżność**: to jedyna z 10 podstron z brandingiem „Terrarium Dla Ciebie" w tytule, pozostałe 9 (huby rodzin + strona główna) mają „terrariumdla.pl". Zgłoszone Wojciechowi w poprzedniej turze, nie poprawione bez jego decyzji.
+- **Plik `assets/img/boa-imperator-opis.jpg` podmieniony poza sesją** (znaleziony jako `git status` „modified" bez odpowiadającego commitu, ten sam wzorzec „commitów spoza sesji" co poprzednie sesje): nowa wersja, 1176x797 (bez zmiany wymiarów względem sesji 17), 193 KB, ze znakiem wodnym TDC (poprzednia wersja z `imperator1.svg` była bez znaku wodnego). `<img>` na `/weze/boa-imperator/opis/index.html` już wskazywał na tę samą nazwę pliku i te same wymiary, więc `src`/`width`/`height` nie wymagały zmian. Zaktualizowano tylko `alt` z powrotem na „na korze" (zgodne z tym konkretnym kadrem, ten sam opis co w sesji 13/14).
+- Zweryfikowano: `html.parser` bez błędów, `link_audit.py --strict` 14/10 bez regresji, zdjęcie sprawdzone wizualnie (Read na pliku z dysku).
+
+_Ostatnia aktualizacja: 2026-08-09 (sesja 17)_
+
+**Zrobione (ta sesja; trzecia podmiana zdjęcia na filarze boa imperator, z pliku dodanego bezpośrednio do repo):**
+- Wojciech dodał do repo (poza sesją, bez wcześniejszego wpisu w statusie) `assets/img/imperator1.svg`, 2,4 MB, ten sam wzorzec co `boa imperator.svg` z sesji 12: SVG jako kontener na pojedynczy osadzony raster PNG w base64, bez faktycznej wektorowej grafiki.
+- Poproszony o „obrazek z folderu imperator1 w największej rozdzielczości": nie było takiego folderu w repo, tylko plik `imperator1.svg`; potraktowano to jako ten plik (jedyne dopasowanie), zgodnie z wcześniejszym wzorcem tego typu próśb.
+- **Wyodrębniono osadzony raster programowo** (Python, dekodowanie base64 z rozpakowaniem encji XML `&#10;` w danych): naturalna rozdzielczość 1176x797, jedyna dostępna w pliku (SVG nie zawiera wielu wariantów rozdzielczości), więc to automatycznie „największa rozdzielczość" z prośby. Bez watermarku TDC, w przeciwieństwie do dwóch poprzednich zdjęć tego gatunku.
+- Przekonwertowano do JPG jakość 88 **bez przeskalowania** (zachowana natywna rozdzielczość źródła, w przeciwieństwie do sesji 12, gdzie źródło było przeskalowane w górę do 1280x868): wynik 1176x797, 133 KB. Nadpisano `assets/img/boa-imperator-opis.jpg`.
+- Zaktualizowano `width`/`height` w `<img>` na `/weze/boa-imperator/opis/index.html` (1176x797) i `alt` (głowa uniesiona, zwój na gałęzi, bez wzmianki o watermarku, bo go nie ma na tym zdjęciu).
+- Zweryfikowano: `html.parser` bez błędów, `link_audit.py --strict` 14/10 bez regresji, zdjęcie sprawdzone wizualnie (Read na finalnym JPG) przed użyciem: ostre, bez artefaktów, wygląda na inne ujęcie tego samego osobnika co zdjęcia z sesji 12/13.
+- Oryginalny `imperator1.svg` zostaje w repo nietknięty, zgodnie ze standing rule (nie kasować źródeł bez wyraźnej prośby).
+
+_Ostatnia aktualizacja: 2026-08-08 (sesja 16)_
+
+**Zrobione (ta sesja; zmiana faviconu na wariant kameleona z mockupu Wojciecha):**
+- Wojciech przesłał planszę mockupu „10 przykładów favicon" (JPG 1536x1024, 10 kandydatów w siatce 5x2) i wybrał wariant nr 4: sylwetka kameleona na gałązce, ciemna zieleń na jasnozielonym tle, okrągły kadr.
+- **Wycięto ikonę 4 z planszy precyzyjnie**, nie ręcznym zgadywaniem: wykryto granice koła przez skan pikseli (Python/PIL, porównanie do koloru tła strony) zamiast szacowania współrzędnych na oko, żeby uniknąć zahaczenia o sąsiednie kafelki (3 i 5). Wynik: kwadrat 274x274 wycięty z `(938,309)`, potem okrągła maska alfa (`ImageMagick -compose CopyOpacity`), żeby narożniki kwadratu były przezroczyste zamiast tła planszy.
+- Przeskalowano do 256x256, zapisano jako `assets/img/favicon-chameleon.png` (84 KB). `assets/img/favicon-terrarium.png` z sesji 15 (poprzedni favicon, roślina w zbiorniku) zostaje w repo nieużywany, podobnie jak oryginalny `favicon.svg` (wąż, dalej używany jako `.logo-mark` w headerze).
+- **Podmieniono `<link rel="icon">` na wszystkich 12 plikach HTML** (te same co w sesji 15) z `favicon-terrarium.png` na `favicon-chameleon.png`, przez `sed` na dokładnym dopasowaniu ścieżki. `.logo-mark` w headerze znowu nietknięty, zgodnie z tą samą zasadą co sesja 15 (prośba dotyczyła faviconu).
+- Zweryfikowano: `html.parser` bez błędów na wszystkich 12 plików, wizualna kontrola wyciętej ikony przed zapisem (czysty krąg, bez fragmentów sąsiednich kafelków, przezroczyste tło poza kołem).
+- **Trzeci favicon w ciągu trzech sesji** (wąż SVG oryginalny → roślina w zbiorniku sesja 15 → kameleon sesja 16). Jeśli Wojciech ustabilizuje wybór, warto rozważyć uprzątnięcie nieużywanych plików `favicon.svg`/`favicon-terrarium.png` z `assets/img/`, ale nie kasować bez wyraźnej prośby (repo ma zasadę nieusuwania bez potrzeby).
+
+_Ostatnia aktualizacja: 2026-08-08 (sesja 15)_
+
+**Zrobione (ta sesja; nowy favicon na całej stronie):**
+- Wojciech przesłał nową ikonę terrarium (płaska grafika, roślina + kamienie + podłoże, obrys czarny), PNG 204x197 z przezroczystością (RGBA, 88 KB).
+- Dopełniono do kwadratu 204x204 (przezroczyste marginesy, `-gravity center -extent`), przeskalowano do 256x256, zapisano jako `assets/img/favicon-terrarium.png` (99 KB). Oryginalny `assets/img/favicon.svg` (wąż z rozwidlonym językiem) zostaje w repo nietknięty.
+- **Podmieniono `<link rel="icon">` na wszystkich 12 plikach HTML, które go mają** (`index.html`, `template.html`, 9 hubów rodzin, `weze/boa-imperator/opis/index.html`): z `href="/assets/img/favicon.svg" type="image/svg+xml"` na `href="/assets/img/favicon-terrarium.png" type="image/png"`. Zmiana zrobiona przez `sed` na dokładnym, pełnym dopasowaniu linii, żeby nie ruszyć niczego innego.
+- **Świadomie nie ruszono `.logo-mark`** (ikona węża w prawym rogu headera, osobny element wizualny, też odwołujący się do `favicon.svg`): prośba dotyczyła favicony, nie loga w headerze. Jeśli Wojciech chce też zmienić logo w headerze na tę samą ikonę terrarium, to osobne zlecenie.
+- Zweryfikowano: `html.parser` bez błędów na wszystkich 12 zmienionych plików, `grep` potwierdza zero pozostałych referencji do starego tagu `<link rel="icon" href="/assets/img/favicon.svg"...>` i dokładnie 12 wystąpień nowego tagu. Obraz sprawdzony wizualnie (Read na finalnym PNG): przezroczyste tło, ostre krawędzie, brak artefaktów po skalowaniu.
+- **Nowa strona `weze/boa-imperator/opis/index.html`, gdyby powstała po tej sesji bez skopiowania z `template.html`, nie dostanie automatycznie nowego faviconu**: `template.html` już zaktualizowany, więc kolejne strony kopiowane od teraz będą miały poprawny tag od razu.
+
+**Zrobione (ta sesja; podmiana zdjęcia na filarze boa imperator):**
+- Wojciech przesłał nowe zdjęcie węża (znak wodny „TDC", ta sama seria co poprzednie zdjęcie z sesji 12), PNG 726x488, 530 KB. Przekonwertowano przez `convert` do JPG jakość 88, wynik 726x488, 65 KB, nadpisano `assets/img/boa-imperator-opis.jpg` (poprzedni plik 1280x868 zastąpiony, nie był używany nigdzie indziej w repo, sprawdzone przez grep).
+- Zaktualizowano `width`/`height` w `<img>` na `/weze/boa-imperator/opis/index.html` (726x488) i `alt` pod nowy kadr (wąż zwinięty na korze, zbliżenie na głowę i wzór ubarwienia, zamiast poprzedniego opisu „na gałęzi").
+- Zweryfikowano wizualnie (Read na finalnym JPG): znak wodny widoczny, kadr ostry, brak artefaktów kompresji.
+- `link_audit.py --strict`: 14/10, bez regresji względem sesji 13 (zmiana obrazu nie dotyka linków).
+
+_Ostatnia aktualizacja: 2026-08-08 (sesja 13)_
+
+**Zrobione (ta sesja; przepisano treść filaru boa imperator na materiał od Wojciecha):**
+- **Zastąpiono treść `<article>` w `/weze/boa-imperator/opis/index.html`** materiałem dostarczonym bezpośrednio przez Wojciecha (własna wiedza/doświadczenie, nie wyszukiwanie), zamiast wcześniejszych faktów z sesji 12 znalezionych przez wyszukiwarkę. Struktura sekcji: opis, **stan prawny** (nowa sekcja, wcześniej celowo pominięta w sesji 12 z braku pewnego źródła), wielkość, terrarium, żywienie, aktywność (z osobistą notatką „mój własny osobnik lubi wędrować także w ciągu dnia", realne E-E-A-T), długość życia, odmiany barwne i cena, boa imperator dla początkujących, czego potrzebujesz.
+- **Liczby zaktualizowane, różnią się od sesji 12** (nowe źródło = Wojciech, nadpisuje wcześniejsze dane z wyszukiwania): terrarium dorosły 140x50x50 cm (wcześniej 120x80x80), 120 cm przy mniejszych liniach jak Hog Island; temperatura 30-32°C strefa ciepła / 24-26°C strefa chłodna / 20-22°C noc (wcześniej 25-28°C z punktem grzewczym do 35°C); wilgotność 60-70% z skokami do 80% przy wylince (wcześniej 60% dzień / 80-100% noc); długość życia 20-30 lat (nowa informacja, nie było jej w sesji 12); cena rozbita na 4 poziomy odmian zamiast jednego akapitu.
+- **Stan prawny domknięty**: CITES, rejestracja w urzędzie miasta/gminy, zgłoszenie miotu w powiatowym inspektoracie weterynarii. To rozwiązuje otwarty punkt z sesji 12 („nie udało się jednoznacznie potwierdzić polskiego rozporządzenia"); teraz oparte na tym, co podał Wojciech wprost, nie na wyszukiwaniu.
+- **Nowy pierwszy realny użytek komponentu `.compare-table`/`.table-wrap`** na stronie (wcześniej istniał tylko w CSS, żadna opublikowana podstrona go nie używała): tabela cen wg odmiany w sekcji „Odmiany barwne i cena". Brak zmian w CSS, komponent już istniał.
+- **14 linków wewnętrznych w `<main>`** (próg filaru 10-15 spełniony, ten sam zestaw celów co w sesji 12, bez regresji): powrót do `/weze/`, `/weze/boa/opis/`, 3 satelity boa imperator (cena/terrarium/odmiany), `/weze/waz-zbozowy/opis/` i `/weze/pyton-krolewski/opis/`, `/weze/ogolne/terrarium/`, 4 strony sprzętu, 2 strony opieki uniwersalnej. Wszystkie martwe (strony jeszcze nienapisane), spójne z resztą serwisu.
+- Zweryfikowano: `link_audit.py --strict` (14/10, przechodzi próg liczbowy), balans tagów włącznie z nowymi `table/thead/tbody/tr/td/th` (wszystkie pary równe), `html.parser` bez błędów, skan regex pełnej listy zabronionych słów/fraz z `ai-writing-detection.md` na czystym tekście `<article>` (zero trafień), skan wzorców kontrastu negacyjnego zasady 25 (zero trafień). Meta description zaktualizowany pod nową treść (dodano „stan prawny", „długość życia").
+- Nie zmieniano: zdjęcia, headera, stopki, kafelka na `/weze/index.html`, `sitemap.xml` (URL bez zmian, wszystko już wpięte z sesji 12).
+- **Otwarte, bez zmian z sesji 12**: satelity boa imperator (`cena/`, `terrarium/`, `odmiany/`) nadal nie istnieją. `weze/index.html` nadal poniżej progu linkowego (1/5), do naprawy w kolejnej sesji, poza zakresem tego zlecenia.
+
 _Ostatnia aktualizacja: 2026-08-08 (sesja 12)_
 
 **Zrobione (ta sesja; pierwsza opublikowana podstrona treściowa serwisu, filar boa imperator):**
