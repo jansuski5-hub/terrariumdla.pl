@@ -51,6 +51,15 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-08-09 (sesja 19)_
+
+**Zrobione (ta sesja; nowy komponent „pasek trudności hodowli" na filarze boa imperator):**
+- Nowy komponent CSS `.difficulty`/`.difficulty-label`/`.difficulty-bars`/`.difficulty-bar` w `style.css`, dopisany zaraz po `.species-photo`: etykieta w stylu `.tag`/figcaption (Fragment Mono, wielkie litery, `text-dim`), pod nią pasek 5 segmentów (`flex`, `gap: 6px`, `max-width: 260px`), segmenty domyślnie w kolorze `--surface`/`--border`, wypełnione w `--emerald`.
+- Wstawiony na `/weze/boa-imperator/opis/index.html` między `<figure class="species-photo">` a pierwszym akapitem, lewostronnie (bez `text-align: center` z figury nadrzędnej). Etykieta „Trudność hodowli", 1 z 5 segmentów wypełniony (boa imperator oceniony jako łatwy w hodowli, zgodnie z tym, co już strona mówi w sekcji „dla początkujących"). Dodano `role="img"` i `aria-label="Trudność hodowli: 1 z 5, wąż łatwy w hodowli"` na kontenerze pasków, żeby ocena była dostępna też dla czytników ekranu i nie tylko wizualna.
+- **Cache-busting**: zbito `?v=11` na `?v=12` przy `style.css` na wszystkich 12 plikach HTML, spójnie z poprzednimi bumpami przy nowych komponentach (sesja 12: `.species-photo`).
+- Zweryfikowano: `html.parser` bez błędów, balans tagów (`div`/`span` włącznie z nowymi elementami paska, wszystkie pary równe), balans klamer w `style.css` (207/207), `link_audit.py --strict` 14/10 bez regresji. **Bez renderu wizualnego w przeglądarce**: sandbox nie ma headless przeglądarki (sprawdzono `chromium`/`wkhtmltoimage`/`playwright`, żadne niedostępne), więc wygląd paska nie został potwierdzony na oko, tylko przez przegląd CSS. Wojciech powinien rzucić okiem po wdrożeniu, czy szerokość/wysokość segmentów wygląda dobrze w praktyce.
+- Komponent ograniczony na razie do tej jednej strony; jeśli Wojciech chce go używać na innych filarach gatunków, trzeba będzie dodać go ręcznie do każdej strony (brak systemu includes, ten sam dług techniczny co reszta serwisu) i ustalić poziom trudności per gatunek.
+
 _Ostatnia aktualizacja: 2026-08-09 (sesja 18)_
 
 **Zrobione (ta sesja; meta title/description na życzenie Wojciecha + potwierdzenie zdjęcia głównego):**

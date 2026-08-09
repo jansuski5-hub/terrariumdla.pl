@@ -321,6 +321,16 @@ section { padding: 56px 0; }
   letter-spacing: .5px; color: var(--text-dim);
 }
 
+/* ---------- PASEK TRUDNOŚCI HODOWLI (filar gatunku) ---------- */
+.difficulty { margin: 0 0 1.8rem; }
+.difficulty-label {
+  display: block; font-family: 'Fragment Mono', monospace; font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .6px; color: var(--text-dim); margin-bottom: 8px;
+}
+.difficulty-bars { display: flex; gap: 6px; max-width: 260px; }
+.difficulty-bar { flex: 1; height: 10px; border-radius: 4px; background: var(--surface); border: 1px solid var(--border); }
+.difficulty-bar.filled { background: var(--emerald); border-color: var(--emerald); }
+
 /* ---------- COMPARISON TABLE ---------- */
 .table-wrap { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--surface); overflow-x: auto; }
 .compare-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
