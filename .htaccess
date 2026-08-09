@@ -1,3 +1,10 @@
+# Katalog bez pliku index.* nie wypisuje swojej zawartości. Bez tej dyrektywy
+# LiteSpeed pokazywał listing "Index of /blog/" z nazwami plików i datami
+# modyfikacji, czyli podglądem struktury serwera dla każdego odwiedzającego.
+# Dotyczy wszystkich katalogów, także tych jeszcze pustych (/karma/, /sprzet/,
+# /assets/img/ i pozostałych z drzewa repozytorium).
+Options -Indexes
+
 # Wymuszenie jednej kanonicznej wersji adresu: https, bez www.
 # Każde żądanie na http://, https://www., czy http://www. trafia
 # przez jedno przekierowanie 301 na https://terrariumdla.pl/...
