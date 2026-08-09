@@ -51,6 +51,17 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-08-09 (sesja 17)_
+
+**Zrobione (ta sesja; trzecia podmiana zdjęcia na filarze boa imperator, z pliku dodanego bezpośrednio do repo):**
+- Wojciech dodał do repo (poza sesją, bez wcześniejszego wpisu w statusie) `assets/img/imperator1.svg`, 2,4 MB, ten sam wzorzec co `boa imperator.svg` z sesji 12: SVG jako kontener na pojedynczy osadzony raster PNG w base64, bez faktycznej wektorowej grafiki.
+- Poproszony o „obrazek z folderu imperator1 w największej rozdzielczości": nie było takiego folderu w repo, tylko plik `imperator1.svg`; potraktowano to jako ten plik (jedyne dopasowanie), zgodnie z wcześniejszym wzorcem tego typu próśb.
+- **Wyodrębniono osadzony raster programowo** (Python, dekodowanie base64 z rozpakowaniem encji XML `&#10;` w danych): naturalna rozdzielczość 1176x797, jedyna dostępna w pliku (SVG nie zawiera wielu wariantów rozdzielczości), więc to automatycznie „największa rozdzielczość" z prośby. Bez watermarku TDC, w przeciwieństwie do dwóch poprzednich zdjęć tego gatunku.
+- Przekonwertowano do JPG jakość 88 **bez przeskalowania** (zachowana natywna rozdzielczość źródła, w przeciwieństwie do sesji 12, gdzie źródło było przeskalowane w górę do 1280x868): wynik 1176x797, 133 KB. Nadpisano `assets/img/boa-imperator-opis.jpg`.
+- Zaktualizowano `width`/`height` w `<img>` na `/weze/boa-imperator/opis/index.html` (1176x797) i `alt` (głowa uniesiona, zwój na gałęzi, bez wzmianki o watermarku, bo go nie ma na tym zdjęciu).
+- Zweryfikowano: `html.parser` bez błędów, `link_audit.py --strict` 14/10 bez regresji, zdjęcie sprawdzone wizualnie (Read na finalnym JPG) przed użyciem: ostre, bez artefaktów, wygląda na inne ujęcie tego samego osobnika co zdjęcia z sesji 12/13.
+- Oryginalny `imperator1.svg` zostaje w repo nietknięty, zgodnie ze standing rule (nie kasować źródeł bez wyraźnej prośby).
+
 _Ostatnia aktualizacja: 2026-08-08 (sesja 16)_
 
 **Zrobione (ta sesja; zmiana faviconu na wariant kameleona z mockupu Wojciecha):**
