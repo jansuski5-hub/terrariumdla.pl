@@ -51,6 +51,15 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-08-09 (sesja 20)_
+
+**Zrobione (ta sesja; drobna korekta paska trudności hodowli):**
+- `.difficulty-label` z 12px na 13.2px (dokładnie +10%, na życzenie Wojciecha).
+- `.difficulty` z `margin: 0 0 1.8rem` na `margin: -1rem 0 1.8rem`: cały blok (etykieta + pasek) podniesiony o mniej więcej wysokość odstępu między akapitami (`article p` ma `margin-bottom: 1rem`), więc bliżej zdjęcia, z tym samym odstępem od pierwszego akapitu co wcześniej.
+- Cache-busting: `?v=12` na `?v=13` przy `style.css` na wszystkich 12 plikach.
+- Zweryfikowano: balans klamer w `style.css` (207/207), bez zmian w HTML poza wersją CSS.
+- **Nadal bez podglądu w przeglądarce** (sandbox bez headless browsera, jak w sesji 19); jeśli 10% na oko wygląda za mało albo za dużo, albo podniesienie o 1rem nie trafia w to, o co chodziło, popraw wartości i daj znać dokładnie w px/rem.
+
 _Ostatnia aktualizacja: 2026-08-09 (sesja 19)_
 
 **Zrobione (ta sesja; nowy komponent „pasek trudności hodowli" na filarze boa imperator):**

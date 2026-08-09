@@ -322,9 +322,9 @@ section { padding: 56px 0; }
 }
 
 /* ---------- PASEK TRUDNOŚCI HODOWLI (filar gatunku) ---------- */
-.difficulty { margin: 0 0 1.8rem; }
+.difficulty { margin: -1rem 0 1.8rem; }
 .difficulty-label {
-  display: block; font-family: 'Fragment Mono', monospace; font-size: 12px; font-weight: 700;
+  display: block; font-family: 'Fragment Mono', monospace; font-size: 13.2px; font-weight: 700;
   text-transform: uppercase; letter-spacing: .6px; color: var(--text-dim); margin-bottom: 8px;
 }
 .difficulty-bars { display: flex; gap: 6px; max-width: 260px; }
