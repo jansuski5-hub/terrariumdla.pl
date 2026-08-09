@@ -44,7 +44,7 @@
 
 /* --- Reset --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; zoom: .8; }
 body {
   background: var(--bg);
   color: var(--text);
