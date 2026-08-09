@@ -51,6 +51,16 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-08-09 (sesja 21)_
+
+**Zrobione (ta sesja; diagnoza „zoom 80% niewidoczny" + fix cache-bustingu):**
+- Wojciech poprosił o zmniejszenie strony głównej i podstron do poziomu 80%. Sprawdzone w repo: `html { zoom: .8; }` już było dodane bezpośrednio przez Wojciecha poza sesją (commit `10474fa "Update style.css"`, 11:30), globalnie przez `css/style.css`, więc obejmuje wszystkie 12 stron HTML (dzielą ten sam plik CSS).
+- Wojciech zgłosił, że efekt nie jest widoczny mimo że reguła jest w repo i na `origin/main`. **Przyczyna zidentyfikowana**: commit `10474fa` zmienił `style.css`, ale nie podbił cache-bustingu `?v=` na `<link rel="stylesheet">` (zostało `?v=13`, ta sama wartość co przed zmianą zoom). Przeglądarki i ewentualny cache po stronie hostingu mogły dalej serwować starą, scachowaną wersję `style.css` pod tym samym URL-em.
+- **Fix**: podbito `?v=13` na `?v=14` na wszystkich 12 plikach HTML (`index.html`, 9 hubów rodzin, `template.html`, `weze/boa-imperator/opis/index.html`), zgodnie z konwencją cache-bustingu z poprzednich sesji (np. sesja 15/16/19/20).
+- Zweryfikowano: `html.parser` bez błędów na wszystkich plikach `.html` w repo, `grep` potwierdza dokładnie 12 wystąpień `style.css?v=14` i zero pozostałych `?v=13`.
+- **Nie udało się zacommitować w tej sesji**: `.git/index.lock` istnieje i nie da się go usunąć (`Operation not permitted`), git zgłasza „Another git process seems to be running in this repository" — najpewniej Wojciech ma otwarty inny klient git (GitHub Desktop / edycję na GitHub.com) w tym samym repo równolegle z tą sesją. **Zmiany są zapisane na dysku** (13 plików: 12x HTML + ten wpis w `SITE_WORKFLOW.md`), ale nie scommitowane ani niewypchnięte. Wojciech musi zamknąć/zakończyć inny proces git i sam zacommitować + wypchnąć (albo poczekać, aż zwolni się lock, i poprosić o commit w kolejnej turze).
+- **Bez podglądu w przeglądarce** (sandbox bez headless browsera, jak w poprzednich sesjach), więc nie potwierdzono wizualnie, czy 80% zoom po stronie wygląda dobrze po odświeżeniu cache; to do potwierdzenia przez Wojciecha po deployu z nowym `?v=14`.
+
 _Ostatnia aktualizacja: 2026-08-09 (sesja 20)_
 
 **Zrobione (ta sesja; drobna korekta paska trudności hodowli):**
