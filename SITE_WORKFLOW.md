@@ -51,6 +51,13 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-08-09 (sesja 18)_
+
+**Zrobione (ta sesja; meta title/description na życzenie Wojciecha + potwierdzenie zdjęcia głównego):**
+- Wojciech podał własny, dokładny tekst do wstawienia bez zmian: `<title>Boa imperator (boa cesarski):  terrarium, cena | Terrarium Dla Ciebie</title>` i meta description „Boa imperator - opis gatunkowy, pochodzenie, wielkość terrarium, cena wg. odmian. Wygląd, długość, trudność hodowli." Wstawiono dosłownie, łącznie z podwójną spacją po dwukropku i „Terrarium Dla Ciebie" w brandingu. **Odnotowana rozbieżność**: to jedyna z 10 podstron z brandingiem „Terrarium Dla Ciebie" w tytule, pozostałe 9 (huby rodzin + strona główna) mają „terrariumdla.pl". Zgłoszone Wojciechowi w poprzedniej turze, nie poprawione bez jego decyzji.
+- **Plik `assets/img/boa-imperator-opis.jpg` podmieniony poza sesją** (znaleziony jako `git status` „modified" bez odpowiadającego commitu, ten sam wzorzec „commitów spoza sesji" co poprzednie sesje): nowa wersja, 1176x797 (bez zmiany wymiarów względem sesji 17), 193 KB, ze znakiem wodnym TDC (poprzednia wersja z `imperator1.svg` była bez znaku wodnego). `<img>` na `/weze/boa-imperator/opis/index.html` już wskazywał na tę samą nazwę pliku i te same wymiary, więc `src`/`width`/`height` nie wymagały zmian. Zaktualizowano tylko `alt` z powrotem na „na korze" (zgodne z tym konkretnym kadrem, ten sam opis co w sesji 13/14).
+- Zweryfikowano: `html.parser` bez błędów, `link_audit.py --strict` 14/10 bez regresji, zdjęcie sprawdzone wizualnie (Read na pliku z dysku).
+
 _Ostatnia aktualizacja: 2026-08-09 (sesja 17)_
 
 **Zrobione (ta sesja; trzecia podmiana zdjęcia na filarze boa imperator, z pliku dodanego bezpośrednio do repo):**
