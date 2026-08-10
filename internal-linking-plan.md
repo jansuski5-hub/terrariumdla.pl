@@ -29,6 +29,9 @@ Fraza liczy się jako okazja do linku, gdy spełnione są trzy warunki:
 | wąż zbożowy | `/weze/waz-zbozowy/opis/` |
 | ile kosztuje wąż zbożowy | `/weze/waz-zbozowy/cena/` |
 | pyton królewski | `/weze/pyton-krolewski/opis/` |
+| ile kosztuje pyton królewski | `/weze/pyton-krolewski/cena/` |
+| terrarium dla pytona królewskiego | `/weze/pyton-krolewski/terrarium/` |
+| odmiany pytona królewskiego | `/weze/pyton-krolewski/odmiany/` |
 | boa dusiciel | `/weze/boa/opis/` |
 | boa imperator, boa cesarski | `/weze/boa-imperator/opis/` |
 | ile kosztuje boa imperator | `/weze/boa-imperator/cena/` |

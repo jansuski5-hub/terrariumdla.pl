@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://terrariumdla.pl/weze/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -77,6 +77,12 @@
   <url>
     <loc>https://terrariumdla.pl/weze/boa-imperator/opis/</loc>
     <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terrariumdla.pl/weze/pyton-krolewski/opis/</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
