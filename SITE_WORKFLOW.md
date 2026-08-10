@@ -51,6 +51,16 @@ Flaga `--strict` sprawdza pełną tabelę progów per archetyp z `internal-linki
 
 ## Bieżący status
 
+_Ostatnia aktualizacja: 2026-08-10 (sesja 22)_
+
+**Zrobione (ta sesja; ukrycie okruszków/breadcrumbs na życzenie Wojciecha):**
+- Wojciech przesłał screen z podstrony `/weze/` (huba węży), na którym ręcznie zakreślił okruszki „Start / Węże” pod headerem i poprosił o usunięcie lub ukrycie tego elementu. Doprecyzowane pytaniem: chodzi o ukrycie wizualne (CSS), nie o usunięcie z HTML, żeby structured data/SEO breadcrumbs zostały nietknięte.
+- **Fix**: dodano `display: none;` do `.breadcrumbs` w `style.css`. Klasa jest współdzielona przez wszystkie strony przez jeden plik CSS (nie ma systemu includes dla HTML, ale CSS jest scentralizowany), więc ta jedna zmiana ukrywa okruszki na wszystkich podstronach naraz, bez dotykania poszczególnych plików HTML. Znaczniki `<nav class="breadcrumbs">` i linki wewnątrz zostają w HTML nietknięte.
+- Cache-busting: `?v=16` → `?v=17` na `style.css` na wszystkich 13 plikach HTML. **Przy okazji zsynchronizowano `blog/index.html`**, który zalegał na `?v=12` od nieokreślonej wcześniejszej sesji (rozjazd nieodnotowany w statusie, znaleziony przy tej zmianie) — teraz wszystkie pliki mają identyczną wersję.
+- Zweryfikowano: balans klamer w `style.css` (213/213), `grep` potwierdza `?v=17` na wszystkich 13 plikach HTML, zero pozostałych `?v=16`/`?v=12`.
+- **Bez podglądu w przeglądarce** (sandbox bez headless browsera, jak w poprzednich sesjach), więc efekt nie potwierdzony wizualnie; zmiana jest jednak minimalna i jednoznaczna (`display: none` na już zidentyfikowanej klasie), niskie ryzyko efektów ubocznych.
+- **Niescommitowane w tej sesji** (brak dostępu do sieci/gita w tym wywołaniu); Wojciech musi sam scommitować i wypchnąć, jak w poprzednich sesjach z tym samym ograniczeniem.
+
 _Ostatnia aktualizacja: 2026-08-09 (sesja 21)_
 
 **Zrobione (ta sesja; diagnoza „zoom 80% niewidoczny" + fix cache-bustingu):**

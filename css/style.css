@@ -157,6 +157,7 @@ nav a:hover::after { transform: scaleX(1); }
   font-size: 13px;
   color: var(--text-dim);
   margin: 22px 0 6px;
+  display: none;
 }
 .breadcrumbs a { color: var(--text-dim); }
 .breadcrumbs a:hover { color: var(--mint); }
