@@ -69,7 +69,15 @@ _Ostatnia aktualizacja: 2026-08-09 (sesja 21)_
 - Cache-busting: `?v=14` na `?v=15` na wszystkich 12 plikach HTML (ten sam wzorzec co przy poprzedniej zmianie w tej sesji, żeby nie powtórzyć błędu ze scachowanym CSS).
 - Zweryfikowano: balans klamer w `style.css` (209/209).
 - **Szerokość 800px dobrana bez podglądu w przeglądarce** (sandbox bez headless browsera), na oko z typografii (rozsądna miara czytelności przy tej wielkości fontu). Jeśli Wojciech uzna, że 800px to za wąsko albo za szeroko, podać dokładną wartość w px do poprawki.
-- **Nadal nie scommitowane** (ten sam `.git/index.lock` co w poprzednim wpisie tej sesji, permission denied na usunięcie). Wszystkie zmiany zapisane na dysku, czekają na commit + push przez Wojciecha albo na zwolnienie locka w kolejnej turze.
+- **Scommitowane** po zwolnieniu się `.git/index.lock` z poprzedniego wpisu (commit `633b243`, lokalnie, branch 1 commit przed `origin/main`). Sandbox bez dostępu do sieci GitHub, więc `git push` musi zrobić Wojciech.
+
+**Zrobione (ta sama sesja; poszerzenie kolumny tekstu o 3 cm z każdej strony):**
+- Wojciech poprosił o poszerzenie kolumny tekstu (ta sama z poprzedniego zlecenia: `.intro-text` na stronie głównej, `article` na hubach/podstronach) o 3 cm z każdej strony.
+- Przeliczono cm→px wg standardu CSS (1cm = 96/2.54 ≈ 37.8px przy 96dpi, referencyjny piksel wg spec CSS Values and Units, niezależny od realnego DPI ekranu): 3cm ≈ 113.4px na stronę, 6cm ≈ 226.8px łącznie. Nowy `max-width`: 800px → 1026.77px, zaokrąglone do 1027px.
+- Zmieniono `max-width` w `.intro-text` i `article` z 800px na 1027px, z komentarzem w CSS dokumentującym przeliczenie.
+- Cache-busting: `?v=15` na `?v=16` na wszystkich 12 plikach HTML.
+- Zweryfikowano: balans klamer w `style.css` (213/213).
+- Jak poprzednio: **bez podglądu w przeglądarce** (sandbox bez headless browsera), więc dokładny wygląd 1027px nie potwierdzony wizualnie.
 
 _Ostatnia aktualizacja: 2026-08-09 (sesja 20)_
 

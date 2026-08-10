@@ -270,7 +270,7 @@ section { padding: 56px 0; }
 
 /* ---------- INTRO (tekst o serwisie pod zdjeciem hero) ---------- */
 /* zawężone i wyśrodkowane na tle strony, żeby tekst nie ciągnął się od krawędzi do krawędzi .wrap (na życzenie Wojciecha) */
-.intro-text { max-width: 800px; margin: 0 auto; }
+.intro-text { max-width: 1027px; margin: 0 auto; } /* 800px + 3cm z każdej strony (1cm = 37.8px przy 96dpi) */
 .intro-text p {
   color: var(--text-dim);
   font-size: clamp(20px, 2.1vw, 34px);
@@ -439,7 +439,7 @@ footer li a:hover { color: var(--mint); }
 
 /* ---------- ARTYKUŁ (podstrony gatunkowe / poradniki) ---------- */
 /* zawężone i wyśrodkowane na tle strony, żeby tekst nie ciągnął się od krawędzi do krawędzi .wrap (na życzenie Wojciecha) */
-article { max-width: 800px; margin: 0 auto; }
+article { max-width: 1027px; margin: 0 auto; } /* 800px + 3cm z każdej strony (1cm = 37.8px przy 96dpi) */
 article h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); color: var(--mint); margin-top: 2.5rem; margin-bottom: .75rem; }
 article h3 { font-size: 1.2rem; color: var(--text); margin-top: 1.75rem; margin-bottom: .5rem; }
 article h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--text); margin-bottom: .75rem; }
