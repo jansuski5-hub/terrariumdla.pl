@@ -32,6 +32,10 @@ Fraza liczy się jako okazja do linku, gdy spełnione są trzy warunki:
 | ile kosztuje pyton królewski | `/weze/pyton-krolewski/cena/` |
 | terrarium dla pytona królewskiego | `/weze/pyton-krolewski/terrarium/` |
 | odmiany pytona królewskiego | `/weze/pyton-krolewski/odmiany/` |
+| pyton tygrysi, Python molurus | `/weze/pyton-tygrysi/opis/` |
+| ile kosztuje pyton tygrysi | `/weze/pyton-tygrysi/cena/` |
+| terrarium dla pytona tygrysiego | `/weze/pyton-tygrysi/terrarium/` |
+| odmiany pytona tygrysiego | `/weze/pyton-tygrysi/odmiany/` |
 | boa dusiciel | `/weze/boa/opis/` |
 | boa imperator, boa cesarski | `/weze/boa-imperator/opis/` |
 | ile kosztuje boa imperator | `/weze/boa-imperator/cena/` |
