@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <line x1="60" y1="230" x2="340" y2="230" stroke="#50C878" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+  <!-- odnóża środkowe i tylne, oparte o gałązkę -->
+  <path d="M200,165 L188,230" stroke="#50C878" stroke-width="5" stroke-linecap="round"/>
+  <path d="M232,180 L225,230" stroke="#50C878" stroke-width="5" stroke-linecap="round"/>
+  <path d="M268,196 L272,230" stroke="#50C878" stroke-width="5" stroke-linecap="round"/>
+  <path d="M298,208 L312,230" stroke="#50C878" stroke-width="5" stroke-linecap="round"/>
+  <!-- płatkowate wyrostki na odnóżach, mimikra kwiatu -->
+  <ellipse cx="194" cy="197" rx="10" ry="6" fill="#98FB98" opacity="0.55" transform="rotate(60 194 197)"/>
+  <ellipse cx="228" cy="205" rx="10" ry="6" fill="#98FB98" opacity="0.55" transform="rotate(65 228 205)"/>
+  <ellipse cx="304" cy="219" rx="10" ry="6" fill="#98FB98" opacity="0.55" transform="rotate(70 304 219)"/>
+  <!-- tułów -->
+  <path d="M140,124 C165,148 195,168 225,180 S270,198 290,204" fill="none" stroke="#50C878" stroke-width="15" stroke-linecap="round"/>
+  <!-- odwłok, masywniejszy niż u innych gatunków -->
+  <ellipse cx="302" cy="210" rx="50" ry="24" fill="#50C878" transform="rotate(15 302 210)"/>
+  <!-- głowa -->
+  <circle cx="135" cy="108" r="14" fill="#50C878"/>
+  <circle cx="128" cy="103" r="3" fill="#98FB98"/>
+  <circle cx="140" cy="100" r="3" fill="#98FB98"/>
+  <!-- czułki -->
+  <path d="M130,95 L110,75" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M142,92 L150,68" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- odnóża chwytne z płatkowatymi wyrostkami -->
+  <path d="M124,119 L94,138 L108,163" fill="none" stroke="#98FB98" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M131,127 L99,148 L116,173" fill="none" stroke="#98FB98" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="97" cy="141" rx="8" ry="5" fill="#98FB98" opacity="0.55" transform="rotate(-30 97 141)"/>
+  <ellipse cx="102" cy="151" rx="8" ry="5" fill="#98FB98" opacity="0.55" transform="rotate(-30 102 151)"/>
+</svg>

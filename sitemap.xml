@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://terrariumdla.pl/modliszki/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -89,6 +89,36 @@
   <url>
     <loc>https://terrariumdla.pl/weze/pyton-tygrysi/opis/</loc>
     <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terrariumdla.pl/modliszki/modliszka-rozowoprega/opis/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terrariumdla.pl/modliszki/modliszka-storczykowa/opis/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terrariumdla.pl/modliszki/modliszka-chinska/opis/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terrariumdla.pl/modliszki/modliszka-diabelska/opis/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terrariumdla.pl/modliszki/modliszka-duch/opis/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

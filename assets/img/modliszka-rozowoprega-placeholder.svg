@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <line x1="60" y1="230" x2="340" y2="230" stroke="#50C878" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+  <!-- odnóża środkowe i tylne, oparte o gałązkę -->
+  <path d="M200,165 L190,230" stroke="#50C878" stroke-width="5" stroke-linecap="round"/>
+  <path d="M230,178 L225,230" stroke="#50C878" stroke-width="5" stroke-linecap="round"/>
+  <path d="M265,192 L270,230" stroke="#50C878" stroke-width="5" stroke-linecap="round"/>
+  <path d="M295,202 L310,230" stroke="#50C878" stroke-width="5" stroke-linecap="round"/>
+  <!-- tułów -->
+  <path d="M140,124 C165,148 195,168 225,180 S270,195 290,200" fill="none" stroke="#50C878" stroke-width="16" stroke-linecap="round"/>
+  <!-- odwłok -->
+  <ellipse cx="300" cy="205" rx="42" ry="19" fill="#50C878" transform="rotate(15 300 205)"/>
+  <!-- głowa -->
+  <circle cx="135" cy="108" r="15" fill="#50C878"/>
+  <circle cx="128" cy="103" r="3" fill="#98FB98"/>
+  <circle cx="140" cy="100" r="3" fill="#98FB98"/>
+  <!-- czułki -->
+  <path d="M130,95 L110,75" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M142,92 L150,68" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- odnóża chwytne złożone w geście modlitewnym -->
+  <path d="M125,120 L95,140 L110,165" fill="none" stroke="#98FB98" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M132,128 L100,150 L118,175" fill="none" stroke="#98FB98" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <line x1="40" y1="235" x2="360" y2="235" stroke="#50C878" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+  <!-- odnóża środkowe i tylne, mocniejsze, oparte o gałązkę -->
+  <path d="M185,168 L172,235" stroke="#50C878" stroke-width="6" stroke-linecap="round"/>
+  <path d="M225,182 L218,235" stroke="#50C878" stroke-width="6" stroke-linecap="round"/>
+  <path d="M270,198 L276,235" stroke="#50C878" stroke-width="6" stroke-linecap="round"/>
+  <path d="M310,212 L328,235" stroke="#50C878" stroke-width="6" stroke-linecap="round"/>
+  <!-- zarys skrzydeł złożonych wzdłuż odwłoka -->
+  <ellipse cx="290" cy="200" rx="55" ry="12" fill="none" stroke="#98FB98" stroke-width="1.5" opacity="0.4" transform="rotate(18 290 200)"/>
+  <!-- tułów, dłuższy niż u mniejszych gatunków -->
+  <path d="M120,118 C150,145 190,168 230,182 S285,200 315,212" fill="none" stroke="#50C878" stroke-width="18" stroke-linecap="round"/>
+  <!-- odwłok -->
+  <ellipse cx="325" cy="218" rx="48" ry="21" fill="#50C878" transform="rotate(15 325 218)"/>
+  <!-- głowa -->
+  <circle cx="113" cy="102" r="16" fill="#50C878"/>
+  <circle cx="105" cy="97" r="3.2" fill="#98FB98"/>
+  <circle cx="118" cy="94" r="3.2" fill="#98FB98"/>
+  <!-- czułki -->
+  <path d="M108,88 L86,66" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M120,86 L130,60" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- odnóża chwytne, duże i mocne -->
+  <path d="M102,114 L68,134 L84,162" fill="none" stroke="#98FB98" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110,123 L74,146 L92,172" fill="none" stroke="#98FB98" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

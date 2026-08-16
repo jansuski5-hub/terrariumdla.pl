@@ -56,7 +56,11 @@ Fraza liczy się jako okazja do linku, gdy spełnione są trzy warunki:
 | salamandra plamista | `/plazy/salamandra/opis/` |
 | traszka grzebieniasta | `/plazy/traszka/opis/` |
 | rzekotka drzewna | `/plazy/rzekotka/opis/` |
-| modliszka | `/bezkregowce/modliszka/opis/` |
+| modliszka różowopręga, Sphodromantis lineola | `/modliszki/modliszka-rozowoprega/opis/` |
+| modliszka storczykowa, modliszka orchideowa, Hymenopus coronatus | `/modliszki/modliszka-storczykowa/opis/` |
+| modliszka chińska, Tenodera sinensis | `/modliszki/modliszka-chinska/opis/` |
+| modliszka diabelska, Idolomantis diabolica | `/modliszki/modliszka-diabelska/opis/` |
+| modliszka duch, modliszka liściogłowa, Phyllocrania paradoxa | `/modliszki/modliszka-duch/opis/` |
 | ptasznik | `/bezkregowce/ptasznik/opis/` |
 | patyczak, straszyk | `/bezkregowce/patyczak/opis/` |
 | formikarium | `/bezkregowce/formikarium/opis/` |
@@ -126,3 +130,5 @@ Próg to podłoga, nie sufit. Dłuższe strony mogą go przekraczać, gdy linki 
 Serwis jest na starcie: opublikowany jest wyłącznie szkielet strony głównej z treścią placeholder. Zero podstron gatunkowych, zero hubów rodzin poza wpisami w nawigacji i stopce. Ten plan obowiązuje od pierwszej opublikowanej podstrony fali 1; nie czekaj z jego stosowaniem do „później”, bo naprawianie linkowania wstecz na 209 stronach jest droższe niż robienie tego dobrze od pierwszej strony.
 
 Gdy powstaną pierwsze huby rodzin i filary, zaktualizuj słownik kotwic powyżej i odnotuj w `SITE_WORKFLOW.md`, które strony przeszły audyt `link_audit.py`.
+
+**Rozbieżność znaleziona 2026-08-16 (sesja 25):** nawigacja i stopka na żywym repo mają `modliszki`, `ptaszniki`, `skorpiony`, `zaby` jako osobne rodziny najwyższego poziomu (własne katalogi w root repo, własne wpisy w nav), nie jako podkatalogi `bezkregowce`/`plazy`, jak zakładał ten dokument przy pierwszym spisaniu. Katalog `bezkregowce/` w repo zawiera tylko `.gitkeep`, bez `index.html` i bez wpisu w nav. Wpisy dla `ptasznik`, `patyczak`, `formikarium` w tabeli wyżej mogą być nieaktualne z tego samego powodu, nie zweryfikowano ich w tej sesji (poza zakresem zlecenia o modliszkach). Do sprawdzenia przy najbliższej sesji dotyczącej ptaszników albo bezkręgowców ogólnie.

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <line x1="70" y1="220" x2="330" y2="220" stroke="#50C878" stroke-width="7" stroke-linecap="round" opacity="0.45"/>
+  <!-- odnóża środkowe i tylne, drobne -->
+  <path d="M195,158 L188,220" stroke="#50C878" stroke-width="4" stroke-linecap="round"/>
+  <path d="M220,168 L216,220" stroke="#50C878" stroke-width="4" stroke-linecap="round"/>
+  <path d="M248,178 L252,220" stroke="#50C878" stroke-width="4" stroke-linecap="round"/>
+  <path d="M270,187 L282,220" stroke="#50C878" stroke-width="4" stroke-linecap="round"/>
+  <!-- listkowate wyrostki wzdłuż tułowia, mimikra suchego liścia -->
+  <polygon points="205,150 218,140 214,158" fill="#98FB98" opacity="0.5"/>
+  <polygon points="235,168 248,160 244,178" fill="#98FB98" opacity="0.5"/>
+  <!-- tułów, krótszy niż u większych gatunków -->
+  <path d="M155,110 C172,128 195,145 218,158 S248,172 262,180" fill="none" stroke="#50C878" stroke-width="12" stroke-linecap="round"/>
+  <!-- odwłok -->
+  <ellipse cx="270" cy="184" rx="30" ry="15" fill="#50C878" transform="rotate(15 270 184)"/>
+  <!-- głowa z listkowatym grzebieniem -->
+  <circle cx="150" cy="98" r="12" fill="#50C878"/>
+  <polygon points="150,84 158,68 144,74" fill="#98FB98" opacity="0.6"/>
+  <circle cx="144" cy="94" r="2.6" fill="#98FB98"/>
+  <circle cx="154" cy="92" r="2.6" fill="#98FB98"/>
+  <!-- czułki, asymetryczne -->
+  <path d="M146,86 L130,70" stroke="#98FB98" stroke-width="2" stroke-linecap="round"/>
+  <path d="M156,84 L166,64" stroke="#98FB98" stroke-width="2" stroke-linecap="round"/>
+  <!-- odnóża chwytne z drobnymi listkowatymi wyrostkami -->
+  <path d="M140,106 L114,122 L126,144" fill="none" stroke="#98FB98" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M146,113 L118,130 L132,152" fill="none" stroke="#98FB98" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
