@@ -431,7 +431,9 @@ footer li { margin-bottom: 9px; }
 footer li a { color: var(--text-dim); font-size: 15.5px; }
 .fanimals { display: flex; gap: 24px; }
 footer li a:hover { color: var(--mint); }
-.fabout p { color: var(--text-dim); font-size: 15.5px; max-width: 330px; margin-top: 12px; }
+.flogo { display: inline-block; line-height: 0; }
+.flogo img { display: block; width: 140px; height: auto; }
+.flogo:hover { opacity: .82; }
 .fbottom {
   border-top: 1px solid var(--border); margin-top: 36px; padding-top: 22px;
   display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
