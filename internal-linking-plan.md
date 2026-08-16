@@ -59,6 +59,7 @@ Fraza liczy się jako okazja do linku, gdy spełnione są trzy warunki:
 | salamandra plamista | `/plazy/salamandra/opis/` |
 | traszka grzebieniasta | `/plazy/traszka/opis/` |
 | rzekotka drzewna | `/plazy/rzekotka/opis/` |
+| żaba rogata, Ceratophrys ornata | `/zaby/zaba-rogata/opis/` |
 | modliszka różowopręga, Sphodromantis lineola | `/modliszki/modliszka-rozowoprega/opis/` |
 | modliszka storczykowa, modliszka orchideowa, Hymenopus coronatus | `/modliszki/modliszka-storczykowa/opis/` |
 | modliszka chińska, Tenodera sinensis | `/modliszki/modliszka-chinska/opis/` |

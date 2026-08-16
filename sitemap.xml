@@ -40,7 +40,13 @@
   </url>
   <url>
     <loc>https://terrariumdla.pl/zaby/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terrariumdla.pl/zaby/zaba-rogata/opis/</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
