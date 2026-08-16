@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <!-- gekon tokejski: duży, krępy, cętkowany pomarańczowo -->
+  <ellipse cx="210" cy="220" rx="135" ry="11" fill="#000000" opacity="0.25"/>
+  <!-- ogon -->
+  <path d="M155,180 Q95,172 55,150 Q60,166 100,182 Q138,196 165,196 Z" fill="#50C878"/>
+  <!-- nogi tylne -->
+  <path d="M182,168 L152,140 L128,124" fill="none" stroke="#50C878" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M182,204 L152,230 L128,248" fill="none" stroke="#50C878" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- nogi przednie -->
+  <path d="M262,166 L292,136 L314,120" fill="none" stroke="#50C878" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M262,206 L292,234 L314,250" fill="none" stroke="#50C878" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- palce -->
+  <circle cx="128" cy="124" r="4.5" fill="#98FB98"/>
+  <circle cx="128" cy="248" r="4.5" fill="#98FB98"/>
+  <circle cx="314" cy="120" r="4.5" fill="#98FB98"/>
+  <circle cx="314" cy="250" r="4.5" fill="#98FB98"/>
+  <!-- korpus krępy -->
+  <ellipse cx="220" cy="188" rx="82" ry="36" fill="#50C878"/>
+  <!-- głowa szeroka -->
+  <circle cx="298" cy="178" r="30" fill="#50C878"/>
+  <!-- duże oczy -->
+  <circle cx="288" cy="168" r="6" fill="#16181A"/>
+  <circle cx="288" cy="168" r="2.5" fill="#98FB98"/>
+  <circle cx="308" cy="168" r="6" fill="#16181A"/>
+  <circle cx="308" cy="168" r="2.5" fill="#98FB98"/>
+  <!-- pomarańczowe cętki -->
+  <circle cx="205" cy="172" r="6" fill="#D9633B" opacity="0.9"/>
+  <circle cx="240" cy="200" r="5.5" fill="#D9633B" opacity="0.9"/>
+  <circle cx="180" cy="198" r="5" fill="#D9633B" opacity="0.9"/>
+  <circle cx="260" cy="175" r="5" fill="#D9633B" opacity="0.9"/>
+  <circle cx="120" cy="172" r="4.5" fill="#D9633B" opacity="0.8"/>
+  <circle cx="145" cy="188" r="4" fill="#D9633B" opacity="0.8"/>
+  <circle cx="295" cy="200" r="4.5" fill="#D9633B" opacity="0.85"/>
+</svg>

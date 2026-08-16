@@ -47,6 +47,9 @@ Fraza liczy się jako okazja do linku, gdy spełnione są trzy warunki:
 | gekon lamparci | `/gekony/gekon-lamparci/opis/` |
 | terrarium dla gekona lamparciego | `/gekony/gekon-lamparci/terrarium/` |
 | gekon orzęsiony | `/gekony/gekon-orzesiony/opis/` |
+| gekon tokejski, gekon toke, Gekko gecko | `/gekony/gekon-tokejski/opis/` |
+| gekon gargulcowy, gekon uszaty, Rhacodactylus auriculatus | `/gekony/gekon-gargulcowy/opis/` |
+| felsuma madagaskarska, gekon dzienny olbrzymi, Phelsuma grandis | `/gekony/felsuma-madagaskarska/opis/` |
 | agama brodata | `/agamy/agama-brodata/opis/` |
 | kameleon jemeński | `/kameleony/kameleon-jemenski/opis/` |
 | żółw lądowy | `/zolwie/zolw-ladowy/opis/` |

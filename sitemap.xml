@@ -57,6 +57,36 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://terrariumdla.pl/gekony/gekon-lamparci/opis/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terrariumdla.pl/gekony/gekon-orzesiony/opis/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terrariumdla.pl/gekony/gekon-tokejski/opis/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terrariumdla.pl/gekony/gekon-gargulcowy/opis/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terrariumdla.pl/gekony/felsuma-madagaskarska/opis/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://terrariumdla.pl/agamy/</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <!-- gekon lamparci: naziemny, cętkowany, pozycja pozioma -->
+  <ellipse cx="215" cy="215" rx="120" ry="10" fill="#000000" opacity="0.25"/>
+  <!-- ogon -->
+  <path d="M160,175 Q105,168 62,150 Q66,162 100,178 Q135,192 162,190 Z" fill="#50C878"/>
+  <!-- nogi tylne -->
+  <path d="M188,165 L160,138 L138,124" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M188,197 L160,222 L138,238" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- nogi przednie -->
+  <path d="M256,163 L282,134 L302,120" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M256,199 L282,226 L302,242" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- palce -->
+  <circle cx="138" cy="124" r="4" fill="#98FB98"/>
+  <circle cx="138" cy="238" r="4" fill="#98FB98"/>
+  <circle cx="302" cy="120" r="4" fill="#98FB98"/>
+  <circle cx="302" cy="242" r="4" fill="#98FB98"/>
+  <!-- korpus -->
+  <ellipse cx="222" cy="181" rx="72" ry="30" fill="#50C878"/>
+  <!-- głowa -->
+  <circle cx="292" cy="172" r="24" fill="#50C878"/>
+  <circle cx="284" cy="164" r="3.2" fill="#98FB98"/>
+  <circle cx="298" cy="164" r="3.2" fill="#98FB98"/>
+  <!-- cętki lamparcie -->
+  <circle cx="200" cy="168" r="5" fill="#16181A" opacity="0.5"/>
+  <circle cx="230" cy="195" r="4.5" fill="#16181A" opacity="0.5"/>
+  <circle cx="180" cy="190" r="4" fill="#16181A" opacity="0.5"/>
+  <circle cx="250" cy="170" r="4" fill="#16181A" opacity="0.5"/>
+  <circle cx="110" cy="167" r="4" fill="#16181A" opacity="0.45"/>
+  <circle cx="130" cy="180" r="3.5" fill="#16181A" opacity="0.45"/>
+  <circle cx="85" cy="158" r="3" fill="#16181A" opacity="0.4"/>
+</svg>

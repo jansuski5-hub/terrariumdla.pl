@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <!-- gekon orzęsiony: drzewny, pozycja pionowa na gałęzi -->
+  <path d="M60,260 Q200,220 340,60" fill="none" stroke="#4B3F33" stroke-width="16" stroke-linecap="round"/>
+  <!-- ogon owinięty wokół gałęzi -->
+  <path d="M255,150 Q285,140 300,118 Q292,132 268,148 Q252,158 240,150 Z" fill="#50C878"/>
+  <!-- nogi -->
+  <path d="M188,140 L160,120 L145,128" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M188,182 L165,196 L150,206" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M218,120 L228,92 L222,76" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M222,168 L245,178 L258,192" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- duże poduszeczki palców -->
+  <circle cx="145" cy="128" r="5.5" fill="#98FB98"/>
+  <circle cx="150" cy="206" r="5.5" fill="#98FB98"/>
+  <circle cx="222" cy="76" r="5.5" fill="#98FB98"/>
+  <circle cx="258" cy="192" r="5.5" fill="#98FB98"/>
+  <!-- korpus, pionowy -->
+  <ellipse cx="205" cy="150" rx="28" ry="55" fill="#50C878"/>
+  <!-- głowa -->
+  <circle cx="210" cy="95" r="23" fill="#50C878"/>
+  <circle cx="202" cy="88" r="3" fill="#98FB98"/>
+  <circle cx="216" cy="88" r="3" fill="#98FB98"/>
+  <!-- rzęsy nad oczami -->
+  <path d="M193,80 L185,72" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M198,76 L192,66" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M227,80 L235,72" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M222,76 L228,66" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- grzebień wzdłuż grzbietu -->
+  <path d="M188,110 L180,116 L189,120" fill="#98FB98" opacity="0.85"/>
+  <path d="M186,128 L177,135 L187,138" fill="#98FB98" opacity="0.85"/>
+  <path d="M186,148 L176,155 L186,158" fill="#98FB98" opacity="0.85"/>
+</svg>

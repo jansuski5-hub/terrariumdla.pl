@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <!-- felsuma madagaskarska: dzienna, jaskrawozielona, czerwone znaczenia -->
+  <path d="M55,265 Q205,225 335,55" fill="none" stroke="#4B3F33" stroke-width="15" stroke-linecap="round"/>
+  <!-- liść w tle -->
+  <ellipse cx="330" cy="70" rx="46" ry="20" fill="#2E7D4F" opacity="0.35" transform="rotate(-35 330 70)"/>
+  <!-- ogon -->
+  <path d="M250,150 Q278,138 292,112 Q286,128 264,146 Q252,156 240,150 Z" fill="#98FB98"/>
+  <!-- nogi -->
+  <path d="M188,138 L160,118 L144,126" fill="none" stroke="#98FB98" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M188,180 L164,194 L148,204" fill="none" stroke="#98FB98" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M218,118 L228,90 L222,74" fill="none" stroke="#98FB98" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M222,166 L245,176 L258,190" fill="none" stroke="#98FB98" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="144" cy="126" r="5" fill="#50C878"/>
+  <circle cx="148" cy="204" r="5" fill="#50C878"/>
+  <circle cx="222" cy="74" r="5" fill="#50C878"/>
+  <circle cx="258" cy="190" r="5" fill="#50C878"/>
+  <!-- korpus jaskrawozielony -->
+  <ellipse cx="205" cy="148" rx="27" ry="53" fill="#98FB98"/>
+  <!-- głowa -->
+  <circle cx="210" cy="93" r="22" fill="#98FB98"/>
+  <!-- okrągłe źrenice, gatunek dzienny -->
+  <circle cx="202" cy="87" r="4" fill="#16181A"/>
+  <circle cx="216" cy="87" r="4" fill="#16181A"/>
+  <!-- czerwone pręgi na pysku i grzbiecie -->
+  <path d="M196,80 Q210,74 222,80" fill="none" stroke="#D9633B" stroke-width="3" stroke-linecap="round"/>
+  <path d="M195,112 Q205,108 216,112" fill="none" stroke="#D9633B" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+  <path d="M192,135 Q204,130 218,135" fill="none" stroke="#D9633B" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+</svg>

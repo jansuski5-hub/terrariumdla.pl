@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <!-- gekon gargulcowy: drzewny, dwa kostne wyrostki na głowie -->
+  <path d="M70,255 Q210,215 330,70" fill="none" stroke="#4B3F33" stroke-width="15" stroke-linecap="round"/>
+  <!-- ogon prosty, zwisający -->
+  <path d="M248,158 Q272,180 278,212 Q268,214 258,196 Q248,178 240,160 Z" fill="#50C878"/>
+  <!-- nogi -->
+  <path d="M190,140 L162,122 L146,130" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M190,180 L166,194 L150,204" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M220,118 L230,90 L224,74" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M224,166 L247,176 L260,190" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="146" cy="130" r="5" fill="#98FB98"/>
+  <circle cx="150" cy="204" r="5" fill="#98FB98"/>
+  <circle cx="224" cy="74" r="5" fill="#98FB98"/>
+  <circle cx="260" cy="190" r="5" fill="#98FB98"/>
+  <!-- korpus -->
+  <ellipse cx="207" cy="148" rx="27" ry="52" fill="#50C878"/>
+  <!-- głowa -->
+  <circle cx="212" cy="94" r="22" fill="#50C878"/>
+  <circle cx="205" cy="88" r="3" fill="#98FB98"/>
+  <circle cx="219" cy="88" r="3" fill="#98FB98"/>
+  <!-- dwa kostne wyrostki (rogi) -->
+  <path d="M196,76 L188,60 L200,68 Z" fill="#98FB98" opacity="0.9"/>
+  <path d="M228,76 L236,60 L224,68 Z" fill="#98FB98" opacity="0.9"/>
+  <!-- pasy barwne na grzbiecie -->
+  <rect x="192" y="108" width="30" height="6" rx="3" fill="#16181A" opacity="0.4"/>
+  <rect x="190" y="130" width="34" height="6" rx="3" fill="#16181A" opacity="0.4"/>
+  <rect x="188" y="152" width="36" height="6" rx="3" fill="#16181A" opacity="0.4"/>
+</svg>
