@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <!-- ptasznik chilijski różowy: naziemny, spokojny, różowawy odcień -->
+  <ellipse cx="200" cy="226" rx="130" ry="10" fill="#000000" opacity="0.25"/>
+  <!-- odnóża -->
+  <path d="M188,88 L162,82 L153,128" fill="none" stroke="#6FB88A" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M188,106 L157,104 L140,160" fill="none" stroke="#6FB88A" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M188,130 L152,132 L126,198" fill="none" stroke="#6FB88A" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M188,149 L147,155 L112,231" fill="none" stroke="#6FB88A" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M212,88 L238,82 L247,128" fill="none" stroke="#6FB88A" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M212,106 L243,104 L260,160" fill="none" stroke="#6FB88A" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M212,130 L248,132 L274,198" fill="none" stroke="#6FB88A" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M212,149 L253,155 L288,231" fill="none" stroke="#6FB88A" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="166" rx="38" ry="46" fill="#6FB88A"/>
+  <circle cx="200" cy="125" r="23" fill="#6FB88A"/>
+  <circle cx="193" cy="117" r="3" fill="#98FB98"/>
+  <circle cx="207" cy="117" r="3" fill="#98FB98"/>
+  <path d="M195,141 L191,155" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M205,141 L209,155" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="200" cy="168" rx="38" ry="46" fill="#E8A6C4" opacity="0.4"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <!-- ptasznik złotokolanowy: naziemny, duży, złociste stawy -->
+  <ellipse cx="200" cy="236" rx="130" ry="10" fill="#000000" opacity="0.25"/>
+  <!-- odnóża -->
+  <path d="M186,74 L153,68 L145,114" fill="none" stroke="#50C878" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M186,97 L147,95 L129,151" fill="none" stroke="#50C878" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M186,126 L141,128 L113,194" fill="none" stroke="#50C878" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M186,148 L134,154 L97,230" fill="none" stroke="#50C878" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M214,74 L247,68 L255,114" fill="none" stroke="#50C878" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M214,97 L253,95 L271,151" fill="none" stroke="#50C878" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M214,126 L259,128 L287,194" fill="none" stroke="#50C878" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M214,148 L266,154 L303,230" fill="none" stroke="#50C878" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- akcenty kolorystyczne na stawach -->
+  <circle cx="153" cy="68" r="5" fill="#D8B24C" opacity="0.9"/>
+  <circle cx="147" cy="95" r="5" fill="#D8B24C" opacity="0.9"/>
+  <circle cx="141" cy="128" r="5" fill="#D8B24C" opacity="0.9"/>
+  <circle cx="134" cy="154" r="5" fill="#D8B24C" opacity="0.9"/>
+  <circle cx="247" cy="68" r="5" fill="#D8B24C" opacity="0.9"/>
+  <circle cx="253" cy="95" r="5" fill="#D8B24C" opacity="0.9"/>
+  <circle cx="259" cy="128" r="5" fill="#D8B24C" opacity="0.9"/>
+  <circle cx="266" cy="154" r="5" fill="#D8B24C" opacity="0.9"/>
+  <ellipse cx="200" cy="170" rx="46" ry="56" fill="#50C878"/>
+  <circle cx="200" cy="119" r="28" fill="#50C878"/>
+  <circle cx="193" cy="111" r="3" fill="#98FB98"/>
+  <circle cx="207" cy="111" r="3" fill="#98FB98"/>
+  <path d="M195,139 L191,156" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M205,139 L209,156" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

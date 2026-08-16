@@ -61,7 +61,16 @@ Fraza liczy się jako okazja do linku, gdy spełnione są trzy warunki:
 | modliszka chińska, Tenodera sinensis | `/modliszki/modliszka-chinska/opis/` |
 | modliszka diabelska, Idolomantis diabolica | `/modliszki/modliszka-diabelska/opis/` |
 | modliszka duch, modliszka liściogłowa, Phyllocrania paradoxa | `/modliszki/modliszka-duch/opis/` |
-| ptasznik | `/bezkregowce/ptasznik/opis/` |
+| ptasznik czerwonokolanowy, Brachypelma hamorii | `/ptaszniki/ptasznik-czerwonokolanowy/opis/` |
+| ptasznik złotokolanowy, Chaco, Grammostola pulchripes | `/ptaszniki/ptasznik-zlotokolanowy/opis/` |
+| ptasznik chilijski różowy, Grammostola rosea | `/ptaszniki/ptasznik-chilijski-rozowy/opis/` |
+| ptasznik kędzierzawy, Tliltocatl albopilosum | `/ptaszniki/ptasznik-kedzierzawy/opis/` |
+| ptasznik olbrzymi, LP, Lasiodora parahybana | `/ptaszniki/ptasznik-olbrzymi/opis/` |
+| ptasznik GBB, Chromatopelma cyaneopubescens | `/ptaszniki/ptasznik-gbb/opis/` |
+| Avicularia avicularia, pinktoe | `/ptaszniki/avicularia-avicularia/opis/` |
+| ptasznik wielobarwny, Caribena versicolor | `/ptaszniki/ptasznik-wielobarwny/opis/` |
+| ptasznik królewski indyjski, Poecilotheria regalis | `/ptaszniki/ptasznik-krolewski/opis/` |
+| ptasznik goliat, Theraphosa blondi | `/ptaszniki/ptasznik-goliat/opis/` |
 | patyczak, straszyk | `/bezkregowce/patyczak/opis/` |
 | formikarium | `/bezkregowce/formikarium/opis/` |
 | waran, waran z komodo | `/jaszczurki-inne/waran/jako-zwierze-domowe/` |
@@ -131,4 +140,6 @@ Serwis jest na starcie: opublikowany jest wyłącznie szkielet strony głównej 
 
 Gdy powstaną pierwsze huby rodzin i filary, zaktualizuj słownik kotwic powyżej i odnotuj w `SITE_WORKFLOW.md`, które strony przeszły audyt `link_audit.py`.
 
-**Rozbieżność znaleziona 2026-08-16 (sesja 25):** nawigacja i stopka na żywym repo mają `modliszki`, `ptaszniki`, `skorpiony`, `zaby` jako osobne rodziny najwyższego poziomu (własne katalogi w root repo, własne wpisy w nav), nie jako podkatalogi `bezkregowce`/`plazy`, jak zakładał ten dokument przy pierwszym spisaniu. Katalog `bezkregowce/` w repo zawiera tylko `.gitkeep`, bez `index.html` i bez wpisu w nav. Wpisy dla `ptasznik`, `patyczak`, `formikarium` w tabeli wyżej mogą być nieaktualne z tego samego powodu, nie zweryfikowano ich w tej sesji (poza zakresem zlecenia o modliszkach). Do sprawdzenia przy najbliższej sesji dotyczącej ptaszników albo bezkręgowców ogólnie.
+**Rozbieżność znaleziona 2026-08-16 (sesja 25):** nawigacja i stopka na żywym repo mają `modliszki`, `ptaszniki`, `skorpiony`, `zaby` jako osobne rodziny najwyższego poziomu (własne katalogi w root repo, własne wpisy w nav), nie jako podkatalogi `bezkregowce`/`plazy`, jak zakładał ten dokument przy pierwszym spisaniu. Katalog `bezkregowce/` w repo zawiera tylko `.gitkeep`, bez `index.html` i bez wpisu w nav. Wpisy dla `patyczak`, `formikarium` w tabeli wyżej mogą być z tego samego powodu nieaktualne, nie zweryfikowane (poza zakresem tej sesji, dotyczy tylko bezkręgowców innych niż ptaszniki).
+
+**Poprawione 2026-08-16 (sesja 26):** wpis `ptasznik | /bezkregowce/ptasznik/opis/` był nieaktualny z tego samego powodu (rodzina `ptaszniki/` istnieje jako osobny katalog najwyższego poziomu, nie podkatalog `bezkregowce/`), zastąpiony 10 realnymi wpisami pod `/ptaszniki/`, po napisaniu pierwszych 10 filarów gatunkowych tej rodziny (wcześniej `ptaszniki/index.html` był samym hubem bez żadnej podstrony gatunkowej).

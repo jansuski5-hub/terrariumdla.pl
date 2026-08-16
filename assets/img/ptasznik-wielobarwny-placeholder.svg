@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <!-- ptasznik wielobarwny: nadrzewny, kolorowe ubarwienie -->
+  <line x1="200" y1="20" x2="200" y2="280" stroke="#4FA8D8" stroke-width="9" stroke-linecap="round" opacity="0.35"/>
+  <!-- odnóża -->
+  <path d="M190,96 L157,90 L150,136" fill="none" stroke="#4FA8D8" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M190,112 L151,110 L136,166" fill="none" stroke="#4FA8D8" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M190,133 L145,135 L122,201" fill="none" stroke="#4FA8D8" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M190,149 L140,155 L107,231" fill="none" stroke="#4FA8D8" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M210,96 L243,90 L250,136" fill="none" stroke="#4FA8D8" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M210,112 L249,110 L264,166" fill="none" stroke="#4FA8D8" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M210,133 L255,135 L278,201" fill="none" stroke="#4FA8D8" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M210,149 L260,155 L293,231" fill="none" stroke="#4FA8D8" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="164" rx="32" ry="40" fill="#4FA8D8"/>
+  <circle cx="200" cy="128" r="20" fill="#4FA8D8"/>
+  <circle cx="193" cy="120" r="3" fill="#98FB98"/>
+  <circle cx="207" cy="120" r="3" fill="#98FB98"/>
+  <path d="M195,142 L191,154" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M205,142 L209,154" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="200" cy="164" rx="32" ry="40" fill="#D9534F"/>
+</svg>
