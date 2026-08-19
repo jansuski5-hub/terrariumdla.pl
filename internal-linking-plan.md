@@ -51,6 +51,10 @@ Fraza liczy się jako okazja do linku, gdy spełnione są trzy warunki:
 | gekon gargulcowy, gekon uszaty, Rhacodactylus auriculatus | `/gekony/gekon-gargulcowy/opis/` |
 | felsuma madagaskarska, gekon dzienny olbrzymi, Phelsuma grandis | `/gekony/felsuma-madagaskarska/opis/` |
 | agama brodata | `/agamy/agama-brodata/opis/` |
+| agama błotna, agama wodna, Physignathus cocincinus | `/agamy/agama-blotna/opis/` |
+| agama kolczasta, uromastyx, Uromastyx | `/agamy/agama-kolczasta/opis/` |
+| agama czerwonogłowa, Agama agama | `/agamy/agama-czerwonoglowa/opis/` |
+| agama kołnierzasta, Chlamydosaurus kingii | `/agamy/agama-kolnierzasta/opis/` |
 | kameleon jemeński | `/kameleony/kameleon-jemenski/opis/` |
 | żółw lądowy | `/zolwie/zolw-ladowy/opis/` |
 | żółw wodno-lądowy | `/zolwie/zolw-wodno-ladowy/opis/` |

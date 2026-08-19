@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <!-- agama błotna: ciało smukłe, bardzo długi ogon, grzebień kolców na grzbiecie -->
+  <ellipse cx="185" cy="230" rx="150" ry="10" fill="#000000" opacity="0.22"/>
+  <!-- bardzo długi ogon, ok. 2/3 długości ciała -->
+  <path d="M165,195 Q90,190 40,180 Q35,192 40,200 Q100,214 168,206 Z" fill="#50C878"/>
+  <!-- prążki na ogonie -->
+  <line x1="150" y1="195" x2="147" y2="207" stroke="#16181A" stroke-width="3" opacity="0.4"/>
+  <line x1="115" y1="192" x2="112" y2="205" stroke="#16181A" stroke-width="3" opacity="0.4"/>
+  <line x1="80" y1="188" x2="78" y2="200" stroke="#16181A" stroke-width="3" opacity="0.4"/>
+  <!-- nogi tylne, długie palce do wspinania -->
+  <path d="M198,188 L172,158 L150,140" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M198,220 L172,248 L150,264" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- nogi przednie -->
+  <path d="M262,182 L288,152 L308,136" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M262,216 L288,242 L308,258" fill="none" stroke="#50C878" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- palce, długie na tylnych łapach -->
+  <circle cx="150" cy="140" r="4" fill="#98FB98"/>
+  <circle cx="150" cy="264" r="4" fill="#98FB98"/>
+  <circle cx="308" cy="136" r="4" fill="#98FB98"/>
+  <circle cx="308" cy="258" r="4" fill="#98FB98"/>
+  <!-- korpus wąski -->
+  <ellipse cx="228" cy="202" rx="68" ry="24" fill="#50C878"/>
+  <!-- grzebień kolców na grzbiecie, od głowy do ogona -->
+  <path d="M175,182 L182,168 L189,183 Z" fill="#98FB98" opacity="0.85"/>
+  <path d="M198,178 L205,161 L212,179 Z" fill="#98FB98" opacity="0.85"/>
+  <path d="M222,176 L229,158 L236,177 Z" fill="#98FB98" opacity="0.85"/>
+  <path d="M246,178 L253,162 L260,179 Z" fill="#98FB98" opacity="0.85"/>
+  <path d="M270,182 L276,168 L282,183 Z" fill="#98FB98" opacity="0.85"/>
+  <!-- głowa -->
+  <circle cx="298" cy="196" r="22" fill="#50C878"/>
+  <circle cx="291" cy="188" r="3.2" fill="#98FB98"/>
+  <circle cx="305" cy="188" r="3.2" fill="#98FB98"/>
+</svg>

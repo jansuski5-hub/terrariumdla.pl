@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <!-- agama czerwonogłowa: ciało smukłe, niebieskie, głowa i ogon w odcieniu pomarańczy -->
+  <ellipse cx="200" cy="222" rx="128" ry="10" fill="#000000" opacity="0.24"/>
+  <!-- ogon, kolor przechodzący w błękit -->
+  <path d="M160,188 Q100,180 55,166 Q60,178 95,192 Q130,204 162,200 Z" fill="#4C8FD9"/>
+  <!-- nogi tylne -->
+  <path d="M188,175 L160,150 L138,136" fill="none" stroke="#4C8FD9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M188,205 L160,228 L138,244" fill="none" stroke="#4C8FD9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- nogi przednie -->
+  <path d="M252,172 L276,144 L294,128" fill="none" stroke="#4C8FD9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M252,205 L276,230 L294,246" fill="none" stroke="#4C8FD9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- palce -->
+  <circle cx="138" cy="136" r="3.6" fill="#98FB98"/>
+  <circle cx="138" cy="244" r="3.6" fill="#98FB98"/>
+  <circle cx="294" cy="128" r="3.6" fill="#98FB98"/>
+  <circle cx="294" cy="246" r="3.6" fill="#98FB98"/>
+  <!-- korpus niebieski -->
+  <ellipse cx="220" cy="188" rx="70" ry="28" fill="#4C8FD9"/>
+  <!-- głowa pomarańczowo-czerwona, kontrastowa -->
+  <circle cx="290" cy="178" r="24" fill="#E8703A"/>
+  <circle cx="283" cy="170" r="3.4" fill="#16181A"/>
+  <circle cx="296" cy="170" r="3.4" fill="#16181A"/>
+  <!-- pas przejścia barw na szyi -->
+  <path d="M266,168 Q270,188 266,208" fill="none" stroke="#98FB98" stroke-width="2" opacity="0.5"/>
+</svg>

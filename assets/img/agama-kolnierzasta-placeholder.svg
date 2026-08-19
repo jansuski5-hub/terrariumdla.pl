@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <!-- agama kołnierzasta: rozłożysty kołnierz wokół szyi, pysk otwarty w obronie -->
+  <ellipse cx="205" cy="235" rx="130" ry="10" fill="#000000" opacity="0.24"/>
+  <!-- ogon długi -->
+  <path d="M155,200 Q95,195 50,182 Q55,194 90,208 Q125,220 157,213 Z" fill="#50C878"/>
+  <!-- nogi tylne -->
+  <path d="M185,190 L158,164 L136,150" fill="none" stroke="#50C878" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M185,220 L158,244 L136,258" fill="none" stroke="#50C878" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- nogi przednie -->
+  <path d="M248,188 L272,160 L290,144" fill="none" stroke="#50C878" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M248,220 L272,246 L290,262" fill="none" stroke="#50C878" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- korpus -->
+  <ellipse cx="216" cy="204" rx="66" ry="26" fill="#50C878"/>
+  <!-- rozłożysty kołnierz, półkole za głową -->
+  <path d="M255,150 Q255,80 320,70 Q300,110 300,140 Q330,120 350,95 Q345,140 315,165 Q345,155 365,140 Q350,175 310,185 Q285,192 255,178 Z" fill="#98FB98" opacity="0.85"/>
+  <!-- głowa, pysk otwarty -->
+  <path d="M262,168 L312,150 L326,172 L308,196 Z" fill="#50C878"/>
+  <circle cx="284" cy="168" r="3.4" fill="#16181A"/>
+</svg>
