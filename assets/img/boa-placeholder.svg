@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="16" fill="#1E2023"/>
+  <!-- boa dusiciel: zwinięty, siodełkowate plamy przechodzące w intensywną czerwień bliżej ogona -->
+    fill="none" stroke="#50C878" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- siodełkowate plamy: brąz na większości ciała -->
+  <ellipse cx="176" cy="146" rx="9" ry="7" fill="#B4703F" stroke="#16181A" stroke-width="1.5"/>
+  <ellipse cx="117" cy="149" rx="8.5" ry="7" fill="#B4703F" stroke="#16181A" stroke-width="1.5"/>
+  <ellipse cx="201" cy="120" rx="8.5" ry="7" fill="#B4703F" stroke="#16181A" stroke-width="1.5"/>
+  <ellipse cx="297" cy="150" rx="8.5" ry="7" fill="#B4703F" stroke="#16181A" stroke-width="1.5"/>
+  <!-- plamy przechodzące w czerwień bliżej ogona (środek zwoju) -->
+  <ellipse cx="238" cy="151" rx="8.5" ry="7" fill="#B23A2E" stroke="#16181A" stroke-width="1.5"/>
+  <ellipse cx="200" cy="150" rx="7.5" ry="6" fill="#B23A2E" stroke="#16181A" stroke-width="1.5"/>
+  <ellipse cx="255" cy="251" rx="8" ry="6.5" fill="#B23A2E" stroke="#16181A" stroke-width="1.5"/>
+  <ellipse cx="200" cy="226" rx="8" ry="6.5" fill="#B23A2E" stroke="#16181A" stroke-width="1.5"/>
+  <!-- głowa duża, trójkątna sylwetka boa -->
+  <ellipse cx="163" cy="250.5" rx="13" ry="10" fill="#50C878"/>
+  <circle cx="159" cy="246.5" r="1.8" fill="#98FB98"/>
+  <!-- rozwidlony język -->
+  <path d="M 152,258 L 143,266" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 143,266 L 135,262" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 143,266 L 139,273" stroke="#98FB98" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

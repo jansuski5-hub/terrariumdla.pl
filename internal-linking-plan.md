@@ -36,11 +36,14 @@ Fraza liczy się jako okazja do linku, gdy spełnione są trzy warunki:
 | ile kosztuje pyton tygrysi | `/weze/pyton-tygrysi/cena/` |
 | terrarium dla pytona tygrysiego | `/weze/pyton-tygrysi/terrarium/` |
 | odmiany pytona tygrysiego | `/weze/pyton-tygrysi/odmiany/` |
-| boa dusiciel | `/weze/boa/opis/` |
+| boa dusiciel, Boa constrictor | `/weze/boa/opis/` |
 | boa imperator, boa cesarski | `/weze/boa-imperator/opis/` |
 | ile kosztuje boa imperator | `/weze/boa-imperator/cena/` |
 | terrarium dla boa imperator | `/weze/boa-imperator/terrarium/` |
 | odmiany boa imperator | `/weze/boa-imperator/odmiany/` |
+| lancetogłów kalifornijski, wąż królewski kalifornijski, Lampropeltis californiae | `/weze/lancetoglow-kalifornijski/opis/` |
+| pyton zielony, Morelia viridis | `/weze/pyton-zielony/opis/` |
+| pyton siatkowy, pyton siatkowany, Malayopython reticulatus | `/weze/pyton-siatkowy/opis/` |
 | zaskroniec | `/weze/dzikie-w-polsce/zaskroniec/` |
 | padalec | `/weze/dzikie-w-polsce/padalec/` |
 | terrarium dla węża, jak urządzić terrarium dla węża | `/weze/ogolne/terrarium/` |
